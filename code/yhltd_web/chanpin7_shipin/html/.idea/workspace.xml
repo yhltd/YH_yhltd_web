@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c5a503c0-cef5-4c58-96a4-6bbe64e51070" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1v4F5S1chUzF78xocpEFmqA3as5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/detail/html" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\yho135\工作\详情页\20210819 新增三页\html\detail\html\html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\yho135\工作\详情页\20210819 新增三页\html\detail\html" />
+      <recent name="D:\yho135\工作\详情页\20210819 新增三页\html\detail\html\html" />
+      <recent name="E:\yhltd129\公司\html\image" />
+      <recent name="E:\yhltd129\公司\html\jquery" />
+      <recent name="E:\yhltd129\公司\html\video" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5a503c0-cef5-4c58-96a4-6bbe64e51070" name="Default Changelist" comment="" />
+      <created>1625813271298</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625813271298</updated>
+      <workItem from="1625813272642" duration="7706000" />
+      <workItem from="1626054726137" duration="7061000" />
+      <workItem from="1626166351010" duration="4182000" />
+      <workItem from="1626224494364" duration="4010000" />
+      <workItem from="1626669644424" duration="375000" />
+      <workItem from="1626691857648" duration="135000" />
+      <workItem from="1626761016742" duration="1011000" />
+      <workItem from="1626862122444" duration="633000" />
+      <workItem from="1627348313293" duration="9212000" />
+      <workItem from="1627433426359" duration="3615000" />
+      <workItem from="1629083014916" duration="1252000" />
+      <workItem from="1629109399634" duration="481000" />
+      <workItem from="1629163464832" duration="213000" />
+      <workItem from="1629336565411" duration="185000" />
+      <workItem from="1629337731265" duration="1420000" />
+      <workItem from="1629340537689" duration="1523000" />
+      <workItem from="1629355547355" duration="6678000" />
+      <workItem from="1629369472277" duration="89000" />
+      <workItem from="1629689987073" duration="327000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1627354624019">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1627354624019" />
+  </component>
+</project>

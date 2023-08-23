@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7b85fc80-d5d3-443d-b0a6-ce67e2b44a0f" name="test" url="http://172.20.10.4:8020/publicize_three_ends/publicize_three_ends/home.html?_ijt=9a10593h33khjqsh39ql3bvqlm">
+        <fileTransfer mountedRoot="E:\yho137\工作\宣传页20220824\宣传页20220824\七合一三端宣传网页\publicize_three_ends\publicize_three_ends" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

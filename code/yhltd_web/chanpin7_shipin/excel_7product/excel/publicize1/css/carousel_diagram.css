@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body,div,ul,li,p
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+.core-top-content-item img {
+    width: 438px;
+    height: 272px;
+}
+.core-top-content-item-right-desc {
+    margin-top: 3px;
+}
+.core-btn-box .to-see-btn{
+    border-radius: 4px;
+    border: 2px solid #008AF2;
+    box-shadow: none;
+    font-size: 16px;
+    color: #008AF2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 46px;
+    line-height: 46px;
+    width:160px;
+    text-indent: -11px;
+    background: #fff  no-repeat 116px center;
+}
+.core-btn-box .to-try-btn{
+    background:  no-repeat 116px center,linear-gradient(315deg, #00BBF9 0%, #0086F1 100%);
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: none;
+    height: 50px;
+    line-height: 50px;
+    width:160px;
+    text-indent: -11px;
+    font-weight: bold;
+}
+.reason-he{
+    margin-bottom: 1px;
+}
+.reason-he-content{
+    box-shadow: none;
+    border-top: none;
+    text-align: left;
+    margin-top: 1px;
+}
+.reason-he-content:nth-child(1){
+    background: url('image/a2.jpeg') no-repeat center;
+}
+.reason-he-content:nth-child(2){
+    background: url('image/a2.jpeg') no-repeat center;
+}
+.reason-he-content:nth-child(3){
+    background: url('image/a2.jpeg') no-repeat center;
+}
+.reason-he-content-title{
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    line-height: 33px;
+    padding-top: 73px
+}
+.reason-he-content-text{
+    color: #fff;
+}
+.reason-he-content-tu{
+    margin: 31px 1px 31px 35px;
+}
+.customnav{
+    display: flex;
+    justify-content: space-between;
+    width: 391px;
+    margin: 51px auto 0 auto;
+}
+.customnav div{
+    font-size: 14px;
+    color: #333;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+.customnav div.cur{
+    color: #008AF2;
+    border-bottom: #008AF2 4px solid;
+}
+#tab2,#tab3{
+    display: none;
+}
+.custombox{
+    width: 1200px;
+    margin: 39px auto;
+}
+.customcon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.customcon > div{
+    width: 386px;
+    height: 431px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.customcon > div:hover .customhover{
+    transform:translateY(-431px)
+}
+.customcon dl.customnormal{
+    height: 431px;
+    background: #FFF;
+}
+.customcon dl.customnormal img{
+    width: 386px;
+    height: 302px;
+}
+.customcon dl.customnormal dd{
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    text-indent: 40px;
+}
+.customcon dl.customnormal dd.title{
+    font-size: 21px;
+    color: #333;
+    font-weight: bold;
+    margin: 31px 0 10px 0;
+}
+.customcon .customhover{
+    height: 431px;
+    transition: .3s;
+    transform:translateY(0);
+    background: #fff;
+}
+.customcon .customhover dl{
+    padding: 51px 39px 0 39px;
+    height: 281px;
+}
+.customcon .customhover dl dt{
+    color: #333;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.customcon .customhover dl dd{
+    color: #666;
+    line-height: 26px;
+    font-size: 14px;
+}
+.customcon .customhover a{
+    background: no-repeat 191px center,linear-gradient(315deg, #00BBF9 0%, #0086F1 100%);
+    border-radius: 4px;
+    letter-spacing: 1px;
+    width: 305px;
+    height: 52px;
+    line-height: 52px;
+    text-indent: -11px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+}
+.content-text-second {
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #777777;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+
+
+.one {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+.one_cantent img {
+    width: 1092.8px;
+    height: 300px;
+    float: left;
+}
+.one_cantent {
+    width: 4371.2px;
+    height: 400px;
+    position: absolute;
+    left: 0px;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: -1092.8px;
+    }
+    50% {
+        left: -2185.6px;
+    }
+    75% {
+        left: -3278.4px;
+    }
+    100% {
+        left: -4371.2px
+    }
+}

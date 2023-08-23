@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bb8790cb-40f5-4eba-936b-0214332bbfff" name="test" url="http://192.168.43.44:8020/publicize1/home.html?_ijt=9qk6sofjdvcismkl0m829cgh9a">
+        <fileTransfer mountedRoot="E:\yho137\工作\宣传页20230103\宣传页20230103\Excel宣传页\publicize1\publicize1" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
