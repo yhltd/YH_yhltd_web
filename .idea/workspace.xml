@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="905b96c6-1bc3-459f-8e22-7f0c4332d00d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/img/分权Excel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/img/分权Excel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/img/分权PC.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/img/分权PC.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/js/head_navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/js/head_navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/人事PC宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/人事PC宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/人事excel.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/人事excel.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/人事小程序宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/人事小程序宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/分权PC宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/分权PC宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/分权excel宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/分权excel宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/分权管理小程序.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/分权管理小程序.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/卡PC.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/卡PC.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/卡excel.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/卡excel.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/卡小程序.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/卡小程序.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/排产PC宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/排产PC宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/排产excel.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/排产excel.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/排产小程序.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/排产小程序.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/教务PC.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/教务PC.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/教务excel.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/教务excel.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/教务小程序.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/教务小程序.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/财务PC.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/财务PC.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/财务excel宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/财务excel宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/财务小程序.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/财务小程序.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/进销存PC宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/进销存PC宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/进销存excel宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/进销存excel宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/进销存小程序宣传视频.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/video/进销存小程序宣传视频.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/11.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/11.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/产供销排产系统 小代.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/产供销排产系统 小代.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/创美财务进销存专业版..mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/创美财务进销存专业版..mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/幼儿管理.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/幼儿管理.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/排产表1.4.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/排产表1.4.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/生产管理系统.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/生产管理系统.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/短视频数据化分析系统.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/短视频数据化分析系统.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/进销存20220607-01.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/video/进销存20220607-01.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/人事管理系统-中质量.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/人事管理系统-中质量.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/信用卡-中质量.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/协同办公系统-中质量.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/协同办公系统-中质量.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/培训管理系统-中质量.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/培训管理系统-中质量.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/排产管理系统-中质量.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/排产管理系统-中质量.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/财务系统-中质量.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/财务系统-中质量.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/进销存-中质量.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/html/video/进销存-中质量.mp4" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/yhltd_web/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/1.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/js/head_navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/js/dynamic-graph.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>video</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/home.html" />
+        <option value="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/js/head_navigation.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="194" />
+    <option name="y" value="27" />
+    <option name="width" value="1400" />
+    <option name="height" value="820" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="yhltd_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="chanpin7_shipin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="chanpin7_shipin" type="462c0819:PsiDirectoryNode" />
+              <item name="excel_7product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="chanpin7_shipin" type="462c0819:PsiDirectoryNode" />
+              <item name="excel_7product" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="chanpin7_shipin" type="462c0819:PsiDirectoryNode" />
+              <item name="excel_7product" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+              <item name="publicize1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YH_yhltd_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YH_yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="yhltd_web" type="462c0819:PsiDirectoryNode" />
+              <item name="chanpin7_shipin" type="462c0819:PsiDirectoryNode" />
+              <item name="excel_7product" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+              <item name="publicize1" type="462c0819:PsiDirectoryNode" />
+              <item name="video" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yhltd_xindaisystem_H5" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="905b96c6-1bc3-459f-8e22-7f0c4332d00d" name="Default Changelist" comment="" />
+      <created>1692788444969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692788444969</updated>
+      <workItem from="1692788446893" duration="1657000" />
+      <workItem from="1692790207754" duration="1142000" />
+      <workItem from="1692854788376" duration="1135000" />
+      <workItem from="1693366184911" duration="41000" />
+      <workItem from="1693366278523" duration="725000" />
+      <workItem from="1693373813601" duration="386000" />
+      <workItem from="1693375104386" duration="1260000" />
+      <workItem from="1693971911025" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6400000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Eval Reset" order="11" visible="true" weight="0.32974428" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/img/门店收银PC.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/img/分权Excel.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/publicize_three_ends/js/head_navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/js/dynamic-graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/excel/publicize1/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

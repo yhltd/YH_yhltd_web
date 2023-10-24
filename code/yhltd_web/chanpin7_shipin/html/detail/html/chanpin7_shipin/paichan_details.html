@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=0.3,maxmum-scale=1.0,minimum-scale=0.3">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>云合未来</title>
+    <script src="jquery/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/header-sem-pc.css">
+    <link rel="stylesheet" href="caiwu_css/caiwu_reset.css" />
+    <link rel="stylesheet" href="caiwu_css/caiwu_swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/footer-sem-pc.css">
+    <link rel="stylesheet" href="css/aggregation-pc.css">
+    <link rel="stylesheet" href="css/sem-share-pc.css">
+    <link rel="stylesheet" href="css/aggregation-new-pc.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/demo2.css">
+<!--    <link rel="stylesheet" href="/r/cms/www/default/v0.1/lib/SliderImgPuzzle/sliderImgPuzzle.css">-->
+    <!-- Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com -->
+    <script type='text/javascript'>
+        ! function (e, t, n, g, i) {
+            e[i] = e[i] || function () {
+                (e[i].q = e[i].q || []).push(arguments)
+            }, n = t.createElement("script"), tag = t.getElementsByTagName("script")[0], n.async = 1, n.src = ('https:' ==
+            document.location.protocol ? 'https://' : 'http://') + g, tag.parentNode.insertBefore(n, tag)
+        }(window, document, "script", "assets.giocdn.com/2.1/gio.js", "gio");
+        gio('init', '819a5889dcb2672b', {});
+        //custom page code begin here
+
+        //custom page code end here
+        gio('send');
+    </script>
+    <!-- End GrowingIO Analytics code version: 2.1 -->
+
+    <!--sem埋码-->
+    <script type="text/javascript">
+        window._agl = window._agl || [];
+        (function () {
+            _agl.push(
+                ['production', '_f7L2XwGXjyszb4d1e2oxPybgD']
+            );
+            (function () {
+                var agl = document.createElement('script');
+                agl.type = 'text/javascript';
+                agl.async = true;
+                agl.src = 'https://fxgate.baidu.com/angelia/fcagl.js?production=_f7L2XwGXjyszb4d1e2oxPybgD';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(agl, s);
+            })();
+        })();
+    </script>
+    <script>
+        function watchVideo(index) {
+            if (index === 1) {
+                $("#pc").css("display","block")
+                $("#excel").css("display","none")
+                $("#app").css("display","none")
+                $("#xcx").css("display","none")
+            } else if (index === 2) {
+                $("#pc").css("display","none")
+                $("#excel").css("display","block")
+                $("#app").css("display","none")
+                $("#xcx").css("display","none")
+            } else if (index === 3) {
+                $("#pc").css("display","none")
+                $("#excel").css("display","none")
+                $("#app").css("display","block")
+                $("#xcx").css("display","none")
+            }else if (index === 4) {
+                $("#pc").css("display","none")
+                $("#excel").css("display","none")
+                $("#app").css("display","none")
+                $("#xcx").css("display","block")
+            }
+        }
+
+        $("#video-shut").click(function() {
+
+            $("#video").trigger("pause");
+            $(".videoCanvas").hide();
+            $(".video-mask").hide();
+        })
+
+        $('.videoCanvas').mouseover(function (event) {
+            $('.video-shut').show();
+        })
+
+        $('.videoCanvas').mouseout(function (event) {
+            $('.video-shut').hide();
+        })
+    </script>
+    <script>
+        function close_video() {
+
+            $("#video").trigger("pause");
+            $(".videoCanvas").hide();
+            $(".video-mask").hide();
+        }
+    </script>
+</head>
+
+<body>
+<div>
+<!--    <section class="header">-->
+<!--        <div class="logo-box">-->
+<!--            <div class="small-box logo-box-left">-->
+<!--                <a class="logo-color-left" href="http://yhocn.cn/"><img src="image/logo.png"-->
+<!--                                                                                alt=""></a>-->
+<!--                <span class="logo-box-text-left"> 企业管理就上云合未来</span>-->
+<!--            </div>-->
+<!--&lt;!&ndash;            <ul class="header-tabs">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab1">财务</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab2">进销存</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab3">人事管理</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab4">协同办公</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab5">门店收银管理</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab6">排产</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="home-to-page" href="" title="core-tab7">培训管理</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--            <div class="small-box logo-box-right animation-zoom">-->
+<!--                <a class="logo-color-right" href="http://yhocn.cn/"><img class="logo-box-right-phone"-->
+<!--                                                         src="image/phone.png" alt=""></a>-->
+<!--                <span class="logo-box-text-right" id="kingdee-phone-numb">1661-9776-280</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <!-- 导航 -->
+    <header class="header">
+        <div class="container clearfix">
+            <div class="fl left">
+                <!--				<a href="javascript:void(0)" ><img src="caiwu_image/logo.png" alt="" class="img1" /></a>-->
+                <!--				<a href="javascript:void(0)" ><img src="caiwu_image/logo2.jpg" alt="" class="img2" /></a>-->
+                <div class="small-box logo-box-left">
+                    <a class="logo-color-left" href="http://yhocn.cn/"><img src="image/logo.png" alt=""></a>
+                    <span class="logo-box-text-left"> 企业管理就上云合未来</span>
+                </div>
+
+            </div>
+            <div class="fr nav">
+
+                <ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="active">
+                        <a href="gongsi_project.html">首页</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">业务体系</a>
+                        <div class="dropdown_menu">
+
+                            <a href="#">Custom Menu</a>
+                            <a href="#">Custom Menu</a>
+                            <a href="#">Custom Menu</a>
+                        </div>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">&nbsp&nbsp&nbsp&nbsp产品&nbsp&nbsp&nbsp&nbsp</a>
+                        <div class="dropdown_menu">
+                            <a href="jinxiaocun_details.html">进销存管理系统</a>
+                            <a href="caiwu_details.html">财务管理系统</a>
+                            <a href="renshi_details.html">人事管理系统</a>
+                            <a href="peixun_details.html">教务管理系统</a>
+                            <a href="xietong_details.html">分权管理系统</a>
+                            <a href="xinyongka_details.html">智慧门店管理系统</a>
+                            <a href="paichan_details.html">排产管理系统</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">行知资讯</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">关于我们</a>
+                    </li>
+                    <li>
+
+                        <a href="javascript:void(0)"><img class="logo-box-right-phone" style="margin-top: 10px" src="image/phone.png" alt="">
+                            <span class="logo-box-text-right" id="kingdee-phone-numb"><166-1977-6280></span></a>
+
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" id="navToggle">
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <section class="banner-box" id="banner-paichan">
+<!--        <img class="bannerTu" src="image/a1.jpeg" alt="">-->
+        <div class="head-conter">
+            <div class="head-conter-left">
+                <div class="financial-cloud" id="paichan">
+                    云合未来
+                </div>
+                <div class="financial-cloud banner-subtitle">
+                    排产管理系统
+                </div>
+                <!-- <div class="financial-cloud-conter">
+                  680万家企业的共同选择
+                </div> -->
+
+                <div class="banner-left-data">
+
+<!--                    <img class="Trophy" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/cup.png" alt="">-->
+<!--                    <div class="banner-data-text-box">-->
+<!--                        <div class="banner-data-text">-->
+<!--                            金蝶是全球领先的云服务提供商，连续4年斩获中国企业SaaS ERM应用软件市场占有率第一-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                </div>
+            </div>
+<!--                用不上-->
+<!--            <div class="form">-->
+<!--                <p class="p1">申请免费试用</p>-->
+<!--                <div class="write-data write-data-username">-->
+<!--                    <img class="ximngming" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/n1.png" alt="">-->
+<!--                    <input id="applyName" type="text" placeholder="姓名" class="name">-->
+<!--                    <span class="apply-error">姓名不能为空</span>-->
+<!--                </div>-->
+<!--                <div class="write-data-phone">-->
+<!--                    <div class="phone-icon">-->
+<!--                        <img class="phone" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/n2.png" alt="">-->
+<!--                        <span>中国+86</span>-->
+<!--                    </div>-->
+<!--                    <input id="applyPhone" type="phone-text" placeholder="请输入手机号码" maxlength="11" class="phoneValue">-->
+<!--                    <span class="apply-error">请输入正确的手机号码</span>-->
+<!--                </div>-->
+
+<!--                <div class="write-data yanBox">-->
+<!--                    <div class="yan">-->
+<!--                        <img class="yzhangma" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/n3.png" alt="">-->
+<!--                        <input id="applyCode" type="text" placeholder="短信验证码" maxlength="6" class="codeInput">-->
+<!--                    </div>-->
+<!--                    <div id="applyCodeBtn" class="code-btn" onclick="anpSilderPuzzle(0)">获取验证码</div>-->
+<!--                    <span class="apply-error">请输入正确的验证码</span>-->
+<!--                </div>-->
+
+<!--                <a href="javascript:void(0);">-->
+<!--                    <div class="btn facula facula" onclick="anpSubmitBtn(0)">提交申请 <span class="appli-btn-arrow"></span></div>-->
+<!--                </a>-->
+<!--            </div>-->
+        </div>
+    </section>
+    <style>
+        .core-top-content-item img {
+            width: 438px;
+            height: 272px;
+        }
+        .core-top-content-item-right-desc {
+            margin-top: 3px;
+        }
+        .core-btn-box .to-see-btn{
+            border-radius: 4px;
+            border: 2px solid #008AF2;
+            box-shadow: none;
+            font-size: 16px;
+            color: #008AF2;
+            font-weight: bold;
+            letter-spacing: 1px;
+            height: 46px;
+            line-height: 46px;
+            width:160px;
+            text-indent: -11px;
+            background: #fff  no-repeat 116px center;
+        }
+        .core-btn-box .to-try-btn{
+            background:  no-repeat 116px center,linear-gradient(315deg, #00BBF9 0%, #0086F1 100%);
+            border-radius: 4px;
+            letter-spacing: 1px;
+            box-shadow: none;
+            height: 50px;
+            line-height: 50px;
+            width:160px;
+            text-indent: -11px;
+            font-weight: bold;
+        }
+        .reason-he{
+            margin-bottom: 1px;
+        }
+        .reason-he-content{
+            box-shadow: none;
+            border-top: none;
+            text-align: left;
+            margin-top: 1px;
+        }
+        .reason-he-content:nth-child(1){
+            background: url('image/a2.jpeg') no-repeat center;
+        }
+        .reason-he-content:nth-child(2){
+            background: url('image/a2.jpeg') no-repeat center;
+        }
+        .reason-he-content:nth-child(3){
+            background: url('image/a2.jpeg') no-repeat center;
+        }
+        .reason-he-content-title{
+            text-align: left;
+            font-size: 24px;
+            color: #fff;
+            line-height: 33px;
+            padding-top: 73px
+        }
+        .reason-he-content-text{
+            color: #fff;
+        }
+        .reason-he-content-tu{
+            margin: 31px 1px 31px 35px;
+        }
+        .customnav{
+            display: flex;
+            justify-content: space-between;
+            width: 391px;
+            margin: 51px auto 0 auto;
+        }
+        .customnav div{
+            font-size: 14px;
+            color: #333;
+            padding-bottom: 6px;
+            cursor: pointer;
+        }
+        .customnav div.cur{
+            color: #008AF2;
+            border-bottom: #008AF2 4px solid;
+        }
+        #tab2,#tab3{
+            display: none;
+        }
+        .custombox{
+            width: 1200px;
+            margin: 39px auto;
+        }
+        .customcon{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .customcon > div{
+            width: 386px;
+            height: 431px;
+            background: #FFF;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .customcon > div:hover .customhover{
+            transform:translateY(-431px)
+        }
+        .customcon dl.customnormal{
+            height: 431px;
+            background: #FFF;
+        }
+        .customcon dl.customnormal img{
+            width: 386px;
+            height: 302px;
+        }
+        .customcon dl.customnormal dd{
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+            text-indent: 40px;
+        }
+        .customcon dl.customnormal dd.title{
+            font-size: 21px;
+            color: #333;
+            font-weight: bold;
+            margin: 31px 0 10px 0;
+        }
+        .customcon .customhover{
+            height: 431px;
+            transition: .3s;
+            transform:translateY(0);
+            background: #fff;
+        }
+        .customcon .customhover dl{
+            padding: 51px 39px 0 39px;
+            height: 281px;
+        }
+        .customcon .customhover dl dt{
+            color: #333;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .customcon .customhover dl dd{
+            color: #666;
+            line-height: 26px;
+            font-size: 14px;
+        }
+        .customcon .customhover a{
+            background: no-repeat 191px center,linear-gradient(315deg, #00BBF9 0%, #0086F1 100%);
+            border-radius: 4px;
+            letter-spacing: 1px;
+            width: 305px;
+            height: 52px;
+            line-height: 52px;
+            text-indent: -11px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .img-right{
+            max-height: 650px;
+            padding-right: 100px;
+        }
+
+        .img-left{
+            max-height: 650px;
+            padding-left: 100px;
+        }
+
+        .text-left{
+            margin-top: 50px;
+            padding-left: 100px;
+        }
+
+        .text-right{
+            margin-top: 50px;
+            padding-right: 100px;
+        }
+        .function-ul li{
+            background-color: white;
+        }
+
+
+        .zhuangshi{
+            padding-top: 50px;
+            height:350px;
+        }
+
+        .zhuangshi-right{
+            padding-top: 50px;
+            height:350px;
+            float:right
+        }
+        .zd{
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            right: 40px;
+            bottom: 20px;
+            background-image: url("caiwu_image/zhiding4.webp");
+            background-size: cover;
+        }
+
+    </style>
+    <!-- 面向各种需求的金蝶核心应用-->
+    <div class="business-value-box product-box core-function-box">
+        <div class="zd">
+            <a href="#paichan" ></a>
+        </div>
+        <div class="four-conter-lang  fout">
+            <div class="content-text-first">云合排产管理系统</div>
+            <div class="content-text-second" style="width: 900px;margin: auto;padding-top: 30px;text-indent:30px;">云合排产管理系统是对生产计划进行排产的一个工具。它不仅可以考虑到生产计划，包括订单号、产品编码、产品名称、规格、下单日期、下单数量等产能数据，还可以结合类别、模块名称、产量/小时、父模块等物料需求进行产量汇总，即使任一环节数据时刻变化都可随机应变，做出正确的排产计划。</div>
+        </div>
+        <div class="four-conter-lang  fout">
+            <div class="content-text-first">产品特点</div>
+
+            <img src="./image/paichan_gif/paichan_tedian.png" style="margin-top: 60px;">
+        </div>
+
+        <div class="core-btn-box" style="display: flex;justify-content: center;align-items: center;">
+            <div class="home-to-page" onclick="watchVideo(1)">
+                <div class="to-see-btn">网页端</div>
+            </div>
+            <div class="home-to-page" onclick="watchVideo(2)" style="margin-left: 20px;">
+                <div class="to-see-btn">Excel</div>
+            </div>
+            <div class="home-to-page" onclick="watchVideo(3)" style="margin-left: 20px;">
+                <div class="to-see-btn">APP</div>
+            </div>
+            <div class="home-to-page" onclick="watchVideo(4)" style="margin-left: 20px;">
+                <div class="to-see-btn">微信小程序</div>
+            </div>
+        </div>
+                <!-- tab栏 -->
+                <!-- <ul id="core-function-tabs" class="module-tabs">
+                  <li><a class="navtab scroll active" href="#tab-container-1">财务云</a></li>
+                  <li><a class="navtab scroll" href="#tab-container-2">供应链云</a></li>
+                  <li><a class="navtab scroll" href="#tab-container-3">制造云</a></li>
+                  <li><a class="navtab scroll" href="#tab-container-4">全渠道云</a></li>
+                  <li><a class="navtab scroll" href="#tab-container-5">HR云</a></li>
+                </ul> -->
+        <!-- 对应显示内容 -->
+        <div id="pc" class="bash-box function-box">
+            <p class="h2-title">网页端产品介绍</p>
+            <ul class="function-ul">
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px"">
+                        <p class="h3">工作时间及休息日</p>
+                        <p class="detail">此模块可以实现添加休息日、修改每日工作时间，帮助管理者管理工厂的工作时间和休息日期。</p>
+                    </div>
+                    <img src="./image/paichan_pc_gif/工作时间及休息日.gif" alt="">
+                </li>>
+                <li class="right">
+                    <img src="./image/paichan_pc_gif/模块单位.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">模块单位</p>
+                        <p class="detail" style="margin-left: 80px">此模块实现模块类别和模块单位的增删改查，用户在此配置机器，供后续排产功能使用。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">BOM</p>
+                        <p class="detail">此模块拥有配置物料信息的功能，供订单模块使用。可对已有物料的详细信息进行增删改查操作。</p>
+                    </div>
+                    <img src="./image/paichan_pc_gif/BOM.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_pc_gif/订单.gif" alt="" style="margin-top: 60px">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">订单</p>
+                        <p class="detail" style="margin-left: 80px">基于生产相关的数据实现全面集成的协同，可以实现订单的增删改查操作。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">排产</p>
+                        <p class="detail">此模块拥有查询、添加、统计功能，可以查询某天的所有生产情况，如订单号、模块、每小时的效率和数量。可以通过开始日期，结束日期，订单号和模块生成图表。发生插单业务时，能够选择将新订单插到某条已有订单之后。</p>
+                    </div>
+                    <img src="./image/paichan_pc_gif/排产.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_pc_gif/汇总.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">汇总</p>
+                        <p class="detail" style="margin-left: 80px">此页面汇总每个现有模块单位的总生产数量。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">部门</p>
+                        <p class="detail">此模块可以实现部门的权限配置，方便管理工作人员对此系统每个页面的使用权限。</p>
+                    </div>
+                    <img src="./image/paichan_pc_gif/部门.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_pc_gif/人员信息.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">人员信息</p>
+                        <p class="detail" style="margin-left: 80px">此模块拥有管理员工信息的功能，为排班功能提供员工信息数据。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">排班</p>
+                        <p class="detail">此模块可以进行排班功能，有不轮换、隔天轮换和隔周轮换三种排班方式，可以对已有排班信息进行查询、修改和删除。</p>
+                    </div>
+                    <img src="./image/paichan_pc_gif/排班.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_pc_gif/排班明细.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">排班明细</p>
+                        <p class="detail" style="margin-left: 80px">此功能是排班模块的细分，可以让管理者具体到每个员工每天的排班细节，根据实际情况随时进行修改和删除。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">排产核对</p>
+                        <p class="detail">此模块与其他模块无关联，用户在此模块录入数据作为记录，与排产模块进行核对。</p>
+                    </div>
+                    <img src="./image/paichan_pc_gif/排产核对.gif" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <!-- 对应显示内容 -->
+        <div id="excel" style="display: none;" class="bash-box function-box">
+            <p class="h2-title">Excel产品介绍</p>
+            <ul class="function-ul">
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">工作时间及休息日</p>
+                        <p class="detail">此模块可以实现添加休息日、修改每日工作时间，帮助管理者管理工厂的工作时间和休息日期。</p>
+                    </div>
+                    <img src="./image/paichan_excel_gif/工作时间及休息日.gif" alt="">
+                </li>>
+                <li class="right">
+                    <img src="./image/paichan_excel_gif/模块单位.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">模块单位</p>
+                        <p class="detail" style="margin-left: 80px">此模块实现模块类别和模块单位的增删改查，用户在此配置机器，供后续排产功能使用。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">BOM</p>
+                        <p class="detail">此模块拥有配置物料信息的功能，供订单模块使用。可对已有物料的详细信息进行增删改查操作。</p>
+                    </div>
+                    <img src="./image/paichan_excel_gif/BOM.gif" alt="">
+                </li>
+                <li class="right" style="margin-top: 130px">
+                    <img src="./image/paichan_excel_gif/订单.gif" alt="" >
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">订单</p>
+                        <p class="detail" style="margin-left: 80px">基于生产相关的数据实现全面集成的协同，可以实现订单的增删改查操作。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 100px;margin-left: 30px">
+                        <p class="h3">排产</p>
+                        <p class="detail">此模块拥有查询、添加、统计功能，可以查询某天的所有生产情况，如订单号、模块、每小时的效率和数量。可以通过开始日期，结束日期，订单号和模块生成图表。发生插单业务时，能够选择将新订单插到某条已有订单之后。</p>
+                    </div>
+                    <img src="./image/paichan_excel_gif/排产.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_excel_gif/汇总.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">汇总</p>
+                        <p class="detail" style="margin-left: 80px">此页面汇总每个现有模块单位的总生产数量。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">部门</p>
+                        <p class="detail">此模块可以实现部门的权限配置，方便管理工作人员对此系统每个页面的使用权限。</p>
+                    </div>
+                    <img src="./image/paichan_excel_gif/部门.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_excel_gif/人员信息.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">人员信息</p>
+                        <p class="detail" style="margin-left: 80px">此模块拥有管理员工信息的功能，为排班功能提供员工信息数据。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">排班</p>
+                        <p class="detail">此模块可以进行排班功能，有不轮换、隔天轮换和隔周轮换三种排班方式，可以对已有排班信息进行查询、修改和删除。</p>
+                    </div>
+                    <img src="./image/paichan_excel_gif/排班.gif" alt="">
+                </li>
+                <li class="right">
+                    <img src="./image/paichan_excel_gif/排班明细.gif" alt="">
+                    <div style="margin-top: 130px">
+                        <p class="h3" style="margin-left: 80px">排班明细</p>
+                        <p class="detail" style="margin-left: 80px">此功能是排班模块的细分，可以让管理者具体到每个员工每天的排班细节，根据实际情况随时进行修改和删除。</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 130px;margin-left: 30px">
+                        <p class="h3">排产核对</p>
+                        <p class="detail">此模块与其他模块无关联，用户在此模块录入数据作为记录，与排产模块进行核对。</p>
+                    </div>
+                    <img src="./image/paichan_excel_gif/排产核对.gif" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <!-- 对应显示内容 -->
+        <div id="app" style="display: none;" class="bash-box function-box">
+            <p class="h2-title">APP产品介绍</p>
+            <ul class="function-ul">
+                <li>
+                    <div class="text-left">
+                        <p class="h3">工作时间及休息日</p>
+                        <p class="detail">此模块可以实现添加休息日、修改每日工作时间，帮助管理者管理工厂的工作时间和休息日期。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_app_gif/gongzuoshijianjixiuxiri.gif" alt="">
+                </li>>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_app_gif/mokuaidanwei.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">模块单位</p>
+                        <p class="detail" style="margin-left: 80px">此模块实现模块类别和模块单位的增删改查，用户在此配置机器，供后续排产功能使用。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">BOM</p>
+                        <p class="detail">此模块拥有配置物料信息的功能，供订单模块使用。可对已有物料的详细信息进行增删改查操作。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_app_gif/bom.gif" alt="">
+                </li>
+                <li class="right" style="margin-top: 130px">
+                    <img class="img-left" src="./image/paichan_app_gif/dingdan.gif" alt="" >
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">订单</p>
+                        <p class="detail" style="margin-left: 80px">基于生产相关的数据实现全面集成的协同，可以实现订单的增删改查操作。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">排产</p>
+                        <p class="detail">此模块拥有查询、添加、统计功能，可以查询某天的所有生产情况，如订单号、模块、每小时的效率和数量。可以通过开始日期，结束日期，订单号和模块生成图表。发生插单业务时，能够选择将新订单插到某条已有订单之后。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_app_gif/paichan.gif" alt="">
+                </li>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_app_gif/huizong.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">汇总</p>
+                        <p class="detail" style="margin-left: 80px">此页面汇总每个现有模块单位的总生产数量。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">部门</p>
+                        <p class="detail">此模块可以实现部门的权限配置，方便管理工作人员对此系统每个页面的使用权限。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_app_gif/bumen.gif" alt="">
+                </li>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_app_gif/renyuanxinxi.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">人员信息</p>
+                        <p class="detail" style="margin-left: 80px">此模块拥有管理员工信息的功能，为排班功能提供员工信息数据。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">排班</p>
+                        <p class="detail">此模块可以进行排班功能，有不轮换、隔天轮换和隔周轮换三种排班方式，可以对已有排班信息进行查询、修改和删除。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_app_gif/paiban.gif" alt="">
+                </li>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_app_gif/paibanmingxi.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">排班明细</p>
+                        <p class="detail" style="margin-left: 80px">此功能是排班模块的细分，可以让管理者具体到每个员工每天的排班细节，根据实际情况随时进行修改和删除。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 对应显示内容 -->
+        <div id="xcx" style="display: none;" class="bash-box function-box">
+            <p class="h2-title">微信小程序产品介绍</p>
+            <ul class="function-ul">
+                <li>
+                    <div class="text-left">
+                        <p class="h3">工作时间及休息日</p>
+                        <p class="detail">此模块可以实现添加休息日、修改每日工作时间，帮助管理者管理工厂的工作时间和休息日期。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_xcx_gif/工作时间及休息日.gif" alt="">
+                </li>>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_xcx_gif/模块单位.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">模块单位</p>
+                        <p class="detail" style="margin-left: 80px">此模块实现模块类别和模块单位的增删改查，用户在此配置机器，供后续排产功能使用。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">BOM</p>
+                        <p class="detail">此模块拥有配置物料信息的功能，供订单模块使用。可对已有物料的详细信息进行增删改查操作。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_xcx_gif/BOM.gif" alt="">
+                </li>
+                <li class="right" style="margin-top: 130px">
+                    <img class="img-left" src="./image/paichan_xcx_gif/订单.gif" alt="" >
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">订单</p>
+                        <p class="detail" style="margin-left: 80px">基于生产相关的数据实现全面集成的协同，可以实现订单的增删改查操作。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">排产</p>
+                        <p class="detail">此模块拥有查询、添加、统计功能，可以查询某天的所有生产情况，如订单号、模块、每小时的效率和数量。可以通过开始日期，结束日期，订单号和模块生成图表。发生插单业务时，能够选择将新订单插到某条已有订单之后。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_xcx_gif/排产.gif" alt="">
+                </li>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_xcx_gif/汇总.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">汇总</p>
+                        <p class="detail" style="margin-left: 80px">此页面汇总每个现有模块单位的总生产数量。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">部门</p>
+                        <p class="detail">此模块可以实现部门的权限配置，方便管理工作人员对此系统每个页面的使用权限。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_xcx_gif/部门.gif" alt="">
+                </li>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_xcx_gif/人员信息.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">人员信息</p>
+                        <p class="detail" style="margin-left: 80px">此模块拥有管理员工信息的功能，为排班功能提供员工信息数据。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">排班</p>
+                        <p class="detail">此模块可以进行排班功能，有不轮换、隔天轮换和隔周轮换三种排班方式，可以对已有排班信息进行查询、修改和删除。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_xcx_gif/排班.gif" alt="">
+                </li>
+                <li class="right">
+                    <img class="img-left" src="./image/paichan_xcx_gif/排班明细.gif" alt="">
+                    <div class="text-right">
+                        <p class="h3" style="margin-left: 80px">排班明细</p>
+                        <p class="detail" style="margin-left: 80px">此功能是排班模块的细分，可以让管理者具体到每个员工每天的排班细节，根据实际情况随时进行修改和删除。</p>
+<!--                        <img class="zhuangshi-right" src="./image/树叶右.png" >-->
+                    </div>
+                </li>
+                <li>
+                    <div class="text-left">
+                        <p class="h3">排产核对</p>
+                        <p class="detail">此模块与其他模块无关联，用户在此模块录入数据作为记录，与排产模块进行核对。</p>
+<!--                        <img class="zhuangshi" src="./image/树叶左.png" >-->
+                    </div>
+                    <img class="img-right" src="./image/paichan_xcx_gif/排产核对.gif" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 选择金蝶供应链云的理由 -->
+<div class="reason">
+    <div class="reason-box">
+        <div class="content-text-first">为什么选择云合未来</div>
+        <div class="content-text-second">云合未来，实现云端互联网技术与在线交互模式创新</div>
+    </div>
+    <div class="reason-he">
+
+        <div class="reason-he-content">
+            <h1 class="reason-he-content-title">技术</h1>
+            <div class="reason-he-content-text">
+                云合未来把握前沿技术，在 财务自动化工具，桌面仿人工RPA，移动互联、电子商务、云计算、大数据、物联网等领域自主研发了多项技术解决方案，基于IT业务的生命周期，建立了ONE STOP一站式服务；涵盖云技术、大数据、移动终端，由后台到前台，可实现由云到端的方案整体技术架构体系、应用方案体系的构建。不断创新，数字化将人们联系起来
+            </div>
+<!--            <img class="reason-he-content-tu" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/k1.png" alt="">-->
+        </div>
+        <div class="reason-he-content">
+            <h1 class="reason-he-content-title">态度</h1>
+            <div class="reason-he-content-text">
+                云合未来总部设在北京，在大连设有分支机构，服务网络遍及全国。公司内部实行网络化管理，依托先进的计算机辅助设计系统和计算机管理系统，实现规范化运作，在最短的时间内为用户提供高品质的软件服务产品。 公司本着技术领先、质量第一、客户至上的原则为广大用户提供满意的服务。
+            </div>
+<!--            <img class="reason-he-content-tu" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/k2.png" alt="">-->
+        </div>
+        <div class="reason-he-content">
+            <h1 class="reason-he-content-title">服务</h1>
+            <div class="reason-he-content-text">
+                目前云合未来为国内、外超过1万家的企业提供了网站建设、软件定制、邮件服务、自动化RPA、网站托管服务，同时为近千家的企业设计开发了基于互联网的各类商务应用和管理软件，是国内具影响力的互联网应用服务商之一。公司将坚持客户导向、应用为本的策略，继续专注于在信息技术领域开拓发展成为企业、政府、家庭信息化的推动者和服务者。
+            </div>
+<!--            <img class="reason-he-content-tu" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/k3.png" alt="">-->
+        </div>
+
+    </div>
+    <!-- 视频播放 -->
+    <div class="video-mask" id="video-mask"></div>
+    <div class="videoCanvas" id="videoCanvas">
+    <span class="video-shut" id="video-shut" onclick="close_video()">
+        <img src="image/close.png" style="width: 32px; height: 32px;" >
+    </span>
+        <video id="video" controls autoplay="autoplay" src="" width="1000" height="560"></video>
+    </div>
+</div>
+<div style="height: 30px"></div>
+
+
+
+<!--<div class="custom">-->
+<!--    <div class="reason-box">-->
+<!--        <div class="content-text-first">客户成功故事</div>-->
+<!--        <div class="content-text-second">聆听客户心中无声呼唤，助力客户数字化转型</div>-->
+<!--    </div>-->
+
+<!--    <div class="customnav">-->
+<!--        <div onclick="tab('tab1')" class="cur" id='n1'>大型集团企业</div>-->
+<!--        <div onclick="tab('tab2')" id='n2'>成长型企业</div>-->
+<!--        <div onclick="tab('tab3')" id='n3'>初创及小微企业</div>-->
+<!--    </div>-->
+<!--    <div class="custombox">-->
+<!--        <div id="tab1" class="customcon">-->
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c11.png"/></dt>-->
+<!--                    <dd class="title">温氏集团</dd>-->
+<!--                    <dd>产业互联网新玩法</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>温氏集团</dt>-->
+<!--                        <dd>农牧业早已变成了高科技、高投入、高风险的“三高”行业。某种程度上，不管是“普惠式”助力还是“共享式”平台，都是在对温氏、对农牧业进行体系化的升级，而不是某一方面的数字化，这样才能匹配“三高”的行业属性</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c12.png"/></dt>-->
+<!--                    <dd class="title">中国石油</dd>-->
+<!--                    <dd>金蝶云·苍穹中油国际提升海外安全</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>中国石油</dt>-->
+<!--                        <dd>基于金蝶云苍穹的低代码可视化开发平台，客户快速定制研发了中油国际的HSE系统。平台支持云原生架构，支持系统分布式部署和弹性伸缩，尽最大可能的提升系统的可用度。通过HSE系统的建设，对于海外公司项目人员安全进行监控</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c13.png"/></dt>-->
+<!--                    <dd class="title">华为</dd>-->
+<!--                    <dd>金蝶云·苍穹助力华为基建系统全面云化</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>华为</dt>-->
+<!--                        <dd>2018年初，华为基建决定基于金蝶新一代技术平台-金蝶云苍穹，重构ECC产品。金蝶云苍穹核心架构是：微服务（Microservices）＋Docker容器技术＋分布式数据库，遵循云计算关键要素，旨在打造一个云原生的开放平台，以快速、弹性满足不同行业、不同规模企业对于业务系统的不同需求</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <div id="tab2" class="customcon">-->
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c21.png"/></dt>-->
+<!--                    <dd class="title">光峰科技</dd>-->
+<!--                    <dd>数字化助力夯实企业运营管理地基</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>光峰科技</dt>-->
+<!--                        <dd>对于金蝶与光峰而言，两者合作是一种强强联合。金蝶拥有丰富的业界洞察和实践经验，相信有金蝶全面信息化升级的助力，光峰科技在技术产品全球领先、知识产权自主可控方面，定能领跑行业，让中国之光照亮世界舞台</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c22.png"/></dt>-->
+<!--                    <dd class="title">幸福西饼</dd>-->
+<!--                    <dd>生鲜也能零库存生产 全城两小时配送</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>幸福西饼</dt>-->
+<!--                        <dd>借助金蝶云，我们可以实现线下供应链、配送中心、线上商城与社区，海量数据的高效运转，幸福西饼可以做到零库存生产、2小时配送，根据每个粉丝的喜好，让他们充满惊喜。和金蝶云携手，我们送出的不仅是西饼，更是幸福</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c23.png"/></dt>-->
+<!--                    <dd class="title">欧跃电子</dd>-->
+<!--                    <dd>掌控通路·决胜终端</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>欧跃电子</dt>-->
+<!--                        <dd>信息系统建设对于快速发展中的OPPO山东来说是发展的必经之路，同时也是提升公司运营效率最为关键的一步，通过金蝶云系统建设，打通业务、财务、人力资源、物流、客服等模块形成一体化管理系统，从而做到信息扁平化，决策精准化，管理一体化</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <div id="tab3" class="customcon">-->
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c31.png"/></dt>-->
+<!--                    <dd class="title">大宋官窑</dd>-->
+<!--                    <dd>国礼的体验升级之旅</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>大宋官窑</dt>-->
+<!--                        <dd>使用精斗云V5后，门店和仓库紧密的连接在一起，库存透明化，所有门店的库存实时共享，手机APP上可以快速调拨商品，简化了业务流程，以前调货没货都要和客户解释很久，现在都不用了~客户体验都更好了</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c32.png"/></dt>-->
+<!--                    <dd class="title">客家婆</dd>-->
+<!--                    <dd>实现数字化经营管理</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>客家婆</dt>-->
+<!--                        <dd>之前为了核算成本、出报表，团队经常加班加点录单据，选择金蝶精斗云后，实现了单据的数字化管理，报表自动生成，极大提升了团队的工作效率。在手机上就能看到公司当天销量和各项数据指标，非常实用</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <dl class="customnormal">-->
+<!--                    <dt><img src="/r/cms/www/default/v0.1/images/aggregation-new-pc/c33.png"/></dt>-->
+<!--                    <dd class="title">西昊家具</dd>-->
+<!--                    <dd>家具企业上云后玩转智能家居</dd>-->
+<!--                </dl>-->
+<!--                <div class="customhover">-->
+<!--                    <dl>-->
+<!--                        <dt>西昊家具</dt>-->
+<!--                        <dd>不管是在出差路上，还是旅游休假，我都能在网上实时查看库存和商品价格，客户需要下订单，通过手机APP就能搞定，商机永不丢失！真正解决了我们公司存在的财务和供应链问题，我觉得很棒，真诚推荐！</dd>-->
+<!--                    </dl>-->
+<!--                    <a href="#banner-form">申请试用</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+<script src="jquery/jquery-3.3.1.js"></script>
+<script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+<script src="caiwu_js/caiwu_swiper.min.js"></script>
+<script>
+    $(function(){
+        //超过一定高度导航添加类名
+        var nav=$("header"); //得到导航对象
+        var win=$(window); //得到窗口对象
+        var sc=$(document);//得到document文档对象。
+        win.scroll(function(){
+            if(sc.scrollTop()>=100){
+                nav.addClass("on");
+            }else{
+                nav.removeClass("on");
+            }
+        })
+
+
+    })
+</script>
+<script>
+    function tab(pid){
+        var tabs=["tab1","tab2","tab3"];
+        var nav = ["n1","n2","n3"];
+        for(var i=0;i<3;i++){
+            if(tabs[i]==pid){
+                document.getElementById(tabs[i]).style.display="flex";
+                document.getElementById(nav[i]).classList.add('cur');
+            }else{
+                document.getElementById(tabs[i]).style.display="none";
+                document.getElementById(nav[i]).classList.remove('cur');
+            }
+        }
+    }
+</script>
+<!--<div class="bottom-box">-->
+<!--    <div class="footr-back">-->
+<!--        <img src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/footerBack.png" alt="">-->
+<!--    </div>-->
+<!--    <div class="footer-content">-->
+<!--        <div class="footer-content-left">-->
+<!--            <h2>企业管理 就上云合未来</h2>-->
+<!--            <p><img src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/disk.png" alt="">免费获取30天金蝶产品体验特权</p>-->
+<!--        </div>-->
+<!--        <div class="footer-content-right">-->
+<!--&lt;!&ndash;            <div class="input-box">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="China">中国+86</div>|&ndash;&gt;-->
+<!--&lt;!&ndash;                <input class="footer-content-inpu phoneValue" type="text" name="yourname" placeholder="请输入手机号">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="input-err">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/warning.png" alt="">&ndash;&gt;-->
+<!--&lt;!&ndash;                    请输入正确的手机号码&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="apply-but" onclick="  silderPuzzle(1)">申请体验</div>&ndash;&gt;-->
+<!--            <p class="clause">*请阅读<a href="https://cloud.kingdee.com/passport/#/policy-agree/privacy-policy">隐私条款</a>，kingdee.com将保证您的信息安全</p>-->
+<!--        </div>-->
+<!--        <div class="footer-content-right2">-->
+<!--            <div class="modify-return">-->
+<!--                &lsaquo; 修改手机号-->
+<!--            </div>-->
+<!--            <p class="verification-describe">为保证您的账号安全，已向 +86 <span class="phone-text"></span> <span class="code-btn"  onclick="  silderPuzzle(1)">发送验证码（56s）</span></p>-->
+<!--            <div class="verification-box">-->
+<!--                <input class="verification" type="text">-->
+<!--                <input class="verification" type="text">-->
+<!--                <input class="verification" type="text">-->
+<!--                <input class="verification" type="text">-->
+<!--                <input class="verification" type="text">-->
+<!--                <input class="verification" type="text">-->
+<!--            </div>-->
+<!--            <div class="verification-err ">-->
+<!--                <img src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/warning.png" alt="">-->
+<!--                <div class="verification-err-text">-->
+<!--                    请输入正确的验证码-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- <div class="bottom-box-content">
+      联系我们，让管理更高效
+    </div>
+    <div class="bottom-box-tu">
+      <a href="javascript:void(0)">
+        <div class="bottom-box-tu-small">
+          <img class="bottom-box-tu-min" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/use.png" alt="">
+          <div class="bottom-box-tu-content">免费使用</div>
+
+        </div>
+      </a>
+      <a href="javascript:void(0)">
+        <div class="bottom-box-tu-small">
+          <img class="bottom-box-tu-min" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/demonstrate.png" alt="">
+          <div class="bottom-box-tu-content">预约演示</div>
+
+        </div>
+      </a>
+      <a href="javascript:void(0)">
+        <div class="bottom-box-tu-small">
+          <img class="bottom-box-tu-min" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/inquire.png" alt="">
+          <div class="bottom-box-tu-content">价格查询</div>
+
+        </div>
+      </a>
+      <a href="javascript:void(0)">
+        <div class="bottom-box-tu-small">
+          <img class="bottom-box-tu-min" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/contact..png" alt="">
+          <div class="bottom-box-tu-content">联系我们</div>
+
+        </div>
+      </a>
+    </div>
+    <div class="bottom-box-inpu">
+      <input class="kuang code name" type="text" name="yourname" placeholder="请输入您的姓名">
+      <input class="kuang  code phoneValue" type="text" name="phonenunumber" placeholder="请输入手机号码" maxlength="11">
+      <input class="kuang  code codeInput" type="text" name="code" placeholder="请输入6位短信验证码" maxlength="6">
+      <div class="kuang code-btn yzma box-code" onclick="sendMsgCode(1)" style="cursor: pointer;">获取验证码</div>
+      <div class="kuang btn shqi box-code facula" onclick="submitBtn(1)" style="padding: 0;cursor: pointer;">立即申请试用</div>
+    </div> -->
+<!--</div>-->
+<!--<div class="bottom-box-box-bottom">-->
+<!--    <div class="bottom-box-box">-->
+<!--        <div class="bottom-box-bottom">-->
+<!--            <img class="logotu" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/logo-color.png" alt="">-->
+<!--            <div class="contact">-->
+<!--                <img class="tel-icon" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/icon.png" alt="">-->
+<!--                <div class="tel-box">-->
+<!--                    <div class="dianhua">-->
+<!--                        销售热线：-->
+<!--                    </div>-->
+<!--                    <div class="phone" id="footer-phone-numb">-->
+<!--                        1234-567-890-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="neirong">-->
+<!--            <img class="huizhang" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/badge.png" alt="">-->
+<!--            <img class="huizhang huitu" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/policd.png" alt="">-->
+<!--            <div class="huirong">©2021金蝶软件（中国）有限公司 粤ICP备05041751号 粤公网安备 44030502002324号</div>-->
+<!--        </div>-->
+<!--        <div class="bottom-box-left">-->
+<!--            <div class="zhongwen">中文</div>-->
+<!--            <img class="xiaohao" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/trumpet.png" alt="">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+<!-- 右侧悬浮按钮 -->
+<!--<div class="after-sale-box">-->
+<!--    <a target="_blank" href="https://support.kingdee.com//osp2016/chat/pc/index.php?vendorID=8&kduid=null&type=Sales&source=KingdeePC&serviceType=1&n">-->
+<!--        <div class="after-sale-box-item after-sale-box-item-center advisory-pc-item-before">-->
+<!--            <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/content-gif1.gif" alt="" class="content-gif1">-->
+<!--            <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/content-gif2.gif" alt="" class="content-gif2" style="display: none;">-->
+<!--            <div class="after-sale-box-item-text">-->
+<!--                在线咨询-->
+<!--            </div>-->
+<!--            <div class="after-sale-dialog-center">-->
+<!--                <div class="after-sale-dialog-center-box">-->
+<!--                    <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/dialogbox-bg3.png" alt="">-->
+<!--                    <div class="after-sale-dialog-cente-text">-->
+<!--                        <p class="dialog-box-item-text-title">Hi~ 我在线</p>-->
+<!--                        <p class="dialog-box-item-text-subtitle">欢迎您随时咨询</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </a>-->
+<!--    <div class="after-sale-box-item after-sale-box-item-under after-sale-box-item2">-->
+<!--        <img class="dtu" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/call.png" alt="">-->
+<!--        <div class="after-sale-box-item-text">-->
+<!--            联系我们-->
+<!--        </div>-->
+<!--        <div class="after-sale-dialog-center2">-->
+<!--            &lt;!&ndash; <a href=""> &ndash;&gt;-->
+<!--            <div class="after-sale-dialog-center-box">-->
+<!--                <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/dialogbox-bg4.png" alt="">-->
+<!--                <div class="after-sale-dialog-cente-text2">-->
+<!--                    <p class="dialog-box-item-text-title2">致电金蝶</p>-->
+<!--                    <p class="dialog-box-item-text-subtitle2">4008-830-840</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; </a> &ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- <div class="after-sale-box-item after-sale-box-item-center advisory-pc-item-before">
+  <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/content-gif1.gif" alt="" class="content-gif1">
+  <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/content-gif2.gif" alt="" class="content-gif2" style="display: none;">
+  <div class="after-sale-dialog-center"  style="display: none;">
+      <a href="">
+          <div class="after-sale-dialog-center-box">
+              <img src="/r/cms/www/default/v0.1/images/index/advisory-pc/dialogbox-bg2.png" alt="">
+              <div class="after-sale-dialog-cente-text">
+                  <p class="dialog-box-item-text-title">Hi~ 我在线</p>
+                  <p class="dialog-box-item-text-subtitle">欢迎您随时咨询</p>
+              </div>
+          </div>
+      </a>
+  </div>
+</div>
+<div class="tudian">
+
+<div class="hover-btn">
+  <img class="dtu" src="/r/cms/www/default/v0.1/images/kingdee-Financialcloud/call.png" alt="">
+  <div class="lxwm">联系我们</div>
+</div>
+<div class="page-right-phone">
+  <div>
+    <span>致电金蝶：</span><span id="kingdee-page-numb">4008-830-840</span>
+  </div>
+</div>
+</div> -->
+<!-- 滑块验证 -->
+<!--<div class="silderpuzzle-mask">-->
+<!--    <div class="silderpuzzle-box">-->
+<!--        <div class="silderpuzzle-title">-->
+<!--            <div class="silderpuzzle-title-text">-->
+<!--                请完成安全验证！-->
+<!--            </div>-->
+<!--            <div class="silderpuzzle-title-icon">-->
+<!--                <img class="silderpuzzle-close" src="/r/cms/www/default/v0.1/images/silderpuzzle/close.png" alt="">-->
+<!--                <img class="silderpuzzle-reflash" src="/r/cms/www/default/v0.1/images/silderpuzzle/refresh.png" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="silderpuzzle-img-box">-->
+<!--            <img class="img-back" src="/r/cms/www/default/v0.1/images/silderpuzzle/back2.png" alt="">-->
+<!--            <img class="slider" src="/r/cms/www/default/v0.1/images/silderpuzzle/slider2.png" alt="">-->
+<!--        </div>-->
+<!--        <div class="slide-box">-->
+<!--            <div class="already-slide"></div>-->
+<!--            <div class="text-describe">拖动左边滑块完成上方拼图</div>-->
+<!--            <div class="slide-default">-->
+<!--                <img class="slide-icon slide-NO" src="/r/cms/www/default/v0.1/images/silderpuzzle/slide-NO.png" alt="">-->
+<!--                <img class="slide-icon slide-YES" src="/r/cms/www/default/v0.1/images/silderpuzzle/slide-YES.png" alt="">-->
+<!--                | | |-->
+<!--            </div>-->
+<!--            <div class="err-slide">-->
+<!--                <img src="/r/cms/www/default/v0.1/images/silderpuzzle/FailMany.png" alt="">-->
+<!--                失败次数过多，请刷新拼图重试</div>-->
+<!--        </div>-->
+<!--        <div class="suceMsg msg">-->
+<!--            <img src="/r/cms/www/default/v0.1/images/silderpuzzle/success.png" alt="">-->
+<!--            验证通过：<span class="silderpuzzle-item"></span> 秒的速度超过 <span class="silderpuzzle-speed"></span> 的用户-->
+<!--        </div>-->
+<!--        <div class="errMsg msg">-->
+<!--            <img src="/r/cms/www/default/v0.1/images/silderpuzzle/warning.png" alt="">-->
+<!--            验证失败：请拖动滑块将图像正确拼合-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+</body>
+
+<!--<script src="/r/cms/www/default/v0.1/lib/jquery/jquery.cookie.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/lib/SliderImgPuzzle/sliderImgPuzzle.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/common.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/footer.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/aggregation-pc/aggregation-pc.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/component-animate.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/apply-trial.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/lib/pageResponse.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/get-pageurl.js"></script>-->
+<!--<script src="/r/cms/www/default/v0.1/js/aggregation-new-pc/aggregation-new-pc.js"></script>-->
+
+</html>

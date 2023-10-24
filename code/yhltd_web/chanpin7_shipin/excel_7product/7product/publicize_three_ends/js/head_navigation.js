@@ -6,6 +6,8 @@ function watchVideo_cw(index) {
         $("#video").attr("src","video/财务excel宣传视频.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/财务小程序.mp4");
+    }else if (index === 4) {
+        $("#video").attr("src","video/财务app_0.mp4");
     }
     $(".videoCanvas").show();
     $(".video-mask").show();
@@ -19,6 +21,8 @@ function watchVideo_fq(index) {
         $("#video").attr("src","video/分权excel宣传视频.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/分权管理小程序.mp4");
+    } else if (index === 4) {
+        $("#video").attr("src","video/分权app.mp4");
     }
     $(".videoCanvas").show();
     $(".video-mask").show();
@@ -28,11 +32,13 @@ function watchVideo_fq(index) {
 function watchVideo_jw(index) {
     if (index === 1) {
         $("#video").attr("src","video/教务PC.mp4");
-    } /*else if (index === 2) {
-        $("#video").attr("src","video/教务Excel.mp4");
+    } else if (index === 2) {
+        $("#video").attr("src","video/教务excel.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/教务小程序.mp4");
-    }*/
+    } else if (index === 4) {
+        $("#video").attr("src","video/教务app.mp4");
+    }
     $(".videoCanvas").show();
     $(".video-mask").show();
 }
@@ -45,6 +51,8 @@ function watchVideo_jxc(index) {
         $("#video").attr("src","video/进销存excel宣传视频.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/进销存小程序宣传视频.mp4");
+    } else if (index === 4) {
+        $("#video").attr("src","video/进销存app.mp4");
     }
     $(".videoCanvas").show();
     $(".video-mask").show();
@@ -55,9 +63,11 @@ function watchVideo_pc(index) {
     if (index === 1) {
         $("#video").attr("src","video/排产PC宣传视频.mp4");
     } else if (index === 2) {
-        $("#video").attr("src","video/排产小程序.mp4");
+        $("#video").attr("src","video/排产excel.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/排产小程序.mp4");
+    } else if (index === 4) {
+        $("#video").attr("src","video/排产app.mp4");
     }
     $(".videoCanvas").show();
     $(".video-mask").show();
@@ -71,6 +81,8 @@ function watchVideo_rs(index) {
         $("#video").attr("src","video/人事excel.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/人事小程序宣传视频.mp4");
+    } else if (index === 4) {
+        $("#video").attr("src","video/人事app.mp4");
     }
     $(".videoCanvas").show();
     $(".video-mask").show();
@@ -84,6 +96,8 @@ function watchVideo_k(index) {
         $("#video").attr("src","video/卡excel.mp4");
     } else if (index === 3) {
         $("#video").attr("src","video/卡小程序.mp4");
+    } else if (index === 4) {
+        $("#video").attr("src","video/门店app.mp4");
     }
     $(".videoCanvas").show();
     $(".video-mask").show();
