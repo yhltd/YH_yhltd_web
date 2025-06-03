@@ -1,0 +1,595 @@
+﻿.online_main { width: 425px; height: 215px; border-radius: 4px; background: #fff; position: fixed; top: 40%; left: 40%; z-index: 9;    }
+.dingtu { height: 36px; background: #0c80e8; line-height: 36px; }
+.zixun { font-family: 微软雅黑; font-size: 16px; color: #fff; display: inline-block; margin-left: 13px; }
+.dingtu img { display: inline-block; vertical-align: middle; float: right; margin-right: 22px; margin-top: 11px; }
+
+.qqpic {  background:url("../images/Online/online_bg.jpg") no-repeat; height: 209px; padding-top: 10px; }
+    .qqpic img { display: inline-block; margin-left: 15px; vertical-align: middle; margin-top: 14px; }
+.wentit { display: inline-block; width: 246px; font-family: 微软雅黑; font-size: 14px; color: #616b77; margin-left: 156px; vertical-align: middle; line-height: 26px; text-align: justify; padding-top: 8px; }
+.wentit01 { display: inline-block; width: 246px; font-family: 微软雅黑; font-size: 12px; color: #616b77; margin-left: 156px; vertical-align: middle; line-height: 26px; text-align: justify; padding-top: 8px; }
+
+.ditu {   }
+.chatbox { width: 103px; height: 33px; margin-left: 260px; color: #fff; font-family: 微软雅黑; font-size: 14px; background-color: #e76658; display: inline-block; text-align: center; line-height: 33px; border-radius: 4px; margin-top: 7px; }
+
+#qidian_wpa_2852107810_61 { position: absolute !important; right: 150px; top: 176px !important; }
+#qidian_wpa_2852107810_587 {
+    position: absolute !important;
+    left: 173px !important;
+    top: 176px !important;
+}
+
+
+
+
+/*首页右侧-在线咨询*/
+
+#index_float_01 {
+    width: 87px;
+    float: right;
+    position: fixed;
+    _position: absolute;
+    right: 20px;
+    top: 35%;
+    z-index: 99;
+}
+.part_02 {
+    border-radius: 10px 0 0 10px;
+    border-radius: 87px;
+    background: #fff;
+    overflow: initial;
+    box-shadow: 0px 5px 30px #D6E0FF;
+    padding: 10px 0px;
+    padding-bottom: 25px;
+}
+.rightLine {
+    padding: 0 !important;
+    width: 70px;
+    height: 1px;
+    background: #E7ECFA;
+    margin: auto;
+    margin-top: 13px;
+}
+#index_float_01 .part_01 {
+    width: 11px;
+    height: 100px;
+    float: left;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+        #index_float_01 .part_01 img { vertical-align: middle; display: inline-block;margin-bottom:4px; }
+    #index_float_01 .float_hide { width: 11px; height: 100px; display: block; cursor: pointer; background: url(../images/float_hide.png) no-repeat 5px 50px; }
+    #index_float_01 .float_show { width: 10px; height: 100px; display: block; cursor: pointer; background: url(../images/float_show.png) no-repeat 5px 50px; }
+    #index_float_01 .part_02 {
+        width: 87px;
+        vertical-align: middle;
+        display: inline-block;
+        text-align: center;
+    }
+        #index_float_01 .part_02 div {  text-align: center;padding-top: 14px; cursor: pointer;  }
+        #index_float_01 .part_02 a {
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            width: 87px;
+        }
+        #index_float_01 .part_02 img{margin-bottom:5px;}
+        #index_float_01 #tel_consult {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: -185px;
+            width: 155px;
+            height: 153px;
+            background: #fff;
+            border-radius: 2px;
+            border: 1px solid #ff4000;
+            padding-top: 0;
+            margin-top: -10px;
+            box-sizing: border-box;
+            -o-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+            -webkit-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+            box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+        }
+.counseling-center-li-box:hover #tel_consult{
+    display:block !important;
+}
+#index_float_01 #tel_consult_money {
+    display: none;
+    position: absolute;
+    top: 305px;
+    left: -185px;
+    width: 155px;
+    height: 153px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #ff4000;
+    padding-top: 0;
+    margin-top: 9px;
+    box-sizing: border-box;
+    -o-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+    -webkit-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+    box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+}
+
+    .top-300{
+        top:300px!important;
+    }
+.top-230 {
+    top: 230px !important;
+}
+
+.show{
+    position:relative;
+}
+    .show:hover .tels-box{
+        display:flex;
+    }
+.tels-box span {
+    font-size: 20px;
+}
+.arrow-dianhua {
+    width: 0 !important;
+    padding: 0 !important;
+    height: 0px !important;
+    border: 10px solid rgba(255,64,0,0) !important;
+    border-left: 10px solid #de1c34 !important;
+    position: absolute !important;
+    right: -20px !important;
+    top: 40px !important;
+}
+.tels-box {
+    color: #fff !important;
+    display: flex;
+    z-index: 100;
+    justify-content:center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #de1c34;
+    flex-direction: column;
+    align-items: center;
+    width: 185px !important;
+    height: 98px !important;
+    border: none !important;
+    font-size: 20px;
+    -o-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+    -webkit-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+    box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+}
+
+.index_float_02_dianhua{
+    height:520px!important;
+    background-size:100% 80%;
+    padding-top:30px;
+}
+#index_float_02 {
+    width: 286px;
+    height: 367px;
+    background: url("../images/Online-02/background.png") no-repeat;
+    float: right;
+    position: fixed;
+    _position: absolute;
+    right: 0px;
+    top: 40%;
+    z-index: 9;
+    overflow: initial;
+}
+    #index_float_02 .part_02 { width: 180px; margin: 0 auto; margin-top: 125px; }
+        #index_float_02 .part_02 li { height: 45px; line-height: 45px; border-bottom: 0.5px dashed #ffa688; color: #fff; cursor: pointer; margin-left: 20px; width: 150px; }
+            #index_float_02 .part_02 li img { float: left; width: 34px; height: 34px; margin-top: 6px; display: block; }
+            #index_float_02 .part_02 li span { float: left; width: 100px; height: 45px; line-height: 45px; text-align: center; font-size: 12px; display: block; }
+.dianhua{
+    color:#666;
+}
+    .dianhua:hover {
+        color: #0066CC
+    }
+#index_float_02 .part_02 li #tel_consultBox {
+    display: none;
+    position: absolute;
+    top: 115px;
+    left: -130px;
+    width: 155px;
+    height: 150px;
+}
+                #index_float_02 .part_02 li #tel_consultBox .tel_input_box {
+                    width: 155px;
+                    height: 153px;
+                    background: #fff;
+                    border-radius: 2px;
+                    border: 1px solid #ff4000;
+                    box-sizing: border-box;
+                    -o-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+                    -webkit-box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+                    box-shadow: 0 0px 8px rgba(255,64,0,0.4);
+                }
+                #index_float_02 .part_02 li #tel_consultBox .tel_input_box img{
+                    width:150px;
+                    height:150px;
+                    margin:0;
+                }
+                    #index_float_02 .part_02 li #tel_consultBox .tel_input_box .arrow {
+                        width: 0;
+                        padding: 0;
+                        height: 0px;
+                        border: 10px solid rgba(255,64,0,0);
+                        border-left: 10px solid #ff4000;
+                        position: absolute;
+                        right: -20px;
+                        top: 20px;
+                    }
+                #index_float_02 .part_02 li #tel_consultBox .tel_input_box > input {
+                    display: block;
+                    width: 158px;
+                    height: 48px;
+                    font-size: 12px;
+                    line-height: 48px;
+                    float: left;
+                    border: 0;
+                    padding: 0 0 0 10px;
+                    box-sizing: border-box;
+                }
+                   #index_float_02 .part_02 li #tel_consultBox .tel_input_box > span { display: block; width: 100px; height: 48px; line-height: 48px; font-size: 12px; color: #fff; background: #ff4000; text-align: center; float: right; }
+            #index_float_02 .part_02 li:first-child:hover #tel_consultBox { display: block; }
+
+
+
+
+/*首页右侧-在线咨询*/
+
+.arrow {
+    width: 0;
+    padding: 0 !important;
+    height: 0px;
+    border: 10px solid rgba(255,64,0,0);
+    border-left: 10px solid #2680EB;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+}
+
+#tel_consult img {
+    width: 100%;
+}
+
+#tel_consult {
+    top: 20px !important;
+    left: -170px !important;
+    border: 1px solid #2680EB !important;
+    box-shadow: 0 0px 8px rgb(170 209 255) !important;
+}
+.telbox:hover #tel_consult {
+    display:block !important;
+}
+.counseling-center-head-portrait-box {
+    position: relative;
+    margin: 0 auto;
+    width: 85px;
+    height: 85px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.counseling-center-head-portrait-box img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    animation: my_first .5s linear 0s infinite alternate;
+}
+@keyframes my_first {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(.8, .8);
+    }
+}
+.counseling-center-head-portrait-border-box {
+    cursor: pointer;
+    osition: absolute;
+    top: -20px;
+    right: 0px;
+    width: 87px;
+    height: 87px;
+    border-radius: 10rem;
+    animation: my_second 1s linear 0s infinite;
+    background: #f7fdff;
+    margin-bottom: 30px;
+}
+
+@keyframes my_second {
+    0% {
+        transform: scale(1, 1);
+        border: 1px #16009B solid;
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+        border: 1px #16009B00 solid;
+    }
+}
+.counseling-center-head-portrait-label-box {
+    color: #2680EB;
+    list-style: none;
+    border: 1px #ffffff00 solid;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    position: absolute;
+    top: 85px;
+    width: 80px;
+    margin-left: 5px;
+}
+.counseling-center-li-box {
+    cursor:pointer;
+    position: absolute;
+    top: 0;
+}
+.wechat-popup-window-box {
+    position: absolute;
+    left: -29em;
+    padding: 2rem 1rem !important;
+    padding-bottom: 0 !important;
+    flex-direction: column;
+    width: 20rem;
+    height: 25rem;
+    display: none;
+    background-color: #fff !important;
+    background-position: center;
+    background-size: cover;
+    transition: all .3s;
+    border: 0 !important;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 20px 0 rgba(50, 50, 51, .1);
+    box-shadow: 0 6px 20px 0 rgba(50, 50, 51, .1);
+}
+
+
+
+
+
+
+
+.pt160 {
+    padding-top: 160px;
+}
+
+.w900 {
+    width: 900px;
+}
+
+.ma {
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.register-large {
+    width: 135px !important;
+    height: 34px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-popup-box-css {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+    .login-popup-box-css .block {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .login-popup-box-css .block .box {
+            padding: 20px;
+            width: 500px;
+            height: 145px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.18);
+        }
+
+        .login-popup-box-css .block .flex1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login-popup-box-css .block .name {
+            color: #000;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .login-popup-box-css .block .close {
+            background: #e3e1e1;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            border-radius: 24px;
+            font-size: 12px;
+            line-height: 24px;
+            cursor: pointer;
+        }
+
+            .login-popup-box-css .block .close:hover {
+                opacity: 1;
+            }
+
+.login-popup-box-css .block .list {
+    margin: 30px 0;
+    padding-left: 10px;
+}
+
+.login-popup-box-css .block .list label {
+    font-size: 14px;
+    color: #000;
+    line-height: 30px;
+}
+
+.login-popup-box-css .block .list input {
+    border: 1px solid #ddd;
+    height: 30px;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: 355px;
+}
+
+.login-popup-box-css .btn-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-popup-box-css .btn-box .btn {
+    font-size: 12px;
+    font-size: 12px;
+    padding: 6px 22px;
+    border: 1px solid #ccc;
+    margin-left: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #000;
+}
+
+.login-popup-box-css .btn-box .btn:hover {
+    background: #f6f6f6;
+}
+
+.login-popup-box-css .btn-box .btn-on {
+    border: 1px solid #0084FF;
+    background: #0084FF;
+    color: #fff;
+}
+
+.login-popup-box-css .btn-box .btn-on:hover {
+    background: #489EFF;
+}
+
+#login-popup-error .box {
+    width: 390px;
+    height: 150px;
+}
+
+#login-popup-error .list {
+    padding-right: 10px;
+}
+
+#login-popup-error p {
+    text-align: center;
+    font-size: 16px;
+}
+
+#login-popup-error span {
+    display: block;
+    color: #0084FF;
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.login-popup-box-css .url-link-a {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #2288FC;
+    text-align: center;
+    font-size: 15px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #fff;
+    line-height: 40px;
+    display: block;
+    text-decoration: none;
+    background: #2288fc;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.close-box-div {
+    width: 100%;
+    height: 100%;
+}
+
+.class_qidian_wpa {
+    display: none;
+}
+
+#login-popup-ewm .block .box {
+    width: 295px;
+    height: 332px;
+}
+
+    #login-popup-ewm .block .box img {
+        width: 260px;
+        height: 260px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+#login-popup-url .block .box {
+    width: 355px;
+    height: 145px;
+}
+
+    #login-popup-url .block .box p {
+        margin-top: 22px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+#login-popup-qq .block .box {
+    width: 355px;
+    height: 145px;
+}
+
+    #login-popup-qq .block .box p {
+        margin-top: 22px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+.onlineBtn {
+    height: 34px !important;
+    background: #FFFFFF !important;
+    box-shadow: 0px 3px 3px 0px rgba(255,255,255,0.33) !important;
+    border-radius: 17px !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    color: #C09913 !important;
+    opacity: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+    .onlineBtn img {
+        margin-right: 5px;
+    }
+
+.bigBoxDiv {
+    position: relative;
+}
+
+#loginImgVal {
+    position: absolute;
+    width: 215px;
+    left: -215px;
+    top: 0;
+}

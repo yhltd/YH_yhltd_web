@@ -1,0 +1,94 @@
+/* 右侧悬浮按钮 */
+.after-sale-box {
+    position: fixed;
+    right: 23px;
+    bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+.after-sale-box-item {
+    width: 68px;
+    height: 68px;
+    background: #3399FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 2px;
+}
+.after-sale-box-item img {
+    width: 50px;
+    height: 50px;
+}
+.after-sale-box-item .dtu {
+    width: 32px;
+    height: 32px;
+}
+.after-sale-box-item-text {
+    font-size: 11px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 16px;
+    padding-bottom: 3px;
+}
+.after-sale-dialog-center,
+.after-sale-dialog-center2 {
+    width: 194px;
+    height: 84px;
+    position: absolute;
+    left: -190px;
+    top: -6px;
+    display: none;
+}
+.after-sale-dialog-center img,
+.after-sale-dialog-center2 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.after-sale-dialog-cente-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28px;
+}
+.after-sale-dialog-cente-text2 {
+    text-align: left;
+    padding-top: 21px;
+    padding-left: 34px;
+}
+.dialog-box-item-text-title2 {
+    font-size: 18px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 21px;
+}
+.dialog-box-item-text-subtitle2 {
+    font-size: 16px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 21px;
+}
+
+/* 底部申请体验按钮 */
+.apply-but {
+    border: none;
+    background-color: #17b5fe;
+}
+.apply-but:hover {
+    background-color: #015eea;
+}
+

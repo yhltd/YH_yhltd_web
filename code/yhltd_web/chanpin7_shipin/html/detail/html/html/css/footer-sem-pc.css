@@ -1,0 +1,474 @@
+.bottom-box {
+    width: 100%;
+    height: 396px;
+    background: #2688EE;
+    overflow: hidden;
+  }
+  
+  .bottom-box-content {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 42px;
+    font-family: Microsoft YaHei;
+  }
+  
+  .bottom-box-tu-min {
+    width: 100px;
+    height: 69px;
+  }
+  
+  .bottom-box-tu-content {
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  
+  .bottom-box-tu-small {
+    width: 95px;
+    text-align: center;
+    margin-right: 90px;
+  }
+  
+  .bottom-box-tu {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .code {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #777777;
+    padding-left: 20px;
+  }
+  
+  .bottom-box-inpu {
+    width: 1120px;
+    margin: 0 auto;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .box-code {
+    width: 210px;
+    height: 40px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+  }
+  
+  .bottom-box-inpu ::-webkit-input-placeholder {
+    color: #777777;
+  }
+  
+  .bottom-box-inpu :-moz-placeholder {
+    /* Firefox 18- */
+    color: #777777;
+  }
+  
+  .bottom-box-inpu ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #777777;
+  }
+  
+  .bottom-box-inpu :-ms-input-placeholder {
+    color: #777777;
+  }
+  
+  .bottom-box-inpu input:focus,
+  textarea:focus {
+  
+    outline: none;
+  }
+  
+  .yzma {
+    background: #00CCFE;
+    width: 210px;
+    height: 43px;
+    line-height: 43px;
+  }
+  
+  .shqi {
+    border: 1px solid #FFFFFF;
+  }
+  
+  .bottom-box-inpu {
+    margin-top: 50px;
+  }
+  
+  .logotu {
+    width: 115px;
+    height: 39px;
+  
+  }
+  
+  .bottom-box-bottom {
+    width: 100%;
+    height: 4367px;
+  }
+  
+  .dianhua {
+    font-size: 17px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #0086F2;
+  }
+  
+  .phone {
+    font-size: 17px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #0086F2;
+  }
+  
+  .tel-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 4px;
+  }
+  
+  .tel-icon {
+    width: 21px;
+    height: 21px;
+    margin-left: 20px;
+  }
+  
+  .contact {
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .bottom-box-bottom {
+    width: 472px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  
+  .bottom-box-bottom {
+    margin-top: 30px;
+  }
+  
+  .huizhang {
+    width: 30px;
+    height: 32px;
+    margin-left: 15px;
+  }
+  
+  .huitu {
+    margin-top: 2px;
+  
+  }
+  
+  .huirong {
+    font-size: 12px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #787878;
+    margin-top: 8px;
+    margin-left: 20px;
+  }
+  
+  .bottom-box-box-bottom {
+    width: 100%;
+    height: 65px;
+  }
+  
+  .bottom-box-box {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 72px;
+    margin-top: -23px;
+    text-align: center;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  
+  .neirong {
+    margin-top: 30px;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .zhongwen {
+    font-size: 12px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #787878;
+  }
+  
+  .xiaohao {
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+  }
+  
+  .bottom-box-left {
+    width: 35px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  
+  }
+
+
+  .bottom-box {
+    width: 100%;
+    height: 245px;
+    position: relative;
+    z-index: 1;
+}
+.footr-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.footr-back img {
+    width: 100%;
+    height: 100%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 55px 44px 0;
+}
+.footer-content h2 {
+    font-size: 40px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 56px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.footer-content-left img {
+    width: 27px;
+    height: 21px;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
+.footer-content-left p {
+    font-size: 20px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 28px;
+    padding-top: 9px;
+}
+.footer-content-right {
+    position: relative;
+    /* display: none; */
+}
+.input-box {
+    width: 350px;
+    height: 55px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    display: flex;
+    line-height: 55px;
+}
+.China {
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #333333;
+    line-height: 55px;
+    padding: 0 20px 0 30px;
+}
+.input-box input {
+    border: none;
+    outline:none;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.input-box:focus {
+    outline:none;
+    border: 1px solid red;
+} 
+.apply-but {
+    width: 350px;
+    height: 55px;
+    border-radius: 3px;
+    border: 1px solid #FFFFFF;
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 55px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.clause {
+    font-size: 10px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 12px;
+    white-space: nowrap;
+    margin-top: 8px;
+}
+.clause a:link {
+    color: #00FFFE;
+    text-decoration: underline;
+}
+.input-err {
+    position: absolute;
+    top: 0px;
+    left: 125px;
+    background: #fff;
+    color: #f00;
+    display: none;
+}
+.input-err img {
+    width: 16px;
+    height: 16px;
+}
+.err-active {
+    display: block;
+}
+.footer-content-right2 {
+    position: relative;
+    display: none;
+}
+.modify-return,
+.verification-describe {
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+.modify-return {
+    cursor: pointer;
+}
+.code-btn {
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.code-btn.active {
+    color: #00FFFE;
+}
+.verification-box {
+    display: flex;
+    margin-top: 22px;
+}
+.verification {
+    width: 55px;
+    height: 55px;
+    outline:none;
+    padding-left: 20px;
+    font-size: 24px;
+    margin-right: 12px;
+    display: inline;
+    box-sizing: border-box;
+}
+.verification-err {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    display: flex;
+    opacity: 0;
+}
+.verification-err img {
+    width: 16px;
+    height: 16px;
+}
+.verification-err-text {
+    width: 118px;
+    height: 16px;
+    background: #FF0000;
+    border-radius: 9px;
+    font-size: 11px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 16px;
+    margin-left: 4px;
+    white-space: nowrap;
+    text-align: center;
+}
+.verification-err.verification-active {
+    opacity: 1;
+}
+
+  @media screen and (min-width : 751px) and (max-width : 1200px) {
+    .bottom-box-content,
+    .bottom-box-tu,
+    .bottom-box-inpu,
+    .bottom-box-box {
+        width: 90%;
+    }
+    .bottom-box-tu a {
+        flex: 1;
+    }
+    .bottom-box-tu-small {
+        margin: 0 auto;
+    }
+    .bottom-box-inpu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .phoneValue {
+        margin: 0 10px;
+    }
+    .code {
+        width: 20%;
+    }
+    .yzma,
+    .box-code {
+        flex: 1;
+        width: auto;
+        margin-left: 5px;
+    }
+    .logotu {
+        width: 100px;
+        object-fit: contain;
+    }
+    .bottom-box-bottom {
+        width: inherit;
+    }
+    .tel-icon {
+        margin-left: 10px;
+    }
+    .dianhua,
+    .phone {
+        font-size: 14px;
+    }
+    .bottom-box-left {
+        width: 70px;
+    }
+  }
+
+  @media screen and (max-width : 768px) {
+    .yzma, .box-code {
+        font-size: 12px;
+    }
+  }

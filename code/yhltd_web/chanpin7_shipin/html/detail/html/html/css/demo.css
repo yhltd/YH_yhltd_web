@@ -1,0 +1,467 @@
+@charset 'utf-8';
+
+.bodycontent {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bodycontent * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodycontent html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+address,
+em,
+img,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+i,
+b,
+s {
+    font-family: Microsoft YaHei, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: inherit;
+    font-style: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+a img {
+    vertical-align: top;
+    border: none
+}
+
+a {
+    text-decoration: none
+}
+
+button {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent
+}
+
+button::-moz-focus-inner {
+    padding: 0
+}
+
+input[type=password] {
+    -webkit-text-security: disc
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+    outline: none
+}
+
+body {
+    word-wrap: break-word
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.icon {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: left top
+}
+
+.btn {
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    vertical-align: middle
+}
+
+.none {
+    display: none
+}
+
+.bash-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.bash-box {
+    position: relative;
+    overflow: hidden;
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.h2-title {
+    text-align: center;
+    line-height: 1;
+    font-size: 30px;
+    color: #323232;
+    padding: 60px 0 80px;
+}
+
+.h3-title {
+    text-align: center;
+    line-height: 1;
+    font-size: 18px;
+    color: #323232;
+}
+
+/*--------------------- header -------------------*/
+.jxc-header-wrap{
+    background: url(../img/drp/banner.jpg) no-repeat 50% 50%;
+    height: 650px;
+    background-size: cover;
+}
+.jxc-header-box{
+    padding: 130px 0 0 20px;
+}
+.jxc-header-box > p.h1{
+    line-height: 1;
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 10px;
+}
+.jxc-header-box > p.h2{
+    line-height: 200%;
+    font-size: 16px;
+    color: #fff;
+    padding: 40px 0 25px 10px;
+}
+.jxc-header-box > ul > li > a{
+    display: block;
+    float: left;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.jxc-header-box > ul  {
+    height: 70px;
+}
+
+.jxc-header-box > ul > li:first-child > a{
+    color: #fff;
+    line-height: 50px;
+    background: #3589ff;
+    margin-right: 24px;
+}
+.jxc-header-box > ul > li:first-child > a:hover{
+    background: #4894ff;
+}
+
+.jxc-header-box > ul > li:first-child + li > a{
+    border: 1px solid #6bfcfe;
+    color: #6bfcfe;
+    line-height: 47px;
+}
+.jxc-header-box > ul > li:first-child + li > a:hover{
+    border: 1px solid #6bfcfe;
+    color: #6bfcfe;
+    background:#3034c9;
+}
+
+.code-img {
+    width: 500px;
+    margin-left: -30px;
+}
+
+
+.code-title {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 14px;
+}
+/*--------------------- tradition -------------------*/
+.tradition-box > ul{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.tradition-box > ul > li{
+    display: inline-block;
+    margin-left: 120px;
+}
+.tradition-box > ul > li:first-child{
+    margin-left: 0;
+}
+.tradition-box > ul > li > img{
+    display: block;
+    width: 138px;
+    height: 138px;
+    margin: 0 auto;
+}
+.tradition-box > ul > li > p.h3{
+    padding: 55px 0 25px;
+    line-height: 1;
+    font-size: 24px;
+    color: #323232;
+}
+.tradition-box > ul > li > p.detail{
+    line-height: 200%;
+    color: #888;
+    font-size: 14px;
+}
+
+/*--------------------- industry -------------------*/
+.industry-wrap{
+    background: #f6f7fb;
+}
+.industry-ul{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 35px 20px;
+}
+.industry-ul > li{
+    margin: 0 20px 60px;
+    float: left;
+}
+.industry-ul > li > img{
+    display: block;
+    width: 254px;
+    height: 166px;
+    margin-bottom: 3px;
+}
+.industry-ul > li > p{
+    width: 254px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 16px;
+    color: #666;
+    background: #fff;
+}
+
+/*--------------------- function -------------------*/
+.function-ul{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /*padding-left: 90px;*/
+}
+.function-ul > li{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+.function-ul > li > div{
+    float: left;
+    width: 430px;
+}
+.function-ul > li > div > p.h3{
+    font-size: 26px;
+    color: #323232;
+    line-height: 1;
+}
+.function-ul > li > div > p.detail{
+    font-size: 16px;
+    line-height: 200%;
+    color: #666;
+    padding: 30px 0;
+}
+.function-ul > li > div > a{
+    display: block;
+    width: 144px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: #3589ff;
+    border-radius: 2px;
+}
+.function-ul > li > div > a:hover{
+    background: #4592ff;
+}
+.function-ul > li.right > div{
+    float: right;
+    width: 490px;
+}
+.function-ul > li > img{
+    display: block;
+    float: right;
+}
+.function-ul > li.right > img{
+    float: left;
+}
+.function-ul > li:first-child > div{
+    padding-top: 40px;
+}
+.function-ul > li:first-child + li > div{
+    padding-top: 50px;
+}
+.function-ul > li:first-child + li + li{
+    margin-bottom: 20px;
+}
+.function-ul > li:first-child + li + li > div{
+    padding-top: 40px;
+}
+.function-ul > li:first-child + li + li + li > div{
+    padding-top: 80px;
+}
+
+/*--------------------- advantage -------------------*/
+.advantage-wrap{
+    background: url(../img/drp/advantage_bg.jpg) no-repeat 50% 50%;
+    height: 583px;
+    background-size: cover;
+}
+.advantage-box > p.h2-title{
+    color: #fff;
+    padding-bottom: 60px;
+
+}
+.advantage-ul{
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.advantage-ul > li{
+    margin-left: 20px;
+    width: 285px;
+    height: 306px;
+    float: left;
+    background: #fff;
+    text-align: center;
+}
+.advantage-ul > li:first-child{
+    margin-left: 0;
+}
+.advantage-ul > li > div{
+    width: 100%;
+    height: 170px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.advantage-ul > li > div > img{
+    display: block;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.advantage-ul > li:first-child + li > div > img{
+    width: 46%;
+}
+.advantage-ul > li:first-child + li + li > div > img{
+    width: 36%;
+}
+.advantage-ul > li:first-child + li + li +li > div > img{
+    width: 28%;
+}
+.advantage-ul > li > p{
+    line-height: 200%;
+    font-size: 16px;
+    color: #323232;
+}
+
+/*--------------------- price -------------------*/
+.price-box{
+    padding: 60px 0 0;
+    text-align: center;
+}
+.price-box > p{
+    color: #032332;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+.price-box > p > span{
+    font-size: 22px;
+    color: #323232;
+}
+.price-box > p > span:first-child{
+    padding-left: 25px;
+}
+.price-box > p > i{
+    font-weight: bold;
+    color: #323232;
+    font-size: 40px;
+    padding: 0 10px;
+}
+.price-box > ul{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.price-box > ul > li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.price-box > ul > li:first-child{
+    margin-left: 0;
+}
+.price-box > ul > li > a{
+    display: block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.price-box > ul > li:first-child > a{
+    background: #f91f28;
+    background: -webkit-gradient(linear, left center, right center, color-stop(0%,#f91f28), color-stop(100%,#ff4d2e));
+    background: -webkit-linear-gradient(left, #f91f28 0%,#ff4d2e 100%);
+    background: linear-gradient(to right, #f91f28 , #ff4d2e);
+    box-shadow: 0 0 10px rgba(254, 70, 45, 0.45);
+}
+.price-box > ul > li:first-child + li > a{
+    background: #f91f28;
+    background: -webkit-gradient(linear, left center, right center, color-stop(0%,#3785fa), color-stop(100%,#40a7fc));
+    background: -webkit-linear-gradient(left, #3785fa 0%,#40a7fc 100%);
+    background: linear-gradient(to right, #3785fa , #40a7fc);
+    box-shadow: 0 0 10px rgba(36, 126, 236, 0.45);
+}

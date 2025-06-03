@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品价格</title>
+    <style>
+
+        /*--------------------- 表格部分 -------------------*/
+        .bodycontent {
+            margin: auto;
+            width: 96%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bodycontent * {
+            padding: 1px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+
+        .drp-box > p.h1 {
+            text-align: center;
+            line-height: 1;
+            padding: 40px 0;
+            font-size: 26px;
+            color: #3664c2;
+        }
+
+        .drp-table {
+            position: relative;
+            text-align: center;
+            margin: 0 auto 40px;
+            border-collapse: collapse;
+            border: 1px solid #d6e5ff;
+        }
+
+
+        .tr-bg td {
+            background-color: #eff4fd !important;
+        }
+
+        .drp-table tr th {
+            border-left: 1px solid #d6e5ff;
+            border-right: 1px solid #d6e5ff;
+            border-bottom: 1px solid #d6e5ff;
+            height: 50px;
+            background: #eff4fd;
+            padding: 0 22px;
+            font-size: 14px;
+            color: #505966;
+        }
+
+        .drp-table tr td {
+            border-left: 1px solid #d6e5ff;
+            border-right: 1px solid #d6e5ff;
+            height: 58px;
+            background: #fff;
+            color: #505966;
+            font-size: 14px;
+            padding: 0 5px;
+            white-space: nowrap;
+        }
+
+        .drp-table tr.higher td {
+            height: 50px;
+        }
+
+        .drp-table tr.erp-use-num td {
+            border-bottom: 1px solid #d6e5ff;
+        }
+
+        .font-w {
+            font-weight: bold;
+            font-size: 16px;
+            color: #6e7682;
+        }
+
+        /*--------------------- 底部 -------------------*/
+        img {
+            position: relative;
+        }
+        .reason {
+            width: 100%;
+            background: linear-gradient(180deg, #EAF3FC 0%, rgba(255, 255, 255, 0) 100%);
+            overflow: hidden;
+        }
+
+        div {
+            display: block;
+        }
+
+        .reason-box {
+            margin-bottom: 10px;
+        }
+
+        .content-text-first {
+            font-size: 36px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #333333;
+            line-height: 36px;
+            /* margin-top: 100px; */
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .content-text-second {
+            font-size: 16px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #777777;
+            line-height: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reason-he {
+            width: 1200px;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .reason-he-content:nth-child(3n+1) {
+            margin-left: 0px;
+        }
+
+        .reason-he-content {
+            margin-left: 2%;
+            margin-top: 33px;
+            padding-bottom: 30px;
+        }
+
+        .reason-he-content-title {
+            font-size: 22px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+
+        .reason-he-content-text {
+            /* height: 85px; */
+            font-size: 14px;
+            font-family: Microsoft YaHei;
+            font-weight: 500;
+            color: #fff;
+            line-height: 26px;
+            text-align: left;
+            padding: 2px 35px;
+            margin-top: 15px;
+        }
+
+        div {
+            display: block;
+        }
+
+        .reason-he-content {
+            box-shadow: none;
+            border-top: none;
+            text-align: left;
+            margin-top: 1px;
+        }
+
+        .reason-he-content {
+            width: 32%;
+            height: 334px;
+            background: #0b1d2d;
+            box-shadow: 1px 6px 10px 1px rgba(0, 134, 241, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .reason-he-content-title {
+            text-align: left;
+            font-size: 24px;
+            color: #fff;
+            line-height: 33px;
+            padding-top: 20px;
+        }
+
+        /*右侧弹窗样式*/
+        .right-popups {
+            position: fixed;
+            right: 120px;
+            top: 35%;
+            z-index: 100;
+            width: 219px;
+            min-height: 161px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.16);
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 6px;
+            text-align: center;
+            margin-top: 212px
+        }
+        .right-popups.hidden {
+            opacity: 0;
+            transform: translateX(120%);
+            pointer-events: none; /* 禁用交互 */
+        }
+        .right-popups .user-img {
+            position: absolute;
+            left: 50%;
+            top: -34px;
+            transform: translateX(-50%)
+        }
+
+        .right-popups .close-img {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        .right-popups > p {
+            padding-top: 45px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .right-popups .popups-phone {
+            width: 77%;
+            font-weight: bold;
+            color: #2680EB;
+            margin-top: 12px;
+            font-size: 18px;
+            margin-left: 27px
+        }
+
+        /*-------------------- 滚动-------------------*/
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            padding: 23px 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-item.active {
+            color: #1890ff;
+        }
+
+        .indicator {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background: #1890ff;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-wrapper .nav-list a {
+            color: inherit !important;
+            cursor: pointer;
+            background-color: transparent;
+            outline: none;
+        }
+
+        html {
+            scroll-padding-top: 100px;  /* 全局补偿偏移量‌:ml-citation{ref="4" data="citationList"} */
+        }
+
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+
+<div id="topHeader">
+    <div class="topHeader">
+        <link href="css/header.css" rel="stylesheet">
+        <div class="header min_w1200 newFlex">
+            <div class="w1200 flex1">
+                <div class="flex left showH5EwmBox">
+                    <div class="showH5DivEwm"><img
+                            src="images/saomatubiao.png">
+                        扫码添加微信
+                        <div class="showH5DivEwmImg" id="headerQrcodeBox"
+                             title="">
+                            <canvas width="128" height="128" style="display: none;"></canvas>
+                            <img src="images/wx.png"  style="position: relative;" >
+                        </div>
+                    </div>
+                    <div class="flex">&nbsp;&nbsp;&nbsp;<img
+                            src="images/tel.png"><span>购买咨询</span>
+                    </div>
+                    <p class="holiday-phone" id="headerphone" style="margin-top:-3px;">166-1977-6280</p>
+                    <p class="erp-phone">166-1977-6280</p>
+
+                </div>
+                <div class="flex">
+                   <!-- <a class="headerA go-next right-text" href="javascript:;" data-target="_blank"
+                                     data-url="" id="md_myorder">我的订单</a>-->
+                    <div class="right flex cur_p erp-dianjing"><a class="go-next"
+                                                                  data-url=""
+                                                                  data-target="_blank" id="md_buy"> <img
+                            src="images/btn1.png">
+                        <p style="width:58px;">扫码购买</p></a></div> 
+                              
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap-box">
+            <div class="header-wrap">
+                <div class="header-box flex1"><a href="https://yhocn.cn/"><img height="70px" src="images/shangbiao.png"></a>
+                    <nav class="nav-wrapper">
+                        <ul class="nav-list">
+                            <li class="nav-item active" data-target="jxcxt">
+                                <a href="#jxcxt">进销存</a>
+                            </li>
+                            <li class="nav-item" data-target="cwxt">
+                                <a href="#cwxt">财务</a>
+                            </li>
+                            <li class="nav-item" data-target="rsxt">
+                                <a href="#rsxt">人事</a>
+                            </li>
+                            <li class="nav-item" data-target="yblfqbjqxt">
+                                <a href="#yblfqbjqxt">分权编辑</a>
+                            </li>
+                            <li class="nav-item" data-target="zhmdglxt">
+                                <a href="#zhmdglxt">智慧门店</a>
+                            </li>
+                            <li class="nav-item" data-target="pcxt">
+                                <a href="#pcxt">排产</a>
+                            </li>
+                            <li class="nav-item" data-target="jwxt">
+                                <a href="#jwxt">教务</a>
+                            </li>
+                            <li class="nav-item" data-target="cjxt">
+                                <a href="#cjxt">采集</a>
+                            </li>
+                        </ul>
+                        <div class="indicator"></div>
+                    </nav>
+                    <script>
+                        // 初始化核心逻辑
+                        const navItems = document.querySelectorAll('.nav-item');
+                        const indicator = document.querySelector('.indicator');
+                        let isScrolling = false;
+
+                        // 更新指示器函数
+                        function updateIndicator(target) {
+                            const activeNav = [...navItems].find(item => item.dataset.target === target);
+                            if (!activeNav) return;
+
+                            const { offsetLeft, offsetWidth } = activeNav;
+                            indicator.style.width = `${offsetWidth}px`;
+                            indicator.style.transform = `translateX(${offsetLeft}px)`;
+
+                            navItems.forEach(item => item.classList.remove('active'));
+                            activeNav.classList.add('active');
+                        }
+
+                        // 滚动检测逻辑
+                        function checkScrollPosition() {
+                            if (isScrolling) return;
+                            isScrolling = true;
+
+                            // 获取所有目标区块
+                            const sections = Array.from(navItems).map(item => ({
+                                id: item.dataset.target,
+                                element: document.getElementById(item.dataset.target),
+                                nav: item
+                            }));
+
+                            // 计算当前可见区块
+                            let activeSection = null;
+                            sections.forEach(({ id, element }) => {
+                                const rect = element.getBoundingClientRect();
+                                if (rect.top <= window.innerHeight * 0.3 && rect.bottom >= window.innerHeight * 0.3) {
+                                    activeSection = id;
+                                }
+                            });
+
+                            if (activeSection) {
+                                updateIndicator(activeSection);
+                            }
+                            isScrolling = false;
+                        }
+
+                        // 事件监听
+                        window.addEventListener('scroll', () => {
+                            requestAnimationFrame(checkScrollPosition);
+                        });
+
+                        window.addEventListener('resize', () => {
+                            const active = document.querySelector('.nav-item.active');
+                            if (active) updateIndicator(active.dataset.target);
+                        });
+
+                        // 点击导航平滑滚动
+                        navItems.forEach(item => {
+                            item.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const targetId = this.dataset.target;
+                                const targetElement = document.getElementById(targetId);
+
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            });
+                        });
+                        window.addEventListener('scroll', () => {
+                            requestAnimationFrame(checkScrollPosition);
+                        }, { passive: true });
+                        // 初始化指示器
+                        updateIndicator('section1');
+                    </script>
+
+                    <ul class="header-right-box">
+                        <li class="hidden login-li"><a class="btn login go-next" href="javascript:;"
+                                                       data-target="_blank" id="md_login"
+                                                       data-url=""
+                                                       data-url=""
+                                                       style="display: none;">登录</a>
+                        </li>
+                        <li class="btn-code-box erp-dianjing"><a class="btn login-code btn-code">扫码试用</a>
+                            <div class="qrcode" style="display: none;"><img
+                                    src="">
+                            </div>
+                        </li>
+                     <!--   <li><a class="btn register go-next cancelLoginBtn" id="registerBtn" href="javascript:;"
+                               data-target="_blank" data-url="">免费注册</a>
+                        </li>-->
+                        <li><a class="btn register hidden" id="dianjingTryoutBtn" style="width:100px;display:none"
+                               href="javascript:;" onclick="qidian();">免费试用咨询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hideHeaders"></div>
+</div>
+<input id="urlWeChat" type="hidden" value="">
+
+
+<!--   header内容结束-->
+
+
+
+
+</div>
+
+<div class="bodycontent">
+    <!--   进销存内容开始  -->
+    <div class="bash-box drp-box" id="jxcxt" style="width:1280px;">
+        <p class="h1">云合未来·进销存系统</p>
+        <table data-module="jinxiaocun" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务端</th>
+                <th class="font-w">版本</th>
+                <th class="font-w cancelLoginDiv" style="width: 203px;">1用户</th>
+                <th class="font-w cancelLoginNoDiv">每增加1个用户数</th>
+                <th class="font-w cancelLoginNoDiv">不限用户</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">小程序·进销存</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="xcxmd"></td>
+                <td data-price-type="xcxzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">Web·进销存</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="webmd"></td>
+                <td data-price-type="webzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">Excel·进销存</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="excelmd"></td>
+                <td data-price-type="excelzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">App·进销存</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="appmd"></td>
+                <td data-price-type="appzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--   财务内容开始  -->
+    <div class="bash-box drp-box" id="cwxt" style="width:1280px;">
+        <p class="h1">云合未来·财务管理系统</p>
+        <table data-module="caiwu" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务段</th>
+                <th class="font-w">版本</th>
+                <th class="font-w">1用户2账套</th>
+                <th class="font-w">每增加1个用户</th>
+                <th class="font-w">无限用户2账套</th>
+                <th class="font-w">每增加10账套</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>小程序</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf"></td>
+                <td data-price-type="xcxwxyhnf"></td>
+                <td data-price-type="xcxzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>Web</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf"></td>
+                <td data-price-type="webwxyhnf"></td>
+                <td data-price-type="webzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>Excel</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf"></td>
+                <td data-price-type="excelwxyhnf"></td>
+                <td data-price-type="excelzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>App</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf"></td>
+                <td data-price-type="appwxyhnf"></td>
+                <td data-price-type="appzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!--  财务内容结束  -->
+
+    <!--   人事内容开始  -->
+    <div class="bash-box drp-box" id="rsxt"  style="width:1280px;">
+        <p class="h1">云合未来·人事管理系统</p>
+        <table data-module="renshi" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务段</th>
+                <th class="font-w">版本</th>
+                <th class="font-w">1用户2账套</th>
+                <th class="font-w">每增加1个用户</th>
+                <th class="font-w">无限用户2账套</th>
+                <th class="font-w">每增加10账套</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>小程序</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf"></td>
+                <td data-price-type="xcxwxyhnf"></td>
+                <td data-price-type="xcxzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>Web</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf"></td>
+                <td data-price-type="webwxyhnf"></td>
+                <td data-price-type="webzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>Excel</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf"></td>
+                <td data-price-type="excelwxyhnf"></td>
+                <td data-price-type="excelzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>App</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf"></td>
+                <td data-price-type="appwxyhnf"></td>
+                <td data-price-type="appzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!--  人事内容结束  -->
+
+    <!-- 协同分权编辑开始-->
+    <div class="bash-box drp-box" id="yblfqbjqxt"  style="width:1280px;">
+        <p class="h1">云合未来·协同分权编辑系统</p>
+        <table data-module="yblfqbjq" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务端</th>
+                <th class="font-w">版本</th>
+                <th class="font-w cancelLoginDiv" style="width: 203px;">1用户</th>
+                <th class="font-w cancelLoginNoDiv">每增加1个用户数</th>
+                <th class="font-w cancelLoginNoDiv">不限用户</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">小程序·协同分权编辑</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="xcxmd"></td>
+                <td data-price-type="xcxzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">Web·协同分权编辑</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="webmd"></td>
+                <td data-price-type="webzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">Excel·协同分权编辑</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="excelmd"></td>
+                <td data-price-type="excelzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">App·协同分权编辑</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="appmd"></td>
+                <td data-price-type="appzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 协同分权编辑结束-->
+
+    <!--   智慧门店管理系统内容开始  -->
+    <div class="bash-box drp-box" id="zhmdglxt" style="width:1280px;">
+        <p class="h1">云合未来·智慧门店管理系统</p>
+        <table data-module="zhmdglxt" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务端</th>
+                <th class="font-w">版本</th>
+                <th class="font-w cancelLoginDiv" style="width: 203px;">1用户</th>
+                <th class="font-w cancelLoginNoDiv">每增加1个用户数</th>
+                <th class="font-w cancelLoginNoDiv">不限用户</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">小程序·智慧门店管理系统</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="xcxmd"></td>
+                <td data-price-type="xcxzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">Web·智慧门店管理系统</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="webmd"></td>
+                <td data-price-type="webzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">Excel·智慧门店管理系统</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="excelmd"></td>
+                <td data-price-type="excelzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">App·智慧门店管理系统</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="appmd"></td>
+                <td data-price-type="appzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--   智能门店管理系统内容结束  -->
+
+    <!--     排产内容开始-->
+    <div class="bash-box drp-box"id="pcxt" style="width:1280px;">
+        <p class="h1">云合未来·排产管理系统</p>
+        <table data-module="paichan" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务段</th>
+                <th class="font-w">版本</th>
+                <th class="font-w">1用户2账套</th>
+                <th class="font-w">每增加1个用户</th>
+                <th class="font-w">无限用户2账套</th>
+                <th class="font-w">每增加10账套</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>小程序</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf"></td>
+                <td data-price-type="xcxwxyhnf"></td>
+                <td data-price-type="xcxzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>Web</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf"></td>
+                <td data-price-type="webwxyhnf"></td>
+                <td data-price-type="webzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>Excel</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf"></td>
+                <td data-price-type="excelwxyhnf"></td>
+                <td data-price-type="excelzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>App</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf"></td>
+                <td data-price-type="appwxyhnf"></td>
+                <td data-price-type="appzjsrnf"></td>
+                <td>每年续费</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!--    排产内容结束-->
+
+    <!--   教务系统内容开始  -->
+    <div class="bash-box drp-box"id="jwxt" style="width:1280px;">
+        <p class="h1">云合未来·教务系统</p>
+        <table data-module="jwxt" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务端</th>
+                <th class="font-w">版本</th>
+                <th class="font-w cancelLoginDiv" style="width: 203px;">1用户</th>
+                <th class="font-w cancelLoginNoDiv">每增加1个用户数</th>
+                <th class="font-w cancelLoginNoDiv">不限用户</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">小程序·教务系统</td>
+                <td>年费</td>
+                <td data-price-type="xcxnf"></td>
+                <td data-price-type="xcxzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="xcxmd"></td>
+                <td data-price-type="xcxzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="xcxwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">Web·教务系统</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="webmd"></td>
+                <td data-price-type="webzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">Excel·教务系统</td>
+                <td>年费</td>
+                <td data-price-type="excelnf"></td>
+                <td data-price-type="excelzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="excelmd"></td>
+                <td data-price-type="excelzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="excelwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td rowspan="3">App·教务系统</td>
+                <td>年费</td>
+                <td data-price-type="appnf"></td>
+                <td data-price-type="appzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num tr-bg">
+                <td>软件买断</td>
+                <td data-price-type="appmd"></td>
+                <td data-price-type="appzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="appwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher  erp-use-num tr-bg">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--   教务系统内容结束  -->
+    <!--   采集系统开始  -->
+    <div class="bash-box drp-box"id="cjxt" style="width:1280px;">
+        <p class="h1">云合未来·问卷采集系统</p>
+        <table data-module="cjxt" class="drp-table" style="width:1280px;">
+            <tbody>
+            <tr>
+                <th class="font-w">服务端</th>
+                <th class="font-w">版本</th>
+                <th class="font-w cancelLoginDiv" style="width: 203px;">1用户</th>
+                <th class="font-w cancelLoginNoDiv">每增加1个用户数</th>
+                <th class="font-w cancelLoginNoDiv">不限用户</th>
+                <th class="font-w">说明</th>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td rowspan="3">Web·问卷采集系统</td>
+                <td>年费</td>
+                <td data-price-type="webnf"></td>
+                <td data-price-type="webzjyhnf" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhnf" class="cancelLoginNoDiv"></td>
+                <td>每年续费</td>
+            </tr>
+            <tr class="higher erp-use-num">
+                <td>软件买断</td>
+                <td data-price-type="webmd"></td>
+                <td data-price-type="webzjyhmd" class="cancelLoginNoDiv"></td>
+                <td data-price-type="webwxyhmd" class="cancelLoginNoDiv"></td>
+                <td>软件买断为一次性付费<br>首次购买赠送5年服务器费，第6年起开始支付服务器费</td>
+            </tr>
+            <tr class="higher">
+                <td>服务器费</td>
+                <td colspan="5">服务器费=软件买断标准价*8%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--   采集系统结束  -->
+</div>
+
+
+<!--   底部内容 -->
+<div class="reason">
+    <div class="reason-box">
+        <div class="content-text-first">为什么选择云合未来</div>
+        <div class="content-text-second">云合未来，实现云端互联网技术与多平台在线交互模式创新</div>
+    </div>
+    <div class="reason-he">
+
+        <div class="reason-he-content">
+            <h1 class="reason-he-content-title" style="color: #fff;">技术</h1>
+            <div class="reason-he-content-text" style="color: #fff;">
+                云合未来把握前沿技术，在各类软件定制、IT技术服务外包（人力外派）、大数据处理、办公自动化工具，桌面仿人工RPA，移动互联、电子商务、云计算、大数据、物联网等领域自主研发了多项技术解决方案，基于IT业务的生命周期，建立了ONE
+                STOP一站式服务；涵盖云技术、大数据、移动终端，由后台到前台，可实现由云到端的方案整体技术架构体系、应用方案体系的构建。不断创新，数字化将人们联系起来
+            </div>
+            <!--            <img class="reason-he-content-tu" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/k1.png" alt="">-->
+        </div>
+        <div class="reason-he-content">
+            <h1 class="reason-he-content-title">介绍</h1>
+            <div class="reason-he-content-text">
+                云合未来总部设在北京，在大连设有分支机构，服务网络遍及全国。公司内部实行网络化管理，依托先进的计算机辅助设计系统和计算机管理系统，实现规范化运作，在最短的时间内为用户提供高品质的软件服务产品。
+                公司本着技术领先、质量第一、客户至上的原则为广大用户提供满意的服务。
+            </div>
+            <!--            <img class="reason-he-content-tu" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/k2.png" alt="">-->
+        </div>
+        <div class="reason-he-content">
+            <h1 class="reason-he-content-title">服务</h1>
+            <div class="reason-he-content-text">
+                目前云合未来为国内、外超过1万家的企业提供了网站建设、软件定制、人员外派驻场、自动化RPA、软件系统IT托管服务，同时为近千家的企业设计开发了基于互联网的各类商务应用和管理软件，是国内具影响力的互联网应用服务商之一。公司将坚持客户导向、应用为本的策略，继续专注于在信息技术领域开拓发展成为企业、政府、办公信息化的推动者和服务者。
+            </div>
+            <!--            <img class="reason-he-content-tu" src="/r/cms/www/default/v0.1/images/aggregation-new-pc/k3.png" alt="">-->
+        </div>
+    </div>
+</div>
+<!--   底部内容结束  -->
+
+<script>
+    const priceModules = {
+        // 模块1：进销存
+        jinxiaocun: {
+            xcxnf: "498元/年",
+            xcxzjyhnf: "300元",
+            xcxwxyhnf: "5999元",
+            xcxmd: "2999元",
+            xcxzjyhmd: "2000元",
+            xcxwxyhmd: "",
+            webnf: "499元/年",
+            webzjyhnf: "300元",
+            webwxyhnf: "5999元",
+            webmd: "3500元",
+            webzjyhmd: "1000元",
+            webwxyhmd: "",
+            excelnf: "498元/年",
+            excelzjyhnf: "300元",
+            excelwxyhnf: "3500元",
+            excelmd: "3500元",
+            excelzjyhmd: "300元",
+            excelwxyhmd: "",
+            appnf: "598元/年",
+            appzjyhnf: "398元",
+            appwxyhnf: "5999元",
+            appmd: "4999元",
+            appzjyhmd: "2000元",
+            appwxyhmd: ""
+        },
+        // 模块2:财务
+        caiwu: {
+            xcxnf: "398元/年",
+            xcxzjyhnf: "200元/年",
+            xcxwxyhnf: "4999元/年",
+            xcxzjsrnf: "180元/年",
+            webnf: "399元/年",
+            webzjyhnf: "200元/年",
+            webwxyhnf: "4999元/年",
+            webzjsrnf: "180元/年",
+            excelnf: "398元/年",
+            excelzjyhnf: "200元/年",
+            excelwxyhnf: "3999元/年",
+            excelzjsrnf: "180元/年",
+            appnf: "399元/年",
+            appzjyhnf: "200元/年",
+            appwxyhnf: "4999元/年",
+            appzjsrnf: "180元/年"
+        },
+        // 模块3：人事
+        renshi: {
+            xcxnf: "388元/年",
+            xcxzjyhnf: "200元/年",
+            xcxwxyhnf: "3998元/年",
+            xcxzjsrnf: "180元/年",
+            webnf: "399元/年",
+            webzjyhnf: "200元/年",
+            webwxyhnf: "3999元/年",
+            webzjsrnf: "180元/年",
+            excelnf: "398元/年",
+            excelzjyhnf: "200元/年",
+            excelwxyhnf: "3998元/年",
+            excelzjsrnf: "180元/年",
+            appnf: "399元/年",
+            appzjyhnf: "200元/年",
+            appwxyhnf: "3999元/年",
+            appzjsrnf: "180元/年"
+        },
+        // 模块4：100列分权编编辑
+        yblfqbjq: {
+            xcxnf: "498元/年",
+            xcxzjyhnf: "200元",
+            xcxwxyhnf: "3998元",
+            xcxmd: "5998元",
+            xcxzjyhmd: "2000元",
+            xcxwxyhmd: "",
+            webnf: "499元/年",
+            webzjyhnf: "200元",
+            webwxyhnf: "2999元",
+            webmd: "5999元",
+            webzjyhmd: "2000元",
+            webwxyhmd: "",
+            excelnf: "598元/年",
+            excelzjyhnf: "200元",
+            excelwxyhnf: "2980元",
+            excelmd: "4980元",
+            excelzjyhmd: "1000元",
+            excelwxyhmd: "",
+            appnf: "499元/年",
+            appzjyhnf: "200元",
+            appwxyhnf: "2000元",
+            appmd: "5999元",
+            appzjyhmd: "1000元",
+            appwxyhmd: ""
+        },
+        //模块5 智慧门店管理系统
+        zhmdglxt: {
+            xcxnf: "499元/年",
+            xcxzjyhnf: "300元",
+            xcxwxyhnf: "5999元",
+            xcxmd: "5999元",
+            xcxzjyhmd: "2000元",
+            xcxwxyhmd: "",
+            webnf: "498元/年",
+            webzjyhnf: "300元",
+            webwxyhnf: "5998元",
+            webmd: "5998元",
+            webzjyhmd: "2000元",
+            webwxyhmd: "",
+            excelnf: "499元/年",
+            excelzjyhnf: "300元",
+            excelwxyhnf: "5999元",
+            excelmd: "3999元",
+            excelzjyhmd: "2000元",
+            excelwxyhmd: "",
+            appnf: "498元/年",
+            appzjyhnf: "300元",
+            appwxyhnf: "5998元",
+            appmd: "5998元",
+            appzjyhmd: "2000元",
+            appwxyhmd: ""
+        },
+        //模块6 排产
+        paichan: {
+            xcxnf: "2999/年",
+            xcxzjyhnf: "999元/年",
+            xcxwxyhnf: "7880/年",
+            xcxzjsrnf: "999元/年",
+            webnf: "2998元/年",
+            webzjyhnf: "899元/年",
+            webwxyhnf: "8880元/年",
+            webzjsrnf: "998元/年",
+            excelnf: "2688元/年",
+            excelzjyhnf: "999元/年",
+            excelwxyhnf: "6880元/年",
+            excelzjsrnf: "999元/年",
+            appnf: "4999元/年",
+            appzjyhnf: "999元/年",
+            appwxyhnf: "9880元/年",
+            appzjsrnf: "1999元/年"
+        },
+        //模块7 教务系统
+        jwxt: {
+            xcxnf: "999元/年",
+            xcxzjyhnf: "699元",
+            xcxwxyhnf: "5999元",
+            xcxmd: "9998元",
+            xcxzjyhmd: "3000元",
+            xcxwxyhmd: "",
+            webnf: "998元/年",
+            webzjyhnf: "698元",
+            webwxyhnf: "5998元",
+            webmd: "9998元",
+            webzjyhmd: "5998元",
+            webwxyhmd: "",
+            excelnf: "599元/年",
+            excelzjyhnf: "300元",
+            excelwxyhnf: "3999元",
+            excelmd: "4999元",
+            excelzjyhmd: "3999元",
+            excelwxyhmd: "",
+            appnf: "999元/年",
+            appzjyhnf: "798元",
+            appwxyhnf: "5999元",
+            appmd: "29999元",
+            appzjyhmd: "6999元",
+            appwxyhmd: ""
+        },
+        //模块8 采集系统
+        cjxt: {
+            webnf: "399元/年",
+            webzjyhnf: "199元",
+            webwxyhnf: "4999元",
+            webmd: "4999元",
+            webzjyhmd: "3999元",
+            webwxyhmd: ""
+        }
+    };
+
+    function updateModulePrices(moduleName, data) {
+        const moduleEl = document.querySelector(`[data-module="${moduleName}"]`);
+        if (!moduleEl) {
+            console.error(`模块 ${moduleName} 不存在`);
+            return;
+        }
+
+        moduleEl.querySelectorAll('[data-price-type]').forEach(td => {
+            const priceType = td.dataset.priceType;
+            const price = data[priceType];
+            const isEmpty = price === "" || price === undefined;
+
+            td.textContent = isEmpty ? "价格待定（面议）" : price;
+            td.style.display = "table-cell";
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateModulePrices('jinxiaocun', priceModules.jinxiaocun);
+        updateModulePrices('caiwu', priceModules.caiwu);
+        updateModulePrices('renshi', priceModules.renshi);
+        updateModulePrices('yblfqbjq', priceModules.yblfqbjq);
+        updateModulePrices('zhmdglxt', priceModules.zhmdglxt);
+        updateModulePrices('paichan', priceModules.paichan);
+        updateModulePrices('jwxt', priceModules.jwxt);
+        updateModulePrices('cjxt', priceModules.cjxt);
+
+    });
+
+
+</script>
+
+
+
+
+<!--   右侧弹窗内容开始  -->
+
+<div class="right-popups">
+    <img class="user-img" src="images/rightPopups_img.png">
+    <img class="close-img"
+         onclick="handleClosePopup()"
+         src="images/right_porups_close.png">
+    <p>您好，我是您的专属售前顾问，有什么可以帮您？</p>
+    <div class="popups-phone" id="popupsPhone"><b>166-1977-6280</b></div>
+    <div class="erp-phone" style="color:#2680EB;margin-top:12px">166-1977-6280</div>
+</div>
+<script>
+    function handleClosePopup() {
+        const popup = document.querySelector('.right-popups');
+        popup.style.display = 'none';
+    }
+</script>
+
+<!--   右侧弹窗内容结束  -->
+<!--左侧企业微信-->
+<!--<link href="css/online.css" rel="stylesheet">-->
+
+<!--<div id="index_float_01" style="list-style: none;display:;">-->
+
+<!--    <li class="counseling-center-head-portrait-border-box">-->
+<!--    </li>-->
+<!--    <li class="counseling-center-li-box"-->
+<!--        onclick="commonSuspendedMd(&#39;公共-悬浮-微信公众号&#39;,&#39;814864680278302843&#39;)">-->
+<!--        <div class="counseling-center-head-portrait-box rightPopupBoxDiv" onclick="gowexin()">-->
+<!--            <img src="images/tell.png" alt="">-->
+<!--        </div>-->
+<!--        <div class="counseling-center-head-portrait-box rightPopupCance hidden" onclick="gonewwexin()">-->
+<!--            <img src="images/tell.png" alt="">-->
+<!--        </div>-->
+<!--        <div></div>-->
+<!--        <div id="tel_consult">-->
+<!--            <img class="qwTrue qwSgtrue"-->
+<!--                 src="images/wxgzh.png">-->
+<!--            <div class="arrow"></div>-->
+<!--        </div>-->
+<!--    </li>-->
+<!--    <li class="counseling-center-head-portrait-label-box">微信公众号</li>-->
+<!--    <div class="part_02">-->
+
+<!--        <a href="javascript:;" class="telbox" onclick="qidian();">-->
+<!--            <div class="qqbox" onclick="commonSuspendedMd(&#39;公共-悬浮-在线咨询&#39;,&#39;814864843487085885&#39;)">-->
+<!--                <img src="images/shouqian.png"><br>售前咨询-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <div class="rightLine"></div>-->
+
+<!--        <a href="javascript:;" class="erp-dianjing" onclick="clickShowHouBtn();">-->
+<!--            <div class="qqbox" onclick="commonSuspendedMd(&#39;公共-悬浮-售后咨询&#39;,&#39;786101387376231741&#39;)">-->
+<!--                <img src="images/shouhou.png"><br>售后咨询-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <div class="rightLine erp-dianjing"></div>-->
+
+<!--        <a onclick="commonSuspendedMd(&#39;公共-悬浮-免费试用&#39;,&#39;814865049645516093&#39;)" href="javascript:;"-->
+<!--           data-url="">-->
+<!--            <div class="shiyongbox" onclick="showPopupBox()">-->
+<!--                <img src="images/shi.png"><br>免费试用-->
+<!--            </div>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div id="index_float_02" style="display: none;">-->
+<!--    <li class="counseling-center-head-portrait-border-box"></li>-->
+<!--    <li class="counseling-center-li-box">-->
+<!--        <div class="counseling-center-head-portrait-box">-->
+<!--            <img src="imagestell.png" alt="云合未来">-->
+<!--        </div>-->
+<!--        <div></div>-->
+<!--    </li>-->
+<!--    <li onclick="qidian()" class="counseling-center-head-portrait-label-box">立即咨询</li>-->
+<!--    <div class="part_02" style="margin-top: 140px;">-->
+<!--        <ul>-->
+
+<!--            <li><a href="javascript:;" class="telbox">-->
+<!--                <img src="images/wx.jpg"><span>微信咨询</span></a>-->
+<!--                <div id="tel_consultBox">-->
+<!--                    <div class="tel_input_box">-->
+
+<!--                        <div class="arrow"></div>-->
+<!--                        <img src="images/wx.png">-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <div class="rightLine"></div>-->
+
+<!--            <li onclick="clickShowHouBtn()"><a href="javascript:;"-->
+<!--                                               onclick="commonSuspendedMd(&#39;公共-悬浮-售后咨询&#39;,&#39;786101387376231741&#39;)">-->
+<!--                <img src=".images/shouhou.png"><span>售后咨询</span></a>-->
+<!--            </li>-->
+
+<!--            <div class="rightLine"></div>-->
+
+<!--            <li onclick="commonSuspendedMd(&#39;公共-悬浮-免费试用&#39;,&#39;814865049645516093&#39;)"><a-->
+<!--                    href="javascript:;" onclick="showPopupBox()"-->
+<!--                    data-url="">-->
+<!--                <img src="images/register.png"><span>免费试用</span></a>-->
+<!--            </li>-->
+
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--在线聊天-->
+<!--<iframe width="1263" height="642" id="_QIDIAN_WEB_IM_IFRAME_2852107810" scrolling="no" frameborder="0"-->
+<!--        allowtransparency="true" src="../../../../../文件夹%20学/xiaowenlong/web/价格页面/价格页面/产品价格_files/pc.html"-->
+<!--        allow="camera *; microphone *"-->
+<!--        style="position: fixed; z-index: 2000000010; width: 300px; height: 50px; bottom: 0px; right: 10px; box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 40px; border-radius: 6px 6px 0px 0px; display: none;"-->
+<!--        data-isopen="0"></iframe>-->
+
+</body>
+</html>
