@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="iis_jxc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/iis_jxc.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

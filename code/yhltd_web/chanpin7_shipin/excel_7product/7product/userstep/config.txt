@@ -1,0 +1,3 @@
+# 格式：Public Key,Service ID,Template ID
+DK5BXaY1FX2kqsoyG,service_jr8tecu,template_dia1yzv
+nxEvcymkOgCpUWZ-i,service_mi34rgd,template_xuw2oig

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>云合未来</title>
+    <!-- 引入字体 & 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f0f7fe 0%, #e8f0fa 100%);
+            color: #1f3a5f;
+            line-height: 1.5;
+        }
+
+        /* ========= 全新清新 · 高端商务蓝 ========= */
+        /* 头部 — 通透玻璃态 */
+        .header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 112, 243, 0.15);
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 10px 30px -15px rgba(0,65,131,0.15);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            background: linear-gradient(145deg, #0b3f6b, #1f6fb0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            background: none;
+            -webkit-text-fill-color: #2f5e8c;
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-left: 8px;
+        }
+
+        .contact-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #e2efff;
+            padding: 8px 22px;
+            border-radius: 60px;
+            color: #0b3f6b;
+            font-weight: 600;
+            font-size: 1.3rem;
+            border: 1px solid rgba(0,100,230,0.3);
+            box-shadow: 0 4px 10px rgba(0,79,158,0.08);
+        }
+
+        .contact-phone i {
+            color: #1f6fb0;
+            font-size: 1.4rem;
+        }
+
+        /* ----- BANNER 明亮大气 ----- */
+        .banner {
+            max-width: 1400px;
+            margin: 20px auto 20px;
+            padding: 0 30px;
+        }
+
+        .banner-card {
+            background: linear-gradient(135deg, #d7e9ff 0%, #ffffff 80%);
+            border-radius: 56px;
+            padding: 50px 70px;
+            box-shadow: 0 25px 45px -20px #1e4b77;
+            border: 1px solid rgba(0,102,204,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .banner-left h1 {
+            font-size: 3.8rem;
+            font-weight: 600;
+            background: linear-gradient(145deg, #104079, #3182ce);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .banner-left .sub {
+            font-size: 1.5rem;
+            color: #366fa3;
+            margin-top: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .banner-right {
+            background: #ffffffcc;
+            backdrop-filter: blur(8px);
+            padding: 25px 40px;
+            border-radius: 80px;
+            font-size: 1.4rem;
+            color: #145388;
+            border: 1px solid #b1d4ff;
+            box-shadow: 0 15px 20px -15px #0f4880;
+        }
+
+        .banner-right i {
+            color: #3182ce;
+            margin-right: 12px;
+        }
+
+        /* 快捷导航 (圆润岛屿) */
+        .nav-island {
+            max-width: 1400px;
+            margin: 40px auto 30px;
+            padding: 0 30px;
+        }
+
+        .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 90px;
+            padding: 16px 24px;
+            border: 1px solid rgba(0,112,243,0.2);
+        }
+
+        .nav-grid a {
+            padding: 12px 32px;
+            border-radius: 60px;
+            background: white;
+            color: #1f5090;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 14px -8px #2369b0;
+            transition: 0.2s;
+            border: 1px solid #c1dcff;
+        }
+
+        .nav-grid a:hover {
+            background: #1a4f81;
+            color: white;
+            border-color: #1a4f81;
+            transform: translateY(-3px);
+            box-shadow: 0 18px 20px -12px #0a3b66;
+        }
+
+        /* 标语 */
+        .slogan {
+            max-width: 1400px;
+            margin: 40px auto 20px;
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        .slogan h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            background: linear-gradient(145deg, #17477c, #316fb3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slogan p {
+            font-size: 1.3rem;
+            color: #4173a6;
+            margin-top: 12px;
+        }
+
+        /* ===== 系统区块 ===== 每个系统独占一大块，内部四端整齐 */
+        .system-block {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 30px;
+            scroll-margin-top: 90px;
+        }
+
+        .system-panel {
+            background: #ffffffda;
+            backdrop-filter: blur(10px);
+            border-radius: 80px;
+            padding: 50px 50px 60px;
+            box-shadow: 0 30px 50px -25px #254f7a;
+            border: 1px solid rgba(0,132,255,0.3);
+        }
+
+        .system-title {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 35px;
+            border-bottom: 2px dashed #9ac3f0;
+            padding-bottom: 25px;
+        }
+
+        .system-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2270b0, #57a0e0);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.6rem;
+            box-shadow: 0 10px 15px -5px #2b6faa;
+        }
+
+        .system-title h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #154472;
+        }
+
+        /* 四端布局：每个端独占一卡，一卡只有一个视频 */
+        .four-endpoints {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin: 30px 0 40px;
+        }
+
+        .endpoint-card {
+            background: white;
+            border-radius: 38px;
+            padding: 28px 22px 32px;
+            box-shadow: 0 20px 35px -18px #1d5483;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(0,119,255,0.2);
+            text-align: center;
+        }
+
+        .endpoint-card:hover {
+            transform: translateY(-10px);
+            border-color: #3399ff;
+            box-shadow: 0 30px 35px -18px #0a3f72;
+        }
+
+        .endpoint-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1d62a0;
+            margin-bottom: 25px;
+            background: #e2f0ff;
+            padding: 10px;
+            border-radius: 60px;
+        }
+
+        .endpoint-header i {
+            font-size: 2rem;
+            color: #1d6fb0;
+        }
+
+        /* 每个端下面只有一个视频卡片 */
+        .single-video {
+            background: #f0f8ff;
+            border-radius: 36px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.2s;
+            border: 1px solid #c4dfff;
+            box-shadow: 0 12px 18px -12px #366ea0;
+        }
+
+        .video-preview {
+            height: 160px;
+            background: linear-gradient(145deg, #1c5682, #3282c0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+        }
+
+        .video-label {
+            padding: 20px 16px 22px;
+            background: white;
+        }
+
+        .video-label h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #134579;
+            margin-bottom: 8px;
+        }
+
+        .video-label p {
+            color: #5b799b;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .video-label p i {
+            color: #1d6fb0;
+        }
+
+        /* 系统描述 */
+        .system-desc {
+            background: #e6f1fe;
+            border-radius: 50px;
+            padding: 28px 40px;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #1d4b79;
+            border-left: 8px solid #1f6fb0;
+            margin-top: 30px;
+        }
+
+        /* 底部 为什么选择 区块 */
+        .reason-section {
+            background: #ebf3fc;
+            border-radius: 120px 120px 0 0;
+            padding: 70px 30px;
+            margin-top: 80px;
+            border-top: 1px solid #add3ff;
+        }
+
+        .reason-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .reason-title {
+            font-size: 3rem;
+            text-align: center;
+            color: #134b81;
+            font-weight: 500;
+        }
+
+        .reason-sub {
+            text-align: center;
+            color: #4677af;
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+        }
+
+        .reason-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+        }
+
+        .reason-item {
+            background: white;
+            border-radius: 48px;
+            padding: 45px 30px;
+            box-shadow: 0 20px 30px -16px #2d608b;
+            transition: 0.2s;
+        }
+
+        .reason-item:hover {
+            transform: scale(1.02);
+            background: #f3faff;
+        }
+
+        .reason-item h3 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #10508b;
+            border-left: 10px solid #3b8cdf;
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .reason-item p {
+            color: #335e88;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .Y-link {
+            margin-left: 20px;
+        }
+
+        .Y-link a {
+            display: inline-block;
+            background: linear-gradient(145deg, #1f6fb0, #0b3f6b);
+            color: white;
+            text-decoration: none;
+            padding: 10px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 15px -8px #0f4880;
+            transition: 0.2s;
+        }
+
+        .Y-link a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -10px #0a3b66;
+        }
+
+        /* 弹窗 — 明亮蓝调 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 60, 110, 0.5);
+            backdrop-filter: blur(12px);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 850px;
+            width: 90%;
+            border-radius: 70px;
+            padding: 35px;
+            box-shadow: 0 50px 70px -20px #053059;
+            border: 2px solid #aacbff;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px 20px;
+        }
+
+        .modal-header h3 {
+            font-size: 2.2rem;
+            color: #0c3c6b;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .modal-header i {
+            color: #1f6fb0;
+        }
+
+        .modal-close {
+            background: #eaf2fc;
+            border: none;
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 40px;
+            color: #0a3d70;
+            cursor: pointer;
+        }
+
+        .modal-video {
+            background: #d7eaff;
+            border-radius: 50px;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            color: #175187;
+            border: 2px solid #87befa;
+        }
+
+        .modal-video i {
+            font-size: 5rem;
+            color: #2670b3;
+        }
+
+        .go-top {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #1b558b;
+            box-shadow: 0 8px 20px -8px #0a3360;
+            border: 1px solid #8abfff;
+        }
+
+        .go-top a {
+            color: inherit;
+        }
+
+        /* 小响应 */
+        @media (max-width: 1100px) {
+            .four-endpoints { grid-template-columns: repeat(2,1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 清爽玻璃态头部 -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area">
+            <img src="image/logo.png" alt="云合未来" style="height: 40px;">
+            <div class="logo">云合未来</div>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <div class="contact-phone">
+                <i class="fas fa-phone-alt"></i> 1661-9776-280
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- 明亮BANNER -->
+<section class="banner">
+    <div class="banner-card">
+        <div class="banner-left">
+            <h1>使用说明 · 四端教程</h1>
+            <div class="sub">就用云合未来办公系统</div>
+        </div>
+        <div class="banner-right">
+            <i class="fas fa-cubes"></i> 进销存 · 排产 · 财务 · 人事 · 门店 · 教务 · 分权
+        </div>
+    </div>
+</section>
+
+<!-- 快捷导航 (圆岛) -->
+<div class="nav-island">
+    <div class="nav-grid">
+        <a href="#cwxt">财务</a>
+        <a href="#fqxt">分权</a>
+        <a href="#jwxt">教务</a>
+        <a href="#jxcxt">进销存</a>
+        <a href="#pcxt">排产</a>
+        <a href="#rsxt">人事</a>
+        <a href="#kglxt">门店</a>
+<!--        <a href="#morext">更多</a>-->
+    </div>
+</div>
+
+<!-- 标语 -->
+<div class="slogan">
+    <h2>面向企业多应用的云合未来一体化办公系统</h2>
+    <p>四端数据互通 · 每一个终端，一个核心演示视频</p>
+</div>
+
+<!-- ========= 八大系统区块，每个区块四个端，每个端一个视频 ========= -->
+<!-- 财务系统 -->
+<section id="cwxt" class="system-block">
+    <div class="system-panel">
+        <div class="system-title">
+            <div class="system-icon"><i class="fas fa-coins"></i></div>
+            <h2>财务系统</h2>
+        </div>
+        <!-- 四端 -->
+        <div class="four-endpoints">
+            <!-- Excel 端 -->
+            <div class="endpoint-card">
+                <div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div>
+                <div class="single-video" data-system="财务系统" data-ep="Excel" data-mod="账务总览">
+                    <div class="video-preview"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-label">
+                        <h4>财务 · Excel端</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- 小程序端 -->
+            <div class="endpoint-card">
+                <div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div>
+                <div class="single-video" data-system="财务系统" data-ep="小程序" data-mod="移动审批">
+                    <div class="video-preview"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-label">
+                        <h4>财务 · 小程序端</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- PC端 -->
+            <div class="endpoint-card">
+                <div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div>
+                <div class="single-video" data-system="财务系统" data-ep="PC" data-mod="全功能驾驶舱">
+                    <div class="video-preview"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-label">
+                        <h4>财务 · PC端</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- APP端 -->
+            <div class="endpoint-card">
+                <div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div>
+                <div class="single-video" data-system="财务系统" data-ep="APP" data-mod="报表查阅">
+                    <div class="video-preview"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-label">
+                        <h4>财务 · APP端</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="system-desc">
+            云合未来财务系统融合最新的财务管理模式，数智技术与企业最佳实践，构建账目费用管理、财务会计、税务管理、管理会计、企业绩效、资金管理、账套等新一代财务云应用，助力企业财务数字化轻量化转型。智能看板账目信息清晰透彻，多账号管理可单独设置每个账号的独有权限。
+        </div>
+    </div>
+</section>
+
+<!-- 分权系统 -->
+<section id="fqxt" class="system-block">
+    <div class="system-panel">
+        <div class="system-title"><div class="system-icon"><i class="fas fa-shield-alt"></i></div><h2>分权系统</h2></div>
+        <div class="four-endpoints">
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="分权系统" data-ep="Excel" data-mod="权限矩阵"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>分权 · Excel端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="分权系统" data-ep="小程序" data-mod="分权审批"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>分权 · 小程序端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="分权系统" data-ep="PC" data-mod="角色管理"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>分权 · PC端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="分权系统" data-ep="APP" data-mod="动态权限"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>分权 · APP端</h4></div></div></div>
+        </div>
+        <div class="system-desc">分权编辑系统针对系统办公，数据共享，多人分权限编辑做出了很好的解决方案。可设计和实现自己想要的各类信息系统。同时根据业务变化需求，用户可在使用过程中对系统持续优化和扩展功能。</div>
+    </div>
+</section>
+
+<!-- 教务系统 -->
+<section id="jwxt" class="system-block">
+    <div class="system-panel"><div class="system-title"><div class="system-icon"><i class="fas fa-graduation-cap"></i></div><h2>教务系统</h2></div>
+        <div class="four-endpoints">
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="教务系统" data-ep="Excel" data-mod="学员管理"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>教务 · Excel端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="教务系统" data-ep="小程序" data-mod="课时通知"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>教务 · 小程序端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="教务系统" data-ep="PC" data-mod="排课中心"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>教务 · PC端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="教务系统" data-ep="APP" data-mod="成绩查询"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>教务 · APP端</h4></div></div></div>
+        </div><div class="system-desc">教务管理系统适用于各种规模的学校、培训机构等，提供实用敏捷化的教务相关管理功能。操作简单，减少用户上手时间，准确记录学员的基本信息，一键汇总学员缴费信息，一键统计教师课时与工资生成图表方便查看。</div>
+    </div>
+</section>
+
+<!-- 进销存系统 -->
+<section id="jxcxt" class="system-block">
+    <div class="system-panel"><div class="system-title"><div class="system-icon"><i class="fas fa-boxes"></i></div><h2>进销存系统</h2></div>
+        <div class="four-endpoints">
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="进销存" data-ep="Excel" data-mod="库存总表"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>进销存 · Excel端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="进销存" data-ep="小程序" data-mod="移动盘点"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>进销存 · 小程序端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="进销存" data-ep="PC" data-mod="进销存驾驶舱"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>进销存 · PC端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="进销存" data-ep="APP" data-mod="订单审核"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>进销存 · APP端</h4></div></div></div>
+        </div><div class="system-desc">进销存系统为从事工厂加工/企事业单位库管/批零兼营/贸易的商家、企业，提供全面简单实用的业务管理及库存管理状况分析功能。将进货、销售、存储、财务等各种有关销售方面的功能统合在一起，实行一体化的管理，大大提高管理效率。</div>
+    </div>
+</section>
+
+<!-- 排产系统 -->
+<section id="pcxt" class="system-block">
+    <div class="system-panel"><div class="system-title"><div class="system-icon"><i class="fas fa-industry"></i></div><h2>排产系统</h2></div>
+        <div class="four-endpoints">
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="排产系统" data-ep="Excel" data-mod="生产计划"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>排产 · Excel端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="排产系统" data-ep="小程序" data-mod="进度上报"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>排产 · 小程序端</h4><p></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="排产系统" data-ep="PC" data-mod="高级排程"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>排产 · PC端</h4><p></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="排产系统" data-ep="APP" data-mod="工单反馈"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>排产 · APP端</h4></div></div></div>
+        </div><div class="system-desc">排产、排班管理系统适用于各种生产加工企业、轮换制工作单位，提供高效精准、敏捷化的生产管理功能，无需安装随时对地即可使用。根据生产订单实时排程，自动生成作业计划，发生插单业务时自动重新生成生产计划，确保排程准确无误。</div>
+    </div>
+</section>
+
+<!-- 人事系统 -->
+<section id="rsxt" class="system-block">
+    <div class="system-panel"><div class="system-title"><div class="system-icon"><i class="fas fa-users"></i></div><h2>人事系统</h2></div>
+        <div class="four-endpoints">
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="人事系统" data-ep="Excel" data-mod="花名册"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>人事 · Excel端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="人事系统" data-ep="小程序" data-mod="考勤打卡"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>人事 · 小程序端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="人事系统" data-ep="PC" data-mod="薪酬管理"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>人事 · PC端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="人事系统" data-ep="APP" data-mod="审批流"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>人事 · APP端</h4></div></div></div>
+        </div><div class="system-desc">人事系统适用于各类行业各种规模，不同于传统的人事系统的复杂操作，本系统更加简洁、易操作、门槛低、更贴合日常使用习惯。保证了数据的安全性容灾率高，支持多人实时协同操作数据互通，一键同步最新数据。</div>
+    </div>
+</section>
+
+<!-- 门店系统 -->
+<section id="kglxt" class="system-block">
+    <div class="system-panel"><div class="system-title"><div class="system-icon"><i class="fas fa-store"></i></div><h2>智慧门店</h2></div>
+        <div class="four-endpoints">
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="门店系统" data-ep="Excel" data-mod="销售报表"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>门店 · Excel端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="门店系统" data-ep="小程序" data-mod="收银助手"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>门店 · 小程序端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="门店系统" data-ep="PC" data-mod="门店管理"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>门店 · PC端</h4></div></div></div>
+            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="门店系统" data-ep="APP" data-mod="数据看板"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>门店 · APP端</h4></div></div></div>
+        </div><div class="system-desc">云合智慧门店收银系统可提供清晰化的记账相关管理功能。客户信息、日交易记录、月交易记录、统计交易总额、员工信息，功能清晰。系统采用人性化设计，拥有网页端、微信小程序、Excel三端数据同步，异地出差可用手机查看数据，灵活办公。</div>
+    </div>
+</section>
+
+<!-- 更多系统 (扩展) -->
+<!--<section id="morext" class="system-block">-->
+<!--    <div class="system-panel"><div class="system-title"><div class="system-icon"><i class="fas fa-ellipsis-h"></i></div><h2>扩展系统</h2></div>-->
+<!--        <div class="four-endpoints">-->
+<!--            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-file-excel"></i> Excel</div><div class="single-video" data-system="扩展系统" data-ep="Excel" data-mod="数据接口"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>扩展 · Excel端</h4></div></div></div>-->
+<!--            <div class="endpoint-card"><div class="endpoint-header"><i class="fab fa-weixin"></i> 小程序</div><div class="single-video" data-system="扩展系统" data-ep="小程序" data-mod="轻应用"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>扩展 · 小程序端</h4></div></div></div>-->
+<!--            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-desktop"></i> PC</div><div class="single-video" data-system="扩展系统" data-ep="PC" data-mod="高级套件"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>扩展 · PC端</h4></div></div></div>-->
+<!--            <div class="endpoint-card"><div class="endpoint-header"><i class="fas fa-mobile-alt"></i> APP</div><div class="single-video" data-system="扩展系统" data-ep="APP" data-mod="移动扩展"><div class="video-preview"><i class="fas fa-play-circle"></i></div><div class="video-label"><h4>扩展 · APP端</h4></div></div></div>-->
+<!--        </div><div class="system-desc">持续扩展中，满足您未来的管理需求。更多行业专属系统即将上线，敬请期待。</div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- 底部 为什么选择 区块 -->
+<section class="reason-section">
+    <div class="reason-container">
+        <div class="reason-title">为什么选择云合未来</div>
+        <div class="reason-sub">云合未来，实现云端互联网技术与多平台在线交互模式创新</div>
+        <div class="reason-grid">
+            <div class="reason-item"><h3>技术</h3><p>云合未来把握前沿技术，在各类软件定制、IT技术服务外包、大数据处理、办公自动化工具，桌面仿人工RPA，移动互联、电子商务、云计算、大数据、物联网等领域自主研发了多项技术解决方案。</p></div>
+            <div class="reason-item"><h3>介绍</h3><p>云合未来总部设在北京，在大连设有分支机构，服务网络遍及全国。公司内部实行网络化管理，依托先进的计算机辅助设计系统和计算机管理系统，实现规范化运作。</p></div>
+            <div class="reason-item"><h3>服务</h3><p>目前云合未来为国内、外超过1万家的企业提供了网站建设、软件定制、人员外派驻场、自动化RPA、软件系统IT托管服务，是国内具影响力的互联网应用服务商之一。</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 弹窗 -->
+<div class="modal" id="videoModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fas fa-play-circle"></i> <span id="modalTitle">财务 · Excel端 · 账务总览</span></h3>
+            <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-video" id="modalVideo">
+            <video id="realVideoPlayer" controls style="width:100%; height:100%; border-radius: 50px;" autoplay>
+                <source src="" type="video/mp4" id="videoSource">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </div>
+</div>
+
+<!-- 回到顶部 -->
+<div class="go-top"><a href="#"><i class="fas fa-arrow-up"></i></a></div>
+
+<script>
+    (function(){
+        const modal = document.getElementById('videoModal');
+        const modalTitle = document.getElementById('modalTitle');
+
+        // 给所有 single-video 添加点击事件
+        document.querySelectorAll('.single-video').forEach(card => {
+            card.addEventListener('click', function(){
+                const system = this.dataset.system || '未知系统';
+                const ep = this.dataset.ep || '终端';
+
+                // 标题只显示系统和终端
+                modalTitle.innerText = `${system} · ${ep}端`;
+
+                // 设置视频地址 - 只使用系统和终端命名
+                let videoName = `${system}-${ep}端.mp4`;
+                // 假设所有视频都放在 "video/" 目录下
+                document.getElementById('videoSource').src = 'video/' + videoName;
+
+                // 重新加载视频并播放
+                let videoPlayer = document.getElementById('realVideoPlayer');
+                videoPlayer.load();
+
+                modal.classList.add('active');
+            });
+        });
+
+        // 关闭弹窗
+        document.getElementById('closeModal').addEventListener('click', ()=>{
+            let videoPlayer = document.getElementById('realVideoPlayer');
+            videoPlayer.pause();  // 暂停视频
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e)=>{
+            if(e.target === modal) {
+                let videoPlayer = document.getElementById('realVideoPlayer');
+                videoPlayer.pause();
+                modal.classList.remove('active');
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>

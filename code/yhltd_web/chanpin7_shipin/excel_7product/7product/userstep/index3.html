@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>云合未来</title>
+    <!-- 字体 & 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+        }
+
+        body {
+            background: #F0F5FB;  /* 极浅灰蓝背景，和原深色风格完全区分 */
+            color: #1A344D;
+            line-height: 1.5;
+        }
+
+        /* 全新浅色商务蓝变量 */
+        :root {
+            --bg-soft: #F0F5FB;           /* 背景浅灰蓝 */
+            --card-white: #FFFFFF;         /* 卡片纯白 */
+            --blue-sky: #E1F0FA;           /* 天空蓝 - 点缀 */
+            --blue-clear: #B8D9FF;         /* 清透蓝 */
+            --blue-primary: #2B6EB0;       /* 主蓝 (少量使用) */
+            --blue-deep: #1E4F8A;          /* 深蓝 (文字/强调) */
+            --gray-light: #E9EDF2;         /* 分割线/边框 */
+            --text-dark: #1A344D;          /* 主文字深色 */
+            --text-soft: #4F6F8F;          /* 辅助文字 */
+            --shadow-card: 0 15px 40px -15px rgba(0, 40, 80, 0.15);
+            --shadow-hover: 0 25px 45px -15px rgba(0, 60, 120, 0.2);
+        }
+
+        .header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(43, 110, 176, 0.15);
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            height: 38px;
+            width: auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1A344D;
+            letter-spacing: -0.3px;
+        }
+
+        .logo span {
+            font-weight: 400;
+            color: #6B8CAA;
+            font-size: 1.2rem;
+            margin-left: 5px;
+        }
+
+        .contact-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 24px;
+            border-radius: 40px;
+            color: #1E4F8A;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 1px solid #D0E2F5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .contact-phone i {
+            color: #2B6EB0;
+            font-size: 1.2rem;
+        }
+
+        /* ===== 全新布局：水平分割 + 卡片悬浮 ===== */
+        .hero {
+            max-width: 1400px;
+            margin: 30px auto 40px;
+            padding: 0 30px;
+        }
+
+        .hero-split {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: white;
+            border-radius: 48px;
+            padding: 50px 60px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(43, 110, 176, 0.1);
+        }
+
+        .hero-left {
+            flex: 1;
+        }
+
+        .hero-left h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #1A344D;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-left .highlight {
+            color: #2B6EB0;
+            border-bottom: 3px solid #B8D9FF;
+        }
+
+        .hero-left p {
+            font-size: 1.2rem;
+            color: #4F6F8F;
+            max-width: 500px;
+        }
+
+        .hero-right {
+            background: #E1F0FA;
+            border-radius: 100px;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            color: #1E4F8A;
+            font-weight: 500;
+            white-space: nowrap;
+            border: 1px solid #B8D9FF;
+            box-shadow: inset 0 1px 3px white, 0 10px 15px -12px #1E4F8A;
+        }
+
+        .hero-right i {
+            color: #2B6EB0;
+            margin-right: 10px;
+        }
+
+        /* 快速入口 - 圆角网格 */
+        .quick-access {
+            max-width: 1400px;
+            margin: 30px auto 20px;
+            padding: 0 30px;
+        }
+
+        .quick-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .quick-grid a {
+            padding: 10px 28px;
+            border-radius: 40px;
+            background: white;
+            color: #1E4F8A;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 1rem;
+            border: 1px solid #D0E2F5;
+            transition: 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .quick-grid a:hover {
+            background: #2B6EB0;
+            color: white;
+            border-color: #2B6EB0;
+            transform: translateY(-2px);
+        }
+
+        /* 系统展示区 - 全新杂志式排版 */
+        .systems-showcase {
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 30px;
+        }
+
+        .section-caption {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+
+        .section-caption h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #1A344D;
+            border-left: 6px solid #2B6EB0;
+            padding-left: 20px;
+        }
+
+        .section-caption span {
+            color: #6B8CAA;
+            background: white;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            border: 1px solid #D0E2F5;
+        }
+
+        /* 卡片网格 — 4x2 排列，清爽大方 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .system-card {
+            background: white;
+            border-radius: 32px;
+            padding: 28px 20px 30px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(43, 110, 176, 0.12);
+            transition: all 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #B8D9FF, #2B6EB0);
+            opacity: 0;
+            transition: 0.25s;
+        }
+
+        .system-card:hover::after {
+            opacity: 1;
+        }
+
+        .system-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #E1F0FA;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #2B6EB0;
+            font-size: 2.2rem;
+            transition: 0.2s;
+        }
+
+        .system-card:hover .card-icon {
+            background: #2B6EB0;
+            color: white;
+        }
+
+        .system-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1A344D;
+            margin-bottom: 12px;
+        }
+
+        .system-desc {
+            color: #4F6F8F;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #E9EDF2;
+            padding-top: 18px;
+            margin-top: auto;
+        }
+
+        .badge {
+            background: #E1F0FA;
+            color: #1E4F8A;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .arrow-link {
+            color: #B8D9FF;
+            font-size: 1.2rem;
+            transition: 0.2s;
+        }
+
+        .system-card:hover .arrow-link {
+            color: #2B6EB0;
+            transform: translateX(4px);
+        }
+
+        /* 底部分割线 */
+        .reason-section {
+            background: white;
+            border-radius: 60px 60px 0 0;
+            padding: 70px 30px;
+            margin-top: 70px;
+            border-top: 1px solid #D0E2F5;
+            box-shadow: inset 0 10px 20px -15px rgba(0,0,0,0.05);
+        }
+
+        .reason-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .reason-title {
+            font-size: 2.8rem;
+            text-align: center;
+            color: #1A344D;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .reason-sub {
+            text-align: center;
+            color: #4F6F8F;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+
+        .reason-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .reason-item {
+            background: #F8FAFD;
+            border-radius: 40px;
+            padding: 40px 30px;
+            transition: 0.2s;
+            border: 1px solid #E1F0FA;
+        }
+
+        .reason-item:hover {
+            background: white;
+            box-shadow: var(--shadow-card);
+        }
+
+        .reason-item h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #1A344D;
+            border-left: 8px solid #2B6EB0;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        .reason-item p {
+            color: #4F6F8F;
+            line-height: 1.7;
+        }
+
+        .go-top {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: white;
+            width: 52px;
+            height: 52px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #1E4F8A;
+            box-shadow: 0 8px 20px -8px rgba(0, 40, 80, 0.15);
+            border: 1px solid #D0E2F5;
+            z-index: 99;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .go-top a {
+            color: inherit;
+        }
+
+        .go-top:hover {
+            background: #2B6EB0;
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 1100px) {
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 700px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .reason-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area">
+            <img src="image/logo.png" alt="云合未来">
+            <div class="logo">云合未来</div>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <div class="contact-phone">
+                <i class="fas fa-phone-alt"></i> 1661-9776-280
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- 水平分割 hero 区域 (新布局) -->
+<section class="hero">
+    <div class="hero-split">
+        <div class="hero-left">
+            <h1>企业<span class="highlight">数字化控制台</span><br>八套核心系统</h1>
+            <p>点击卡片直达业务后台 · 极简 · 安全 · 高效</p>
+        </div>
+        <div class="hero-right">
+            <i class="fas fa-crown"></i> 统一入口 · 一键跳转
+        </div>
+    </div>
+</section>
+
+<!-- 快速导航胶囊 (新布局) -->
+<div class="quick-access">
+    <div class="quick-grid">
+        <a href="#finance">财务</a>
+        <a href="#jxc">进销存</a>
+        <a href="#hr">人事</a>
+        <a href="#office">协同</a>
+        <a href="#store">门店</a>
+        <a href="#pc">排产</a>
+        <a href="#train">培训</a>
+        <a href="#info">信息采集</a>
+    </div>
+</div>
+
+<!-- 系统卡片展示区 (全新杂志式卡片) -->
+<div class="systems-showcase">
+    <div class="section-caption">
+        <h2>核心业务系统</h2>
+        <span><i class="far fa-clock" style="margin-right: 6px;"></i> 8个系统 · 实时可用</span>
+    </div>
+
+    <div class="card-grid">
+        <!-- 财务系统 -->
+        <a href="http://yhocn.cn:8010/Myadmin/login.aspx" class="system-card" target="_blank" rel="noopener noreferrer" id="finance">
+            <div class="card-icon"><i class="fas fa-coins"></i></div>
+            <h3>财务系统</h3>
+            <div class="system-desc">智能看板、多账号权限、税务管理一体化。助力财务数字化轻量化转型。</div>
+            <div class="card-footer">
+                <span class="badge">业务核心</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 进销存系统 -->
+        <a href="http://yhocn.cn:8010/Myadmin/login.aspx" class="system-card" target="_blank" rel="noopener noreferrer" id="jxc">
+            <div class="card-icon"><i class="fas fa-boxes"></i></div>
+            <h3>进销存</h3>
+            <div class="system-desc">进货、销售、存储、财务一体化。实时库存，减少人为失误。</div>
+            <div class="card-footer">
+                <span class="badge">供应链</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 人事管理系统 -->
+        <a href="http://yhocn.cn:8010/Myadmin/login.aspx" class="system-card" target="_blank" rel="noopener noreferrer" id="hr">
+            <div class="card-icon"><i class="fas fa-users"></i></div>
+            <h3>人事系统</h3>
+            <div class="system-desc">考勤、薪酬、审批流。多人协同，一键生成工资，数据安全容灾。</div>
+            <div class="card-footer">
+                <span class="badge">人力资本</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 协同办公系统 -->
+        <a href="http://yhocn.cn:9085/" class="system-card" target="_blank" rel="noopener noreferrer" id="office">
+            <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>协同办公</h3>
+            <div class="system-desc">数据共享，分权限编辑。多人权限控制，保障数据传输安全。</div>
+            <div class="card-footer">
+                <span class="badge">协作平台</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 智慧门店收银系统 -->
+        <a href="http://yhocn.cn:3000" class="system-card" target="_blank" rel="noopener noreferrer" id="store">
+            <div class="card-icon"><i class="fas fa-store"></i></div>
+            <h3>智慧门店</h3>
+            <div class="system-desc">卡帐期管理、用户管理、信息提醒。傻瓜式操作，上手快。</div>
+            <div class="card-footer">
+                <span class="badge">新零售</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 排产系统 -->
+        <a href="http://yhocn.cn:8010/Myadmin/login.aspx" class="system-card" target="_blank" rel="noopener noreferrer" id="pc">
+            <div class="card-icon"><i class="fas fa-industry"></i></div>
+            <h3>排产系统</h3>
+            <div class="system-desc">生产计划排产、插单自动调整。加工排产到人员排班全覆盖。</div>
+            <div class="card-footer">
+                <span class="badge">智能制造</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 培训管理系统 -->
+        <a href="http://yhocn.cn:9083" class="system-card" target="_blank" rel="noopener noreferrer" id="train">
+            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>培训管理</h3>
+            <div class="system-desc">学生收费、课时统计、教师工资。帮助培训学校更好管理。</div>
+            <div class="card-footer">
+                <span class="badge">教育</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- 信息采集系统 -->
+        <a href="http://yhocn.cn:9086" class="system-card" target="_blank" rel="noopener noreferrer" id="info">
+            <div class="card-icon"><i class="fas fa-database"></i></div>
+            <h3>信息采集</h3>
+            <div class="system-desc">自定义表单、数据汇总、报表导出。轻松收集管理业务信息。</div>
+            <div class="card-footer">
+                <span class="badge">数据中台</span>
+                <span class="arrow-link"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- 底部优势区块（风格匹配浅色） -->
+<div class="reason-section">
+    <div class="reason-container">
+        <div class="reason-title">为什么选择云合未来</div>
+        <div class="reason-sub">云端互联 · 数据驱动 · 四端同步 · 极致简洁</div>
+        <div class="reason-grid">
+            <div class="reason-item">
+                <h3>技术</h3>
+                <p>云合未来把握前沿技术，在软件定制、大数据、RPA、云计算等领域自主研发多项解决方案。</p>
+            </div>
+            <div class="reason-item">
+                <h3>介绍</h3>
+                <p>总部北京，大连设分支机构，服务网络遍及全国。依托先进系统实现规范化运作。</p>
+            </div>
+            <div class="reason-item">
+                <h3>服务</h3>
+                <p>为国内外超1万家企业提供网站建设、软件定制、RPA、IT托管等服务，具影响力服务商之一。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="go-top"><a href="#"><i class="fas fa-arrow-up"></i></a></div>
+
+<script>
+    document.querySelector('.go-top a').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>

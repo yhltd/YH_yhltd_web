@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>云合未来</title>
+  <!-- 引入字体 & 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 使用CDN引入jQuery，确保加载成功 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <style>
+    /* 样式保持不变，只需修复类名 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f0f7fe 0%, #e8f0fa 100%);
+      color: #1f3a5f;
+      line-height: 1.5;
+    }
+
+    .header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0, 112, 243, 0.15);
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 10px 30px -15px rgba(0,65,131,0.15);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-area img {
+      height: 42px;
+      width: auto;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 700;
+      background: linear-gradient(145deg, #0b3f6b, #1f6fb0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #e2efff;
+      padding: 8px 22px;
+      border-radius: 60px;
+      color: #0b3f6b;
+      font-weight: 600;
+      font-size: 1.3rem;
+      border: 1px solid rgba(0,100,230,0.3);
+      box-shadow: 0 4px 10px rgba(0,79,158,0.08);
+    }
+
+    .contact-phone i {
+      color: #1f6fb0;
+      font-size: 1.4rem;
+    }
+
+    /* 修复类名：从 .Y-link 改为 .y-link 或保持原样但HTML中正确使用 */
+    .price-link {
+      margin-left: 20px;
+    }
+
+    .price-link a {
+      display: inline-block;
+      background: linear-gradient(145deg, #1f6fb0, #0b3f6b);
+      color: white;
+      text-decoration: none;
+      padding: 10px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 0 8px 15px -8px #0f4880;
+      transition: 0.2s;
+    }
+
+    .price-link a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 20px -10px #0a3b66;
+    }
+
+    .banner {
+      max-width: 1400px;
+      margin: 20px auto 30px;
+      padding: 0 30px;
+    }
+
+    .banner-card {
+      background: linear-gradient(135deg, #d7e9ff 0%, #ffffff 80%);
+      border-radius: 56px;
+      padding: 40px 60px;
+      box-shadow: 0 25px 45px -20px #1e4b77;
+      border: 1px solid rgba(0,102,204,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .banner-left h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      background: linear-gradient(145deg, #104079, #3182ce);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .banner-left .sub {
+      font-size: 1.4rem;
+      color: #366fa3;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    .banner-right {
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      padding: 20px 35px;
+      border-radius: 80px;
+      font-size: 1.3rem;
+      color: #145388;
+      border: 1px solid #b1d4ff;
+      box-shadow: 0 15px 20px -15px #0f4880;
+    }
+
+    .banner-right i {
+      color: #3182ce;
+      margin-right: 12px;
+    }
+
+    .promo-title {
+      max-width: 1400px;
+      margin: 40px auto 20px;
+      padding: 0 30px;
+    }
+
+    .promo-title h2 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      background: linear-gradient(145deg, #17477c, #316fb3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-left: 8px solid #1f6fb0;
+      padding-left: 25px;
+    }
+
+    .promo-grid {
+      max-width: 1400px;
+      margin: 30px auto 50px;
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .promo-card {
+      background: white;
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 25px 40px -22px #1d5483;
+      border: 1px solid rgba(0,119,255,0.25);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-12px);
+      border-color: #3399ff;
+      box-shadow: 0 35px 45px -22px #0a3f72;
+    }
+
+    .promo-thumb {
+      height: 200px;
+      background: linear-gradient(145deg, #1c5682, #3282c0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 5rem;
+      position: relative;
+    }
+
+    .promo-thumb i {
+      filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
+    }
+
+    .play-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 25px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      padding: 10px 22px;
+      border-radius: 60px;
+      font-size: 1rem;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .play-badge i {
+      font-size: 1.2rem;
+    }
+
+    .promo-info {
+      padding: 28px 28px 35px;
+    }
+
+    .promo-info h3 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #134579;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .promo-info h3 i {
+      color: #1f6fb0;
+      font-size: 2rem;
+    }
+
+    .promo-desc {
+      color: #5b799b;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 25px;
+      min-height: 80px;
+    }
+
+    .promo-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .promo-tag {
+      background: #e2f0ff;
+      padding: 8px 25px;
+      border-radius: 60px;
+      color: #1d62a0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid #b8d6ff;
+    }
+
+    .promo-length {
+      color: #4677af;
+      font-size: 0.95rem;
+    }
+
+    .reason-section {
+      background: #ebf3fc;
+      border-radius: 120px 120px 0 0;
+      padding: 70px 30px;
+      margin-top: 60px;
+      border-top: 1px solid #add3ff;
+    }
+
+    .reason-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .reason-title {
+      font-size: 3rem;
+      text-align: center;
+      color: #134b81;
+      font-weight: 500;
+    }
+
+    .reason-sub {
+      text-align: center;
+      color: #4677af;
+      font-size: 1.3rem;
+      margin-bottom: 50px;
+    }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 30px;
+    }
+
+    .reason-item {
+      background: white;
+      border-radius: 48px;
+      padding: 45px 30px;
+      box-shadow: 0 20px 30px -16px #2d608b;
+      transition: 0.2s;
+    }
+
+    .reason-item:hover {
+      transform: scale(1.02);
+      background: #f3faff;
+    }
+
+    .reason-item h3 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #10508b;
+      border-left: 10px solid #3b8cdf;
+      padding-left: 25px;
+      margin-bottom: 25px;
+    }
+
+    .reason-item p {
+      color: #335e88;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .video-mask {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 60, 110, 0.5);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+    }
+
+    .videoCanvas {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1001;
+      background: white;
+      border-radius: 70px;
+      padding: 30px;
+      box-shadow: 0 50px 70px -20px #053059;
+      border: 2px solid #aacbff;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    /* 全新的关闭按钮样式 - 详情页面风格 */
+    .video-close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: white;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 35, 70, 0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      z-index: 10;
+      border: 1px solid rgba(0, 112, 243, 0.2);
+    }
+
+    .video-close:hover {
+      transform: rotate(90deg) scale(1.1);
+      background: #f0f7ff;
+      border-color: #1f6fb0;
+      box-shadow: 0 6px 16px rgba(0, 70, 150, 0.25);
+    }
+
+    .video-close i {
+      font-size: 1.5rem;
+      color: #1f6fb0;
+      transition: color 0.2s;
+    }
+
+    .video-close:hover i {
+      color: #0b3f6b;
+    }
+
+    .videoCanvas video {
+      width: 100%;
+      height: auto;
+      border-radius: 50px;
+      display: block;
+      background: #d7eaff;
+    }
+
+    .go-top {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      background: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #1b558b;
+      box-shadow: 0 8px 20px -8px #0a3360;
+      border: 1px solid #8abfff;
+      z-index: 99;
+      cursor: pointer;
+    }
+
+    .go-top a {
+      color: inherit;
+    }
+
+    @media (max-width: 800px) {
+      .promo-grid {
+        grid-template-columns: 1fr;
+      }
+      .reason-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo-area">
+      <img src="image/logo.png" alt="云合未来">
+      <div class="logo">云合未来</div>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <div class="contact-phone">
+        <i class="fas fa-phone-alt"></i> 1661-9776-280
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="banner-card">
+    <div class="banner-left">
+      <h1>系统宣传</h1>
+      <div class="sub">七套核心系统 · 点击卡片观看完整宣传片</div>
+    </div>
+    <div class="banner-right">
+      <i class="fas fa-video"></i> 总览 · 快速了解产品
+    </div>
+  </div>
+</section>
+
+<div class="promo-title">
+  <h2><i class="fas fa-play-circle" style="margin-right: 15px; color: #1f6fb0;"></i> 七套系统 · 精彩呈现</h2>
+</div>
+
+<div class="promo-grid">
+  <!-- 财务系统 -->
+  <div class="promo-card" onclick="watchVideo(1)">
+    <div class="promo-thumb">
+      <i class="fas fa-coins"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 财务系统</h3>
+      <div class="promo-desc">智能看板、多账号权限、税务管理一体化。助力企业财务数字化轻量化转型。</div>
+    </div>
+  </div>
+
+  <!-- 进销存系统 -->
+  <div class="promo-card" onclick="watchVideo(2)">
+    <div class="promo-thumb">
+      <i class="fas fa-boxes"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 进销存系统</h3>
+      <div class="promo-desc">进货、销售、存储、财务一体化管理。实时计算库存，减少人为失误。</div>
+    </div>
+  </div>
+
+  <!-- 人事管理系统 -->
+  <div class="promo-card" onclick="watchVideo(3)">
+    <div class="promo-thumb">
+      <i class="fas fa-users"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 人事管理系统</h3>
+      <div class="promo-desc">考勤打卡、薪酬管理、审批流。多人协同，一键生成工资，数据安全容灾。</div>
+    </div>
+  </div>
+
+  <!-- 协同办公系统 -->
+  <div class="promo-card" onclick="watchVideo(4)">
+    <div class="promo-thumb">
+      <i class="fas fa-file-alt"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 协同办公系统</h3>
+      <div class="promo-desc">数据共享，分权限编辑。多人操作权限控制，保障数据传输安全。</div>
+    </div>
+  </div>
+
+  <!-- 智慧门店收银系统 -->
+  <div class="promo-card" onclick="watchVideo(5)">
+    <div class="promo-thumb">
+      <i class="fas fa-store"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 智慧门店收银</h3>
+      <div class="promo-desc">卡帐期管理、用户管理、信息提醒。傻瓜式操作，上手快易操作。</div>
+    </div>
+  </div>
+
+  <!-- 排产系统 -->
+  <div class="promo-card" onclick="watchVideo(6)">
+    <div class="promo-thumb">
+      <i class="fas fa-industry"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 排产系统</h3>
+      <div class="promo-desc">生产计划排产、插单自动调整。涵盖加工排产到人员排班。</div>
+    </div>
+  </div>
+
+  <!-- 培训管理系统 -->
+  <div class="promo-card" onclick="watchVideo(7)">
+    <div class="promo-thumb">
+      <i class="fas fa-graduation-cap"></i>
+      <span class="play-badge"><i class="fas fa-play"></i> 播放宣传片</span>
+    </div>
+    <div class="promo-info">
+      <h3><i class="fas fa-circle" style="font-size: 0.8rem;"></i> 培训管理系统</h3>
+      <div class="promo-desc">学生收费、课时统计、教师工资统计。帮助培训学校更好管理。</div>
+    </div>
+  </div>
+</div>
+
+<div class="reason-section">
+  <div class="reason-container">
+    <div class="reason-title">为什么选择云合未来</div>
+    <div class="reason-sub">云合未来，实现云端互联网技术与多平台在线交互模式创新</div>
+    <div class="reason-grid">
+      <div class="reason-item">
+        <h3>技术</h3>
+        <p>云合未来把握前沿技术，在各类软件定制、IT技术服务外包、大数据处理、办公自动化工具，桌面仿人工RPA，移动互联、电子商务、云计算、大数据、物联网等领域自主研发了多项技术解决方案。</p>
+      </div>
+      <div class="reason-item">
+        <h3>介绍</h3>
+        <p>云合未来总部设在北京，在大连设有分支机构，服务网络遍及全国。公司内部实行网络化管理，依托先进的计算机辅助设计系统和计算机管理系统，实现规范化运作。</p>
+      </div>
+      <div class="reason-item">
+        <h3>服务</h3>
+        <p>目前云合未来为国内、外超过1万家的企业提供了网站建设、软件定制、人员外派驻场、自动化RPA、软件系统IT托管服务，是国内具影响力的互联网应用服务商之一。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="video-mask" id="video-mask"></div>
+<div class="videoCanvas" id="videoCanvas">
+  <!-- 替换为新的关闭按钮，不再使用图片 -->
+  <button class="video-close" id="video-close" onclick="close_video()">
+    <i class="fas fa-times"></i>
+  </button>
+  <video id="video" controls autoplay width="1000" height="560"></video>
+</div>
+
+
+<div class="go-top"><a href="#"><i class="fas fa-arrow-up"></i></a></div>
+
+<script>
+  // 视频播放函数
+  function watchVideo(index) {
+    console.log("播放视频:", index); // 添加调试日志
+    if (index === 1) {
+      $("#video").attr("src", "video/财务系统-宣传.mp4");
+    } else if (index === 2) {
+      $("#video").attr("src", "video/进销存-宣传.mp4");
+    } else if (index === 3) {
+      $("#video").attr("src", "video/人事系统-宣传.mp4");
+    } else if (index === 4) {
+      $("#video").attr("src", "video/分权系统-宣传.mp4");
+    } else if (index === 5) {
+      $("#video").attr("src", "video/门店收银-宣传.mp4");
+    } else if (index === 6) {
+      $("#video").attr("src", "video/排产系统-宣传.mp4");
+    } else if (index === 7) {
+      $("#video").attr("src", "video/教务系统-宣传.mp4");
+    }
+    $(".videoCanvas").show();
+    $(".video-mask").show();
+  }
+
+  // 关闭视频
+  function close_video() {
+    $("#video").trigger("pause");
+    $(".videoCanvas").hide();
+    $(".video-mask").hide();
+  }
+
+  // 点击遮罩关闭
+  $('.video-mask').click(function() {
+    close_video();
+  });
+
+  // 鼠标悬停显示关闭按钮
+  $('.videoCanvas').mouseover(function() {
+    $('.video-close').show();
+  }).mouseout(function() {
+    $('.video-close').show(); // 保持可见，但你可以根据需要修改
+  });
+
+  // 平滑滚动
+  document.querySelector('.go-top a').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
