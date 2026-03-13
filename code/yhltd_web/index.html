@@ -15,6 +15,35 @@
 window.onerror=function(){return true;}
 </script></head>
 
+<style>
+    .zixun {
+        position: relative;
+        /*width: 200px;*/
+        /*padding: 15px 20px;*/
+        /*background: #4158D0;*/
+        /*color: white;*/
+        /*border-radius: 10px;*/
+        cursor: pointer;
+    }
+
+    .dropdown-img {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        width: 100%;
+        width: 200px;
+        display: none;
+        margin-left: 30px;
+        margin-top: 10px;
+        z-index: 999;
+        border-radius: 8px;
+    }
+
+    .zixun:hover .dropdown-img {
+        display: block;
+    }
+</style>
+
 <body>
 <div id="wrapper">
 
@@ -34,24 +63,31 @@ window.onerror=function(){return true;}
 
 <div class="TopLogo">
 <div class="logo"><a href="/"><img src="/images/up_images/logo.png" alt="云合未来计算机技术有限公司"></a></div>
-<div class="tel">
-<p class="telW">全国服务热线</p>
-<p class="telN">16619776280</p>
-    <div>
-        <button
-                style="background: #3B82F6;
-               color: white;
-               border: none;
-               padding: 10px 24px;
-               border-radius: 6px;
-               font-size: 14px;
-               cursor: pointer;
-               margin-left: 50%;
-               margin-top: 2%;"
-                onclick="window.location.href='chanpin7_shipin/excel_7product/7product/userstep/home.html'">
-            申请体验
-        </button>
+<div class="tel" style="display: flex;width: 400px;">
+    <div class="zixun">
+        <p class="telW">服务热线(微信咨询)</p>
+        <p class="telN">16619776280</p>
+        <img src="/images/up_images/erweima.jpg" class="dropdown-img">
     </div>
+    <div>
+        <button style="margin-left: 10px;
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #176ddd, #aecdf3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(65, 88, 208, 0.3);"
+                onclick="window.location.href='chanpin7_shipin/excel_7product/7product/userstep/home.html'">免费试用</button>
+    </div>
+</div>
+</div>
+
 </div>
 <!--top end-->
 
