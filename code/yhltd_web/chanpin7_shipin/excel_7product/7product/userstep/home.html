@@ -986,6 +986,455 @@
             .nav-menu { display: none; }
             .modal-form { padding: 30px 20px; }
         }
+        /* ===== 增强的手机端兼容性优化 ===== */
+        @media (max-width: 768px) {
+            /* 容器内边距调整 */
+            .container {
+                padding: 0 20px;
+            }
+
+            /* 导航优化 */
+            .nav-container {
+                padding: 12px 20px;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            /* 轮播图优化 */
+            .hero-carousel {
+                margin: 20px auto 30px;
+                border-radius: 24px;
+            }
+
+            .carousel-container {
+                height: 500px;
+            }
+
+            .carousel-slide {
+                padding: 0 30px;
+                align-items: flex-end;
+                padding-bottom: 100px;
+            }
+
+            .carousel-slide::before {
+                background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.3) 100%);
+            }
+
+            .slide-content {
+                max-width: 100%;
+            }
+
+            .slide-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .slide-tag {
+                font-size: 0.8rem;
+                padding: 4px 14px;
+            }
+
+            .slide-btn {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
+            /* 轮播控件位置调整 */
+            .carousel-indicators {
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .carousel-controls {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .carousel-counter {
+                top: 20px;
+                right: 20px;
+                font-size: 0.8rem;
+                padding: 6px 16px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            /* 解决方案横向滚动优化 */
+            .solution-title {
+                font-size: 1.8rem;
+                padding-left: 15px;
+                margin-bottom: 20px;
+            }
+
+            .solution-container {
+                gap: 15px;
+                padding: 15px 0 25px;
+            }
+
+            .solution-item {
+                flex: 0 0 300px;
+            }
+
+            .solution-img {
+                height: 180px;
+            }
+
+            .solution-content {
+                padding: 20px;
+            }
+
+            .solution-content h3 {
+                font-size: 1.3rem;
+                margin-bottom: 8px;
+            }
+
+            .solution-content p {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+
+            .solution-nav {
+                gap: 10px;
+            }
+
+            .solution-nav-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* 核心产品本托优化 */
+            .section-title {
+                font-size: 1.8rem;
+                margin: 40px 0 25px;
+                padding-left: 15px;
+            }
+
+            .bento-grid {
+                gap: 15px;
+                margin: 20px 0;
+            }
+
+            .bento-card {
+                padding: 20px;
+            }
+
+            .card-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 14px;
+                margin-bottom: 15px;
+            }
+
+            .card-icon i {
+                font-size: 1.5rem;
+            }
+
+            .bento-card h3 {
+                font-size: 1.3rem;
+                margin-bottom: 8px;
+            }
+
+            .bento-card p {
+                font-size: 0.9rem;
+            }
+
+            .bento-card.featured {
+                grid-column: span 1;
+            }
+
+            /* 客户案例墙优化 */
+            .case-wall-title {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+
+            .case-grid {
+                gap: 15px;
+            }
+
+            .case-img {
+                height: 160px;
+            }
+
+            .case-content {
+                padding: 20px;
+            }
+
+            .case-content h3 {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+            }
+
+            .case-content p {
+                font-size: 0.9rem;
+            }
+
+            .case-category {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+            }
+
+            .case-wall-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            /* 数据看板优化 */
+            .stats-grid {
+                gap: 15px;
+                margin: 30px 0;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+            }
+
+            /* CTA区域优化 */
+            .cta-section {
+                padding: 40px 20px;
+                margin: 40px 0;
+                border-radius: 30px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-section p {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .cta-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+
+            /* 底部优化 */
+            .footer {
+                padding: 40px 0 20px;
+                margin-top: 40px;
+            }
+
+            .footer-grid {
+                gap: 30px;
+            }
+
+            .footer-col h4 {
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+            }
+
+            .footer-col ul li {
+                margin-bottom: 8px;
+            }
+
+            .footer-col ul li a {
+                font-size: 0.9rem;
+            }
+
+            .social-links a {
+                width: 38px;
+                height: 38px;
+            }
+
+            /* 回到顶部按钮优化 */
+            .go-top {
+                width: 44px;
+                height: 44px;
+                right: 20px;
+                bottom: 20px;
+                font-size: 1.2rem;
+            }
+
+            /* 弹窗表单优化 */
+            .modal-form {
+                padding: 30px 20px;
+                width: 95%;
+                max-height: 85vh;
+                overflow-y: auto;
+            }
+
+            .modal-form h3 {
+                font-size: 1.5rem;
+            }
+
+            .modal-form p {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 12px 18px;
+                font-size: 0.95rem;
+            }
+
+            .form-submit {
+                padding: 14px 20px;
+                font-size: 1rem;
+            }
+
+            .modal-close {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+            }
+
+            /* 修复导航菜单在小屏幕的显示问题 */
+            .nav-menu {
+                display: none; /* 保持隐藏，如果需要可以添加汉堡菜单 */
+            }
+
+            /* 确保所有图片在小屏幕上不会溢出 */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* 改善触摸体验 */
+            .solution-item,
+            .bento-card,
+            .case-card,
+            .stat-card,
+            .slide-btn,
+            .cta-btn,
+            .nav-cta,
+            .carousel-btn,
+            .solution-nav-btn,
+            .go-top,
+            .modal-close {
+                cursor: pointer;
+                -webkit-tap-highlight-color: rgba(59, 130, 246, 0.1);
+            }
+
+            /* 修复文字溢出问题 */
+            h1, h2, h3, p, .stat-number, .slide-tag, .solution-tag, .case-category {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        /* 针对更小屏幕（480px以下）的额外优化 */
+        @media (max-width: 480px) {
+            .carousel-container {
+                height: 450px;
+            }
+
+            .carousel-slide {
+                padding: 0 20px;
+                padding-bottom: 80px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .solution-item {
+                flex: 0 0 260px;
+            }
+
+            .solution-img {
+                height: 160px;
+            }
+
+            .bento-grid {
+                gap: 12px;
+            }
+
+            .bento-card {
+                padding: 18px;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .footer-grid {
+                gap: 25px;
+            }
+
+            .modal-form {
+                padding: 25px 15px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 10px 15px;
+            }
+
+            /* 调整轮播控件位置避免重叠 */
+            .carousel-indicators {
+                bottom: 15px;
+                left: 15px;
+            }
+
+            .carousel-controls {
+                bottom: 15px;
+                right: 15px;
+                gap: 8px;
+            }
+
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+            }
+
+            .indicator {
+                width: 8px;
+                height: 8px;
+            }
+
+            .indicator.active {
+                width: 30px;
+            }
+        }
+
+        /* 横屏模式优化 */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .carousel-container {
+                height: 350px;
+            }
+
+            .modal-form {
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+
+            .carousel-slide {
+                align-items: center;
+                padding-bottom: 60px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .slide-content p {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>

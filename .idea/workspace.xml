@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="905b96c6-1bc3-459f-8e22-7f0c4332d00d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/chanpin7_shipin/excel_7product/7product/userstep/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/yhltd_web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/yhltd_web/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="905b96c6-1bc3-459f-8e22-7f0c4332d00d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +111,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zuoyananlonghui_java/code" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,6 +151,7 @@
       <workItem from="1773375919647" duration="8288000" />
       <workItem from="1773385439875" duration="71000" />
       <workItem from="1773385726459" duration="70000" />
+      <workItem from="1773386379165" duration="32000" />
     </task>
     <servers />
   </component>

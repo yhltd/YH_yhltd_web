@@ -433,6 +433,354 @@
             .card-grid { grid-template-columns: 1fr; }
             .reason-grid { grid-template-columns: 1fr; }
         }
+
+        /* ===== 手机端兼容性优化 ===== */
+        @media (max-width: 768px) {
+            /* 头部优化 */
+            .header-container {
+                padding: 0 15px;
+            }
+
+            .logo-area {
+                gap: 8px;
+            }
+
+            .logo-area img {
+                height: 30px;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+                margin-left: 3px;
+            }
+
+            .contact-phone {
+                padding: 6px 15px;
+                font-size: 0.95rem;
+            }
+
+            .contact-phone i {
+                font-size: 1rem;
+            }
+
+            /* Hero区域优化 */
+            .hero {
+                padding: 0 15px;
+                margin: 15px auto 20px;
+            }
+
+            .hero-split {
+                flex-direction: column;
+                padding: 30px 25px;
+                gap: 20px;
+                border-radius: 30px;
+                text-align: center;
+            }
+
+            .hero-left h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-left p {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+
+            .hero-right {
+                padding: 15px 25px;
+                font-size: 1rem;
+                border-radius: 60px;
+                white-space: normal;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* 快速导航优化 */
+            .quick-access {
+                padding: 0 15px;
+            }
+
+            .quick-grid {
+                gap: 8px;
+            }
+
+            .quick-grid a {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                flex: 1 0 auto;
+                text-align: center;
+            }
+
+            /* 系统展示区优化 */
+            .systems-showcase {
+                padding: 0 15px;
+                margin: 30px auto;
+            }
+
+            .section-caption {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin-bottom: 25px;
+            }
+
+            .section-caption h2 {
+                font-size: 1.8rem;
+                padding-left: 15px;
+                border-left-width: 4px;
+            }
+
+            .section-caption span {
+                padding: 6px 18px;
+                font-size: 0.85rem;
+                margin-left: 15px;
+            }
+
+            /* 卡片网格优化 */
+            .card-grid {
+                gap: 15px;
+            }
+
+            .system-card {
+                padding: 20px 18px 22px;
+                border-radius: 24px;
+            }
+
+            .system-card::after {
+                height: 4px;
+            }
+
+            .card-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 16px;
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .system-card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+
+            .system-desc {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+
+            .card-footer {
+                padding-top: 15px;
+            }
+
+            .badge {
+                padding: 4px 12px;
+                font-size: 0.8rem;
+            }
+
+            .arrow-link {
+                font-size: 1rem;
+            }
+
+            /* 底部优势区域优化 */
+            .reason-section {
+                padding: 40px 15px;
+                border-radius: 40px 40px 0 0;
+                margin-top: 30px;
+            }
+
+            .reason-title {
+                font-size: 2rem;
+            }
+
+            .reason-sub {
+                font-size: 1rem;
+                margin-bottom: 30px;
+                padding: 0 10px;
+            }
+
+            .reason-grid {
+                gap: 20px;
+            }
+
+            .reason-item {
+                padding: 30px 25px;
+                border-radius: 30px;
+            }
+
+            .reason-item h3 {
+                font-size: 1.6rem;
+                padding-left: 15px;
+                border-left-width: 6px;
+                margin-bottom: 15px;
+            }
+
+            .reason-item p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            /* 回到顶部优化 */
+            .go-top {
+                width: 45px;
+                height: 45px;
+                right: 15px;
+                bottom: 15px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 小屏手机优化 (480px以下) */
+        @media (max-width: 480px) {
+            .header-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .logo-area {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .contact-phone {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-left h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-right {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .quick-grid a {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            .section-caption h2 {
+                font-size: 1.5rem;
+            }
+
+            .system-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .card-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .reason-title {
+                font-size: 1.6rem;
+            }
+
+            .reason-item h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* 横屏模式优化 */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero-split {
+                padding: 20px 30px;
+            }
+
+            .hero-left h1 {
+                font-size: 2rem;
+            }
+
+            .quick-grid {
+                flex-wrap: wrap;
+            }
+
+            .system-card {
+                padding: 15px;
+            }
+        }
+
+        /* 触摸反馈优化 */
+        @media (hover: none) and (pointer: coarse) {
+            .system-card,
+            .quick-grid a,
+            .reason-item,
+            .contact-phone,
+            .go-top {
+                cursor: pointer;
+                -webkit-tap-highlight-color: rgba(43, 110, 176, 0.15);
+            }
+
+            .system-card:active,
+            .quick-grid a:active {
+                transform: scale(0.98);
+            }
+
+            .contact-phone:active,
+            .go-top:active {
+                opacity: 0.8;
+            }
+        }
+
+        /* 图片自适应 */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 文字断行优化 */
+        h1, h2, h3, p, .system-desc, .reason-item p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* 确保卡片在手机上完整显示 */
+        .system-card {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* 快速导航滚动优化 (如果内容过多可以横向滚动) */
+        @media (max-width: 600px) {
+            .quick-grid {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 5px;
+                justify-content: flex-start;
+            }
+
+            .quick-grid::-webkit-scrollbar {
+                height: 3px;
+            }
+
+            .quick-grid::-webkit-scrollbar-thumb {
+                background: #B8D9FF;
+                border-radius: 3px;
+            }
+
+            .quick-grid a {
+                flex: 0 0 auto;
+            }
+        }
+
+        /* 优化卡片点击区域 */
+        .system-card {
+            cursor: pointer;
+        }
+
+        /* 确保所有链接在手机上可点击区域足够大 */
+        a, button, .system-card, .quick-grid a {
+            min-height: 44px;
+            min-width: 44px;
+        }
     </style>
 </head>
 <body>
