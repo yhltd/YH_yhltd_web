@@ -16,22 +16,21 @@
         }
 
         body {
-            background: #F0F5FB;  /* 极浅灰蓝背景，和原深色风格完全区分 */
+            background: #F0F5FB;
             color: #1A344D;
             line-height: 1.5;
         }
 
-        /* 全新浅色商务蓝变量 */
         :root {
-            --bg-soft: #F0F5FB;           /* 背景浅灰蓝 */
-            --card-white: #FFFFFF;         /* 卡片纯白 */
-            --blue-sky: #E1F0FA;           /* 天空蓝 - 点缀 */
-            --blue-clear: #B8D9FF;         /* 清透蓝 */
-            --blue-primary: #2B6EB0;       /* 主蓝 (少量使用) */
-            --blue-deep: #1E4F8A;          /* 深蓝 (文字/强调) */
-            --gray-light: #E9EDF2;         /* 分割线/边框 */
-            --text-dark: #1A344D;          /* 主文字深色 */
-            --text-soft: #4F6F8F;          /* 辅助文字 */
+            --bg-soft: #F0F5FB;
+            --card-white: #FFFFFF;
+            --blue-sky: #E1F0FA;
+            --blue-clear: #B8D9FF;
+            --blue-primary: #2B6EB0;
+            --blue-deep: #1E4F8A;
+            --gray-light: #E9EDF2;
+            --text-dark: #1A344D;
+            --text-soft: #4F6F8F;
             --shadow-card: 0 15px 40px -15px rgba(0, 40, 80, 0.15);
             --shadow-hover: 0 25px 45px -15px rgba(0, 60, 120, 0.2);
         }
@@ -76,13 +75,6 @@
             letter-spacing: -0.3px;
         }
 
-        .logo span {
-            font-weight: 400;
-            color: #6B8CAA;
-            font-size: 1.2rem;
-            margin-left: 5px;
-        }
-
         .contact-phone {
             display: flex;
             align-items: center;
@@ -102,7 +94,6 @@
             font-size: 1.2rem;
         }
 
-        /* ===== 全新布局：水平分割 + 卡片悬浮 ===== */
         .hero {
             max-width: 1400px;
             margin: 30px auto 40px;
@@ -161,7 +152,6 @@
             margin-right: 10px;
         }
 
-        /* 快速入口 - 圆角网格 */
         .quick-access {
             max-width: 1400px;
             margin: 30px auto 20px;
@@ -195,7 +185,181 @@
             transform: translateY(-2px);
         }
 
-        /* 系统展示区 - 全新杂志式排版 */
+        /* 下载模块 */
+        .download-section {
+            max-width: 1400px;
+            margin: 30px auto 40px;
+            padding: 0 30px;
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFD 100%);
+            border-radius: 48px;
+            padding: 40px 50px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(43, 110, 176, 0.15);
+            text-align: center;
+        }
+
+        .download-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1A344D;
+            margin-bottom: 12px;
+        }
+
+        .download-sub {
+            color: #4F6F8F;
+            font-size: 1rem;
+            margin-bottom: 35px;
+        }
+
+        .download-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .download-item {
+            background: white;
+            border-radius: 32px;
+            padding: 28px 40px;
+            text-decoration: none;
+            color: #1A344D;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            min-width: 180px;
+            transition: all 0.25s ease;
+            border: 1px solid #E1F0FA;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            cursor: pointer;
+        }
+
+        .download-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: #2B6EB0;
+        }
+
+        .download-icon {
+            width: 70px;
+            height: 70px;
+            background: #E1F0FA;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #2B6EB0;
+            transition: 0.2s;
+        }
+
+        .download-item:hover .download-icon {
+            background: #2B6EB0;
+            color: white;
+        }
+
+        .download-item h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .download-item p {
+            font-size: 0.85rem;
+            color: #6B8CAA;
+            margin: 0;
+        }
+
+        /* 弹窗样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content h3 {
+            color: #1A344D;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #4F6F8F;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #6B8CAA;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #2B6EB0;
+        }
+
+        .modal-close {
+            background: #2B6EB0;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 10px;
+        }
+
+        .modal-close:hover {
+            background: #1E4F8A;
+            transform: translateY(-2px);
+        }
+
         .systems-showcase {
             max-width: 1400px;
             margin: 50px auto;
@@ -226,7 +390,6 @@
             border: 1px solid #D0E2F5;
         }
 
-        /* 卡片网格 — 4x2 排列，清爽大方 */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -332,7 +495,6 @@
             transform: translateX(4px);
         }
 
-        /* 底部分割线 */
         .reason-section {
             background: white;
             border-radius: 60px 60px 0 0;
@@ -432,354 +594,40 @@
         @media (max-width: 700px) {
             .card-grid { grid-template-columns: 1fr; }
             .reason-grid { grid-template-columns: 1fr; }
+            .download-grid { gap: 15px; }
+            .download-item { min-width: 140px; padding: 20px 25px; }
+            .download-icon { width: 55px; height: 55px; font-size: 2rem; }
+            .download-item h4 { font-size: 1.1rem; }
         }
 
-        /* ===== 手机端兼容性优化 ===== */
         @media (max-width: 768px) {
-            /* 头部优化 */
-            .header-container {
-                padding: 0 15px;
-            }
-
-            .logo-area {
-                gap: 8px;
-            }
-
-            .logo-area img {
-                height: 30px;
-            }
-
-            .logo {
-                font-size: 1.3rem;
-            }
-
-            .logo span {
-                font-size: 0.9rem;
-                margin-left: 3px;
-            }
-
-            .contact-phone {
-                padding: 6px 15px;
-                font-size: 0.95rem;
-            }
-
-            .contact-phone i {
-                font-size: 1rem;
-            }
-
-            /* Hero区域优化 */
-            .hero {
-                padding: 0 15px;
-                margin: 15px auto 20px;
-            }
-
-            .hero-split {
-                flex-direction: column;
-                padding: 30px 25px;
-                gap: 20px;
-                border-radius: 30px;
-                text-align: center;
-            }
-
-            .hero-left h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-left p {
-                font-size: 1rem;
-                max-width: 100%;
-            }
-
-            .hero-right {
-                padding: 15px 25px;
-                font-size: 1rem;
-                border-radius: 60px;
-                white-space: normal;
-                width: 100%;
-                text-align: center;
-            }
-
-            /* 快速导航优化 */
-            .quick-access {
-                padding: 0 15px;
-            }
-
-            .quick-grid {
-                gap: 8px;
-            }
-
-            .quick-grid a {
-                padding: 8px 16px;
-                font-size: 0.9rem;
-                flex: 1 0 auto;
-                text-align: center;
-            }
-
-            /* 系统展示区优化 */
-            .systems-showcase {
-                padding: 0 15px;
-                margin: 30px auto;
-            }
-
-            .section-caption {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-                margin-bottom: 25px;
-            }
-
-            .section-caption h2 {
-                font-size: 1.8rem;
-                padding-left: 15px;
-                border-left-width: 4px;
-            }
-
-            .section-caption span {
-                padding: 6px 18px;
-                font-size: 0.85rem;
-                margin-left: 15px;
-            }
-
-            /* 卡片网格优化 */
-            .card-grid {
-                gap: 15px;
-            }
-
-            .system-card {
-                padding: 20px 18px 22px;
-                border-radius: 24px;
-            }
-
-            .system-card::after {
-                height: 4px;
-            }
-
-            .card-icon {
-                width: 50px;
-                height: 50px;
-                border-radius: 16px;
-                font-size: 1.8rem;
-                margin-bottom: 15px;
-            }
-
-            .system-card h3 {
-                font-size: 1.5rem;
-                margin-bottom: 8px;
-            }
-
-            .system-desc {
-                font-size: 0.9rem;
-                margin-bottom: 15px;
-                line-height: 1.5;
-            }
-
-            .card-footer {
-                padding-top: 15px;
-            }
-
-            .badge {
-                padding: 4px 12px;
-                font-size: 0.8rem;
-            }
-
-            .arrow-link {
-                font-size: 1rem;
-            }
-
-            /* 底部优势区域优化 */
-            .reason-section {
-                padding: 40px 15px;
-                border-radius: 40px 40px 0 0;
-                margin-top: 30px;
-            }
-
-            .reason-title {
-                font-size: 2rem;
-            }
-
-            .reason-sub {
-                font-size: 1rem;
-                margin-bottom: 30px;
-                padding: 0 10px;
-            }
-
-            .reason-grid {
-                gap: 20px;
-            }
-
-            .reason-item {
-                padding: 30px 25px;
-                border-radius: 30px;
-            }
-
-            .reason-item h3 {
-                font-size: 1.6rem;
-                padding-left: 15px;
-                border-left-width: 6px;
-                margin-bottom: 15px;
-            }
-
-            .reason-item p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
-
-            /* 回到顶部优化 */
-            .go-top {
-                width: 45px;
-                height: 45px;
-                right: 15px;
-                bottom: 15px;
-                font-size: 1.5rem;
-            }
-        }
-
-        /* 小屏手机优化 (480px以下) */
-        @media (max-width: 480px) {
-            .header-container {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 8px;
-            }
-
-            .logo-area {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .contact-phone {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-left h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero-right {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-            }
-
-            .quick-grid a {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-            }
-
-            .section-caption h2 {
-                font-size: 1.5rem;
-            }
-
-            .system-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .card-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 1.5rem;
-            }
-
-            .reason-title {
-                font-size: 1.6rem;
-            }
-
-            .reason-item h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        /* 横屏模式优化 */
-        @media (max-height: 500px) and (orientation: landscape) {
-            .hero-split {
-                padding: 20px 30px;
-            }
-
-            .hero-left h1 {
-                font-size: 2rem;
-            }
-
-            .quick-grid {
-                flex-wrap: wrap;
-            }
-
-            .system-card {
-                padding: 15px;
-            }
-        }
-
-        /* 触摸反馈优化 */
-        @media (hover: none) and (pointer: coarse) {
-            .system-card,
-            .quick-grid a,
-            .reason-item,
-            .contact-phone,
-            .go-top {
-                cursor: pointer;
-                -webkit-tap-highlight-color: rgba(43, 110, 176, 0.15);
-            }
-
-            .system-card:active,
-            .quick-grid a:active {
-                transform: scale(0.98);
-            }
-
-            .contact-phone:active,
-            .go-top:active {
-                opacity: 0.8;
-            }
-        }
-
-        /* 图片自适应 */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* 文字断行优化 */
-        h1, h2, h3, p, .system-desc, .reason-item p {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        /* 确保卡片在手机上完整显示 */
-        .system-card {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        /* 快速导航滚动优化 (如果内容过多可以横向滚动) */
-        @media (max-width: 600px) {
-            .quick-grid {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                padding-bottom: 5px;
-                justify-content: flex-start;
-            }
-
-            .quick-grid::-webkit-scrollbar {
-                height: 3px;
-            }
-
-            .quick-grid::-webkit-scrollbar-thumb {
-                background: #B8D9FF;
-                border-radius: 3px;
-            }
-
-            .quick-grid a {
-                flex: 0 0 auto;
-            }
-        }
-
-        /* 优化卡片点击区域 */
-        .system-card {
-            cursor: pointer;
-        }
-
-        /* 确保所有链接在手机上可点击区域足够大 */
-        a, button, .system-card, .quick-grid a {
-            min-height: 44px;
-            min-width: 44px;
+            .header-container { padding: 0 15px; }
+            .logo-area { gap: 8px; }
+            .logo-area img { height: 30px; }
+            .logo { font-size: 1.3rem; }
+            .contact-phone { padding: 6px 15px; font-size: 0.95rem; }
+            .hero { padding: 0 15px; margin: 15px auto 20px; }
+            .hero-split { flex-direction: column; padding: 30px 25px; gap: 20px; border-radius: 30px; text-align: center; }
+            .hero-left h1 { font-size: 2.2rem; }
+            .hero-left p { font-size: 1rem; max-width: 100%; }
+            .hero-right { padding: 15px 25px; font-size: 1rem; white-space: normal; width: 100%; text-align: center; }
+            .quick-access { padding: 0 15px; }
+            .quick-grid { gap: 8px; }
+            .quick-grid a { padding: 8px 16px; font-size: 0.9rem; }
+            .download-section { padding: 0 15px; margin: 20px auto 30px; }
+            .download-card { padding: 25px 20px; border-radius: 32px; }
+            .download-title { font-size: 1.5rem; }
+            .download-sub { font-size: 0.85rem; margin-bottom: 25px; }
+            .systems-showcase { padding: 0 15px; margin: 30px auto; }
+            .section-caption { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 25px; }
+            .section-caption h2 { font-size: 1.8rem; padding-left: 15px; border-left-width: 4px; }
+            .card-grid { gap: 15px; }
+            .system-card { padding: 20px 18px 22px; border-radius: 24px; }
+            .reason-section { padding: 40px 15px; border-radius: 40px 40px 0 0; margin-top: 30px; }
+            .reason-title { font-size: 2rem; }
+            .reason-sub { font-size: 1rem; margin-bottom: 30px; }
+            .go-top { width: 45px; height: 45px; right: 15px; bottom: 15px; font-size: 1.5rem; }
+            .modal-content { margin: 20% auto; width: 85%; }
         }
     </style>
 </head>
@@ -799,7 +647,7 @@
     </div>
 </header>
 
-<!-- 水平分割 hero 区域 (新布局) -->
+<!-- 水平分割 hero 区域 -->
 <section class="hero">
     <div class="hero-split">
         <div class="hero-left">
@@ -812,7 +660,7 @@
     </div>
 </section>
 
-<!-- 快速导航胶囊 (新布局) -->
+<!-- 快速导航胶囊 -->
 <div class="quick-access">
     <div class="quick-grid">
         <a href="#finance">财务</a>
@@ -826,7 +674,48 @@
     </div>
 </div>
 
-<!-- 系统卡片展示区 (全新杂志式卡片) -->
+<!-- 下载模块 -->
+<section class="download-section">
+    <div class="download-card">
+        <div class="download-title">
+            <i class="fas fa-download" style="color: #2B6EB0; margin-right: 10px;"></i> 便捷获取
+        </div>
+        <div class="download-sub">多端同步，随时随地掌握业务动态</div>
+        <div class="download-grid">
+            <!-- 下载APP - 直接下载apk文件 -->
+            <a href="downloads/app-debug.rar" class="download-item" download>
+                <div class="download-icon"><i class="fab fa-android"></i></div>
+                <h4>下载APP</h4>
+                <p>Android 安装包</p>
+            </a>
+            <!-- 微信小程序 - 弹窗显示图片 -->
+            <div class="download-item" onclick="showModal('小程序码', 'wechat_qrcode.png', '微信扫一扫打开小程序')">
+                <div class="download-icon"><i class="fab fa-weixin"></i></div>
+                <h4>微信小程序</h4>
+                <p>即用即走，无需安装</p>
+            </div>
+            <!-- 获取Excel - 弹窗显示图片 -->
+            <div class="download-item" onclick="showModal('联系人码', 'excel_template.png', '请添加联系人后获取excel')">
+                <div class="download-icon"><i class="fas fa-file-excel"></i></div>
+                <h4>获取Excel</h4>
+                <p>报表模板 · 批量导入</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 弹窗模态框 -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="图片预览">
+        <h3 id="modalTitle">图片预览</h3>
+        <p id="modalDesc">请扫描二维码或保存图片</p>
+        <button class="modal-close" onclick="closeModal()">关闭</button>
+    </div>
+</div>
+
+<!-- 系统卡片展示区 -->
 <div class="systems-showcase">
     <div class="section-caption">
         <h2>核心业务系统</h2>
@@ -924,7 +813,7 @@
     </div>
 </div>
 
-<!-- 底部优势区块（风格匹配浅色） -->
+<!-- 底部优势区块 -->
 <div class="reason-section">
     <div class="reason-container">
         <div class="reason-title">为什么选择云合未来</div>
@@ -949,9 +838,49 @@
 <div class="go-top"><a href="#"><i class="fas fa-arrow-up"></i></a></div>
 
 <script>
+    // 回到顶部
     document.querySelector('.go-top a').addEventListener('click', function(e) {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 弹窗显示函数
+    function showModal(title, imageSrc, description) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+
+        modalImage.src = imageSrc;
+        modalTitle.textContent = title;
+        modalDesc.textContent = description;
+        modal.style.display = 'block';
+
+        // 禁止页面滚动
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 关闭弹窗
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+        // 恢复页面滚动
+        document.body.style.overflow = 'auto';
+    }
+
+    // 点击弹窗背景关闭
+    window.onclick = function(event) {
+        const modal = document.getElementById('imageModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    // 按ESC键关闭弹窗
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
     });
 </script>
 </body>

@@ -1,0 +1,29 @@
+# 产品配置说明
+# 格式：端类型,端名称,空间大小,价格(元/年)
+# 端类型：app(APP端)、miniprogram(微信小程序端)、pc(PC端)、excel(Excel端)
+# 以#开头的行是注释，会被忽略
+
+# APP端配置
+app,APP端,10GB,299
+app,APP端,50GB,999
+app,APP端,100GB,1699
+app,APP端,500GB,3999
+app,APP端,1000GB,19999
+
+# 微信小程序端配置
+miniprogram,微信小程序端,10GB,199
+miniprogram,微信小程序端,50GB,699
+miniprogram,微信小程序端,100GB,1199
+miniprogram,微信小程序端,500GB,3999
+
+# PC端配置
+pc,PC端,10GB,399
+pc,PC端,50GB,1299
+pc,PC端,100GB,2199
+pc,PC端,500GB,7999
+
+# Excel端配置
+excel,Excel端,10GB,99
+excel,Excel端,50GB,399
+excel,Excel端,100GB,699
+excel,Excel端,500GB,1999

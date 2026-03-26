@@ -16,20 +16,18 @@
     <style>
         /* ===== 配色体系：浅蓝·通透·高端 ===== */
         :root {
-            --primary-light: #EFF6FF;     /* 极浅蓝 - 主背景 */
-            --primary-soft: #DBEAFE;       /* 柔蓝 - 次背景 */
-            --primary-mist: #BFDBFE;       /* 雾蓝 - 卡片/点缀 */
-            --primary-clear: #93C5FD;       /* 清透蓝 - 渐变过渡 */
-            --primary-deep: #3B82F6;        /* 深邃蓝 - 重点元素 */
-            --primary-navy: #1E3A8A;        /* 深海军蓝 - 文字/强调 */
-            --accent-gold: #FBBF24;         /* 暖金 - 少量点缀 */
-            --accent-gold-light: #FDE68A;   /* 浅金 - 渐变 */
-            --text-primary: #1F2937;         /* 深灰 - 主文字 */
-            --text-secondary: #4B5563;       /* 中灰 - 辅助文字 */
-            --text-light: #9CA3AF;           /* 浅灰 - 标签文字 */
-            --pure-white: #FFFFFF;            /* 纯白 */
-
-            /* 玻璃拟态变量 */
+            --primary-light: #EFF6FF;
+            --primary-soft: #DBEAFE;
+            --primary-mist: #BFDBFE;
+            --primary-clear: #93C5FD;
+            --primary-deep: #3B82F6;
+            --primary-navy: #1E3A8A;
+            --accent-gold: #FBBF24;
+            --accent-gold-light: #FDE68A;
+            --text-primary: #1F2937;
+            --text-secondary: #4B5563;
+            --text-light: #9CA3AF;
+            --pure-white: #FFFFFF;
             --glass-bg: rgba(255, 255, 255, 0.6);
             --glass-border: rgba(59, 130, 246, 0.15);
             --glass-shadow: 0 25px 50px -18px rgba(30, 58, 138, 0.2);
@@ -60,7 +58,7 @@
             padding: 0 40px;
         }
 
-        /* ===== 动态背景：浅蓝光晕 ===== */
+        /* ===== 动态背景 ===== */
         .bg-ambient {
             position: fixed;
             top: 0;
@@ -713,7 +711,7 @@
 
         .modal-form {
             background: white;
-            max-width: 500px;
+            max-width: 600px;
             width: 90%;
             border-radius: 48px;
             padding: 40px;
@@ -739,6 +737,42 @@
         .modal-form p {
             color: var(--text-secondary);
             margin-bottom: 30px;
+        }
+
+        /* 选项切换按钮 */
+        .option-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .option-tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            background: var(--primary-light);
+            color: var(--text-secondary);
+        }
+
+        .option-tab.active {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-clear));
+            color: white;
+            box-shadow: 0 5px 15px var(--blue-glow);
+        }
+
+        .option-tab:hover:not(.active) {
+            background: var(--primary-soft);
+        }
+
+        /* 表单区域 */
+        .form-section {
+            transition: all 0.3s;
         }
 
         .form-group {
@@ -779,6 +813,112 @@
         .form-group textarea {
             height: 100px;
             resize: vertical;
+        }
+
+        /* 产品购买区域 */
+        .product-section {
+            background: var(--primary-light);
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-category {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 15px;
+        }
+
+        .product-category h4 {
+            font-size: 1.1rem;
+            color: var(--primary-deep);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .product-option {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px;
+            background: white;
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .product-option.selected {
+            border-color: var(--primary-deep);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1));
+            box-shadow: 0 2px 8px var(--blue-glow);
+        }
+
+        .product-option:hover {
+            border-color: var(--primary-deep);
+            transform: translateY(-2px);
+        }
+
+        .product-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .product-price {
+            font-size: 0.8rem;
+            color: var(--primary-deep);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .total-amount {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-clear));
+            color: white;
+            padding: 15px 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .qr-code-area {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--primary-light);
+            border-radius: 24px;
+        }
+
+        .qr-code-area img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        .qr-code-area p {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-select {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .contact-select select {
+            flex: 1;
         }
 
         .form-submit {
@@ -971,6 +1111,11 @@
             transform: translateY(-5px);
         }
 
+        /* 隐藏类 */
+        .hidden {
+            display: none;
+        }
+
         @media (max-width: 1100px) {
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
             .case-grid { grid-template-columns: repeat(2, 1fr); }
@@ -985,454 +1130,213 @@
             .footer-grid { grid-template-columns: 1fr; }
             .nav-menu { display: none; }
             .modal-form { padding: 30px 20px; }
+            .product-options { flex-direction: column; }
+            .product-option { min-width: auto; }
         }
         /* ===== 增强的手机端兼容性优化 ===== */
         @media (max-width: 768px) {
-            /* 容器内边距调整 */
-            .container {
-                padding: 0 20px;
-            }
+            .container { padding: 0 20px; }
+            .nav-container { padding: 12px 20px; }
+            .logo-text { font-size: 1.2rem; }
+            .hero-carousel { margin: 20px auto 30px; border-radius: 24px; }
+            .carousel-container { height: 500px; }
+            .carousel-slide { padding: 0 30px; align-items: flex-end; padding-bottom: 100px; }
+            .carousel-slide::before { background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.3) 100%); }
+            .slide-content { max-width: 100%; }
+            .slide-content h1 { font-size: 2.2rem; }
+            .slide-content p { font-size: 1rem; margin-bottom: 25px; }
+            .slide-tag { font-size: 0.8rem; padding: 4px 14px; }
+            .slide-btn { padding: 12px 24px; font-size: 1rem; }
+            .carousel-indicators { bottom: 20px; left: 20px; }
+            .carousel-controls { bottom: 20px; right: 20px; }
+            .carousel-counter { top: 20px; right: 20px; font-size: 0.8rem; padding: 6px 16px; }
+            .carousel-btn { width: 40px; height: 40px; font-size: 1rem; }
+            .solution-title { font-size: 1.8rem; padding-left: 15px; margin-bottom: 20px; }
+            .solution-container { gap: 15px; padding: 15px 0 25px; }
+            .solution-item { flex: 0 0 300px; }
+            .solution-img { height: 180px; }
+            .solution-content { padding: 20px; }
+            .solution-content h3 { font-size: 1.3rem; margin-bottom: 8px; }
+            .solution-content p { font-size: 0.9rem; margin-bottom: 15px; }
+            .solution-nav { gap: 10px; }
+            .solution-nav-btn { width: 40px; height: 40px; }
+            .section-title { font-size: 1.8rem; margin: 40px 0 25px; padding-left: 15px; }
+            .bento-grid { gap: 15px; margin: 20px 0; }
+            .bento-card { padding: 20px; }
+            .card-icon { width: 50px; height: 50px; border-radius: 14px; margin-bottom: 15px; }
+            .card-icon i { font-size: 1.5rem; }
+            .bento-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+            .bento-card p { font-size: 0.9rem; }
+            .bento-card.featured { grid-column: span 1; }
+            .case-wall-title { font-size: 1.8rem; margin-bottom: 25px; }
+            .case-grid { gap: 15px; }
+            .case-img { height: 160px; }
+            .case-content { padding: 20px; }
+            .case-content h3 { font-size: 1.2rem; margin-bottom: 5px; }
+            .case-content p { font-size: 0.9rem; }
+            .case-category { font-size: 0.8rem; padding: 4px 12px; }
+            .case-wall-btn { padding: 12px 30px; font-size: 1rem; }
+            .stats-grid { gap: 15px; margin: 30px 0; }
+            .stat-card { padding: 20px; }
+            .stat-number { font-size: 2rem; }
+            .stat-label { font-size: 0.9rem; }
+            .cta-section { padding: 40px 20px; margin: 40px 0; border-radius: 30px; }
+            .cta-section h2 { font-size: 1.8rem; }
+            .cta-section p { font-size: 1rem; margin-bottom: 25px; }
+            .cta-btn { padding: 14px 30px; font-size: 1rem; }
+            .footer { padding: 40px 0 20px; margin-top: 40px; }
+            .footer-grid { gap: 30px; }
+            .footer-col h4 { margin-bottom: 15px; font-size: 1.1rem; }
+            .footer-col ul li { margin-bottom: 8px; }
+            .footer-col ul li a { font-size: 0.9rem; }
+            .social-links a { width: 38px; height: 38px; }
+            .go-top { width: 44px; height: 44px; right: 20px; bottom: 20px; font-size: 1.2rem; }
+            .modal-form { padding: 30px 20px; width: 95%; max-height: 85vh; overflow-y: auto; }
+            .modal-form h3 { font-size: 1.5rem; }
+            .modal-form p { font-size: 0.9rem; margin-bottom: 20px; }
+            .form-group input, .form-group textarea, .form-group select { padding: 12px 18px; font-size: 0.95rem; }
+            .form-submit { padding: 14px 20px; font-size: 1rem; }
+            .modal-close { width: 38px; height: 38px; font-size: 1.1rem; }
+            .option-tabs { gap: 10px; }
+            .option-tab { padding: 8px 12px; font-size: 0.9rem; }
+        }
+        @media (max-width: 480px) {
+            .carousel-container { height: 450px; }
+            .carousel-slide { padding: 0 20px; padding-bottom: 80px; }
+            .slide-content h1 { font-size: 1.8rem; }
+            .solution-item { flex: 0 0 260px; }
+            .solution-img { height: 160px; }
+            .bento-grid { gap: 12px; }
+            .bento-card { padding: 18px; }
+            .stat-number { font-size: 1.8rem; }
+            .footer-grid { gap: 25px; }
+        }
+        @media (max-height: 500px) and (orientation: landscape) {
+            .carousel-container { height: 350px; }
+            .modal-form { max-height: 80vh; overflow-y: auto; }
+            .carousel-slide { align-items: center; padding-bottom: 60px; }
+            .slide-content h1 { font-size: 1.8rem; }
+            .slide-content p { font-size: 0.9rem; margin-bottom: 15px; }
+        }
 
-            /* 导航优化 */
-            .nav-container {
-                padding: 12px 20px;
-            }
+        /* ===== 联系方式选择区域优化样式 ===== */
+        .contact-select-wrapper {
+            margin-bottom: 25px;
+        }
 
-            .logo-text {
-                font-size: 1.2rem;
-            }
+        .contact-label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
 
-            /* 轮播图优化 */
-            .hero-carousel {
-                margin: 20px auto 30px;
-                border-radius: 24px;
-            }
+        .contact-label i {
+            color: var(--primary-deep);
+            margin-right: 8px;
+        }
 
-            .carousel-container {
-                height: 500px;
-            }
+        .contact-select-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
 
-            .carousel-slide {
-                padding: 0 30px;
-                align-items: flex-end;
-                padding-bottom: 100px;
-            }
+        .contact-type-select {
+            flex: 0 0 110px;
+            position: relative;
+        }
 
-            .carousel-slide::before {
-                background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.3) 100%);
-            }
+        .contact-select-input {
+            width: 100%;
+            padding: 14px 12px;
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            background: var(--primary-light);
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233B82F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 18px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
 
-            .slide-content {
-                max-width: 100%;
-            }
+        .contact-select-input:hover {
+            border-color: var(--primary-deep);
+        }
 
-            .slide-content h1 {
-                font-size: 2.2rem;
-            }
+        .contact-select-input:focus {
+            outline: none;
+            border-color: var(--primary-deep);
+            box-shadow: 0 0 0 3px var(--blue-glow);
+        }
 
-            .slide-content p {
-                font-size: 1rem;
-                margin-bottom: 25px;
-            }
+        .contact-value-input {
+            flex: 1;
+            position: relative;
+        }
 
-            .slide-tag {
-                font-size: 0.8rem;
-                padding: 4px 14px;
-            }
+        .contact-value-input input {
+            width: 100%;
+            padding: 14px 40px 14px 20px;
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            background: var(--primary-light);
+            font-family: 'Inter', sans-serif;
+        }
 
-            .slide-btn {
-                padding: 12px 24px;
-                font-size: 1rem;
-            }
+        .contact-value-input input:focus {
+            outline: none;
+            border-color: var(--primary-deep);
+            box-shadow: 0 0 0 3px var(--blue-glow);
+        }
 
-            /* 轮播控件位置调整 */
-            .carousel-indicators {
-                bottom: 20px;
-                left: 20px;
-            }
+        .contact-value-input .input-icon {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 1rem;
+            pointer-events: none;
+            transition: color 0.3s;
+        }
 
-            .carousel-controls {
-                bottom: 20px;
-                right: 20px;
-            }
+        .contact-value-input input:focus + .input-icon {
+            color: var(--primary-deep);
+        }
 
-            .carousel-counter {
-                top: 20px;
-                right: 20px;
-                font-size: 0.8rem;
-                padding: 6px 16px;
-            }
-
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-
-            /* 解决方案横向滚动优化 */
-            .solution-title {
-                font-size: 1.8rem;
-                padding-left: 15px;
-                margin-bottom: 20px;
-            }
-
-            .solution-container {
-                gap: 15px;
-                padding: 15px 0 25px;
-            }
-
-            .solution-item {
-                flex: 0 0 300px;
-            }
-
-            .solution-img {
-                height: 180px;
-            }
-
-            .solution-content {
-                padding: 20px;
-            }
-
-            .solution-content h3 {
-                font-size: 1.3rem;
-                margin-bottom: 8px;
-            }
-
-            .solution-content p {
-                font-size: 0.9rem;
-                margin-bottom: 15px;
-            }
-
-            .solution-nav {
+        /* 联系方式区域响应式优化 */
+        @media (max-width: 600px) {
+            .contact-select-group {
+                flex-direction: column;
                 gap: 10px;
             }
 
-            .solution-nav-btn {
-                width: 40px;
-                height: 40px;
+            .contact-type-select {
+                flex: auto;
+                width: 100%;
             }
 
-            /* 核心产品本托优化 */
-            .section-title {
-                font-size: 1.8rem;
-                margin: 40px 0 25px;
-                padding-left: 15px;
+            .contact-value-input {
+                width: 100%;
             }
 
-            .bento-grid {
-                gap: 15px;
-                margin: 20px 0;
+            .contact-select-input {
+                padding: 12px 12px;
             }
 
-            .bento-card {
-                padding: 20px;
-            }
-
-            .card-icon {
-                width: 50px;
-                height: 50px;
-                border-radius: 14px;
-                margin-bottom: 15px;
-            }
-
-            .card-icon i {
-                font-size: 1.5rem;
-            }
-
-            .bento-card h3 {
-                font-size: 1.3rem;
-                margin-bottom: 8px;
-            }
-
-            .bento-card p {
-                font-size: 0.9rem;
-            }
-
-            .bento-card.featured {
-                grid-column: span 1;
-            }
-
-            /* 客户案例墙优化 */
-            .case-wall-title {
-                font-size: 1.8rem;
-                margin-bottom: 25px;
-            }
-
-            .case-grid {
-                gap: 15px;
-            }
-
-            .case-img {
-                height: 160px;
-            }
-
-            .case-content {
-                padding: 20px;
-            }
-
-            .case-content h3 {
-                font-size: 1.2rem;
-                margin-bottom: 5px;
-            }
-
-            .case-content p {
-                font-size: 0.9rem;
-            }
-
-            .case-category {
-                font-size: 0.8rem;
-                padding: 4px 12px;
-            }
-
-            .case-wall-btn {
-                padding: 12px 30px;
-                font-size: 1rem;
-            }
-
-            /* 数据看板优化 */
-            .stats-grid {
-                gap: 15px;
-                margin: 30px 0;
-            }
-
-            .stat-card {
-                padding: 20px;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .stat-label {
-                font-size: 0.9rem;
-            }
-
-            /* CTA区域优化 */
-            .cta-section {
-                padding: 40px 20px;
-                margin: 40px 0;
-                border-radius: 30px;
-            }
-
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-
-            .cta-section p {
-                font-size: 1rem;
-                margin-bottom: 25px;
-            }
-
-            .cta-btn {
-                padding: 14px 30px;
-                font-size: 1rem;
-            }
-
-            /* 底部优化 */
-            .footer {
-                padding: 40px 0 20px;
-                margin-top: 40px;
-            }
-
-            .footer-grid {
-                gap: 30px;
-            }
-
-            .footer-col h4 {
-                margin-bottom: 15px;
-                font-size: 1.1rem;
-            }
-
-            .footer-col ul li {
-                margin-bottom: 8px;
-            }
-
-            .footer-col ul li a {
-                font-size: 0.9rem;
-            }
-
-            .social-links a {
-                width: 38px;
-                height: 38px;
-            }
-
-            /* 回到顶部按钮优化 */
-            .go-top {
-                width: 44px;
-                height: 44px;
-                right: 20px;
-                bottom: 20px;
-                font-size: 1.2rem;
-            }
-
-            /* 弹窗表单优化 */
-            .modal-form {
-                padding: 30px 20px;
-                width: 95%;
-                max-height: 85vh;
-                overflow-y: auto;
-            }
-
-            .modal-form h3 {
-                font-size: 1.5rem;
-            }
-
-            .modal-form p {
-                font-size: 0.9rem;
-                margin-bottom: 20px;
-            }
-
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
-                padding: 12px 18px;
-                font-size: 0.95rem;
-            }
-
-            .form-submit {
-                padding: 14px 20px;
-                font-size: 1rem;
-            }
-
-            .modal-close {
-                width: 38px;
-                height: 38px;
-                font-size: 1.1rem;
-            }
-
-            /* 修复导航菜单在小屏幕的显示问题 */
-            .nav-menu {
-                display: none; /* 保持隐藏，如果需要可以添加汉堡菜单 */
-            }
-
-            /* 确保所有图片在小屏幕上不会溢出 */
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            /* 改善触摸体验 */
-            .solution-item,
-            .bento-card,
-            .case-card,
-            .stat-card,
-            .slide-btn,
-            .cta-btn,
-            .nav-cta,
-            .carousel-btn,
-            .solution-nav-btn,
-            .go-top,
-            .modal-close {
-                cursor: pointer;
-                -webkit-tap-highlight-color: rgba(59, 130, 246, 0.1);
-            }
-
-            /* 修复文字溢出问题 */
-            h1, h2, h3, p, .stat-number, .slide-tag, .solution-tag, .case-category {
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-            }
-        }
-
-        /* 针对更小屏幕（480px以下）的额外优化 */
-        @media (max-width: 480px) {
-            .carousel-container {
-                height: 450px;
-            }
-
-            .carousel-slide {
-                padding: 0 20px;
-                padding-bottom: 80px;
-            }
-
-            .slide-content h1 {
-                font-size: 1.8rem;
-            }
-
-            .solution-item {
-                flex: 0 0 260px;
-            }
-
-            .solution-img {
-                height: 160px;
-            }
-
-            .bento-grid {
-                gap: 12px;
-            }
-
-            .bento-card {
-                padding: 18px;
-            }
-
-            .stat-number {
-                font-size: 1.8rem;
-            }
-
-            .footer-grid {
-                gap: 25px;
-            }
-
-            .modal-form {
-                padding: 25px 15px;
-            }
-
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
-                padding: 10px 15px;
-            }
-
-            /* 调整轮播控件位置避免重叠 */
-            .carousel-indicators {
-                bottom: 15px;
-                left: 15px;
-            }
-
-            .carousel-controls {
-                bottom: 15px;
-                right: 15px;
-                gap: 8px;
-            }
-
-            .carousel-btn {
-                width: 36px;
-                height: 36px;
-            }
-
-            .indicator {
-                width: 8px;
-                height: 8px;
-            }
-
-            .indicator.active {
-                width: 30px;
-            }
-        }
-
-        /* 横屏模式优化 */
-        @media (max-height: 500px) and (orientation: landscape) {
-            .carousel-container {
-                height: 350px;
-            }
-
-            .modal-form {
-                max-height: 80vh;
-                overflow-y: auto;
-            }
-
-            .carousel-slide {
-                align-items: center;
-                padding-bottom: 60px;
-            }
-
-            .slide-content h1 {
-                font-size: 1.8rem;
-            }
-
-            .slide-content p {
-                font-size: 0.9rem;
-                margin-bottom: 15px;
+            .contact-value-input input {
+                padding: 12px 38px 12px 18px;
             }
         }
     </style>
@@ -1467,7 +1371,6 @@
 <div class="container">
     <div class="hero-carousel">
         <div class="carousel-container" id="carousel">
-            <!-- Slide 1: 财务系统 -->
             <div class="carousel-slide active" style="background-image: linear-gradient(135deg, #EFF6FF, #DBEAFE), url('https://picsum.photos/1400/700?random=1'); background-blend-mode: overlay;">
                 <div class="slide-content">
                     <div class="slide-tag">FINANCIAL CLOUD</div>
@@ -1476,7 +1379,6 @@
                     <button class="slide-btn apply-btn">申请试用 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
-            <!-- Slide 2: 进销存 -->
             <div class="carousel-slide" style="background-image: linear-gradient(135deg, #EFF6FF, #BFDBFE), url('https://picsum.photos/1400/700?random=2'); background-blend-mode: overlay;">
                 <div class="slide-content">
                     <div class="slide-tag">SUPPLY CHAIN</div>
@@ -1485,7 +1387,6 @@
                     <button class="slide-btn apply-btn">申请试用 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
-            <!-- Slide 3: 人事系统 -->
             <div class="carousel-slide" style="background-image: linear-gradient(135deg, #EFF6FF, #93C5FD), url('https://picsum.photos/1400/700?random=3'); background-blend-mode: overlay;">
                 <div class="slide-content">
                     <div class="slide-tag">HUMAN RESOURCES</div>
@@ -1494,7 +1395,6 @@
                     <button class="slide-btn apply-btn">申请试用 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
-            <!-- Slide 4: 门店系统 -->
             <div class="carousel-slide" style="background-image: linear-gradient(135deg, #EFF6FF, #DBEAFE), url('https://picsum.photos/1400/700?random=4'); background-blend-mode: overlay;">
                 <div class="slide-content">
                     <div class="slide-tag">SMART STORE</div>
@@ -1503,7 +1403,6 @@
                     <button class="slide-btn apply-btn">申请试用 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
-            <!-- Slide 5: 协同办公 -->
             <div class="carousel-slide" style="background-image: linear-gradient(135deg, #EFF6FF, #BFDBFE), url('https://picsum.photos/1400/700?random=5'); background-blend-mode: overlay;">
                 <div class="slide-content">
                     <div class="slide-tag">COLLABORATION</div>
@@ -1514,16 +1413,11 @@
             </div>
         </div>
 
-        <!-- 计数器 -->
         <div class="carousel-counter" id="slideCounter">01 / 05</div>
-
-        <!-- 控制按钮 -->
         <div class="carousel-controls">
             <div class="carousel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></div>
             <div class="carousel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></div>
         </div>
-
-        <!-- 指示器 -->
         <div class="carousel-indicators" id="indicators">
             <div class="indicator active" data-index="0"></div>
             <div class="indicator" data-index="1"></div>
@@ -1597,7 +1491,7 @@
     </div>
 </div>
 
-<!-- 核心产品 (动态本托) -->
+<!-- 核心产品 -->
 <div class="container">
     <h2 class="section-title">核心产品 · 四端一体</h2>
     <div class="bento-grid">
@@ -1768,287 +1662,301 @@
     <i class="fas fa-arrow-up"></i>
 </div>
 
-<!-- 弹窗表单（已更新字段） -->
+<!-- 弹窗表单（带选项切换） -->
 <div class="modal-overlay" id="applyModal">
     <div class="modal-form">
         <div class="modal-close" id="closeModal"><i class="fas fa-times"></i></div>
-        <h3>申请免费试用</h3>
-        <p>填写信息，专业顾问将为您提供一对一服务</p>
+        <h3>申请服务</h3>
+        <p>请选择服务类型并填写相关信息</p>
 
-        <!-- 姓名（必填） -->
-        <div class="form-group">
-            <input type="text" placeholder="您的姓名 *" id="nameInput" required>
+        <!-- 选项切换按钮 -->
+        <div class="option-tabs">
+            <div class="option-tab active" data-option="manual">申请体验</div>
+            <div class="option-tab" data-option="purchase">自助购买</div>
         </div>
 
-        <!-- 系统（下拉选择，必填） -->
-        <div class="form-group">
-            <select id="systemSelect" class="form-select" required>
-                <option value="" disabled selected>选择系统 *</option>
-                <option value="财务管理系统">财务管理系统</option>
-                <option value="进销存管理系统">进销存管理系统</option>
-                <option value="人事管理系统">人事管理系统</option>
-                <option value="分权编辑系统">分权编辑系统</option>
-                <option value="门店收银系统">门店收银系统</option>
-                <option value="排产管理系统">排产管理系统</option>
-                <option value="教务培训系统">教务培训系统</option>
-            </select>
+        <!-- 人工创建表单（默认显示） -->
+        <div id="manualForm" class="form-section">
+            <div class="form-group">
+                <input type="text" placeholder="您的姓名 *" id="nameInput">
+            </div>
+            <div class="form-group">
+                <select id="systemSelect">
+                    <option value="" disabled selected>选择系统 *</option>
+                    <option value="财务管理系统">财务管理系统</option>
+                    <option value="进销存管理系统">进销存管理系统</option>
+                    <option value="人事管理系统">人事管理系统</option>
+                    <option value="分权编辑系统">分权编辑系统</option>
+                    <option value="门店收银系统">门店收银系统</option>
+                    <option value="排产管理系统">排产管理系统</option>
+                    <option value="教务培训系统">教务培训系统</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select id="scaleSelect">
+                    <option value="" disabled selected>用户规模 *</option>
+                    <option value="1-50人">1-50人</option>
+                    <option value="50-200人">50-200人</option>
+                    <option value="200-500人">200-500人</option>
+                    <option value="500-1000人">500-1000人</option>
+                    <option value="1000人以上">1000人以上</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="联系电话 *" id="phoneInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="微信号 *" id="wechatInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="公司名称 *" id="companyInput">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="备注（选填）" id="remarkInput"></textarea>
+            </div>
         </div>
 
-        <!-- 用户规模（下拉选择，必填） -->
-        <div class="form-group">
-            <select id="scaleSelect" class="form-select" required>
-                <option value="" disabled selected>用户规模 *</option>
-                <option value="1-50人">1-50人</option>
-                <option value="50-200人">50-200人</option>
-                <option value="200-500人">200-500人</option>
-                <option value="500-1000人">500-1000人</option>
-                <option value="1000人以上">1000人以上</option>
-            </select>
-        </div>
+        <!-- 购买产品表单（初始隐藏） -->
+        <div id="purchaseForm" class="form-section hidden">
+            <div class="form-group">
+                <input type="text" placeholder="您的姓名 *" id="purchaseName">
+            </div>
+            <div class="form-group">
+                <select id="systemSelectPurchase">
+                    <option value="" disabled selected>选择系统名称 *</option>
+                    <option value="财务管理系统">财务管理系统</option>
+                    <option value="进销存管理系统">进销存管理系统</option>
+                    <option value="人事管理系统">人事管理系统</option>
+                    <option value="分权编辑系统">分权编辑系统</option>
+                    <option value="门店收银系统">门店收银系统</option>
+                    <option value="排产管理系统">排产管理系统</option>
+                    <option value="教务培训系统">教务培训系统</option>
+                </select>
+            </div>
 
-        <!-- 联系电话（必填） -->
-        <div class="form-group">
-            <input type="tel" placeholder="联系电话 *" id="phoneInput" required>
-        </div>
+            <!-- 四端产品选项 -->
+            <div class="product-section"></div>
 
-        <!-- 微信号（必填） -->
-        <div class="form-group">
-            <input type="text" placeholder="微信号 *" id="wechatInput" required>
-        </div>
+            <!-- 总金额显示 -->
+            <div class="total-amount" id="totalAmount">应支付总金额：¥0</div>
 
-        <!-- 公司名称（必填） -->
-        <div class="form-group">
-            <input type="text" placeholder="公司名称 *" id="companyInput" required>
-        </div>
+            <!-- 图片二维码配置 -->
+            <div class="qr-code-area" id="qrCodeArea" style="display: flex;justify-content: space-around;">
+                <img id="qrCodeImg" src="" alt="支付二维码">
+                <img id="qrCodeImg2" src="" alt="支付二维码">
+            </div>
 
-        <!-- 备注（选填） -->
-        <div class="form-group">
-            <textarea placeholder="备注（选填）" id="remarkInput"></textarea>
+            <div class="contact-value-input">
+                <input type="text" id="dingdanhao" placeholder="请输入付款账单订单号后六位 *">
+            </div>
+
+            <!-- 联系方式选择 -->
+            <div class="contact-select-wrapper">
+                <label class="contact-label">
+                    <i class="fas fa-address-card"></i> 联系方式
+                </label>
+                <div class="contact-select-group">
+                    <div class="contact-type-select">
+                        <select id="contactType" class="contact-select-input">
+                            <option value="wechat">
+                                <i class="fab fa-weixin"></i> 微信号
+                            </option>
+                            <option value="email">
+                                <i class="fas fa-envelope"></i> 邮箱
+                            </option>
+                        </select>
+                    </div>
+                    <div class="contact-value-input">
+                        <input type="text" id="contactValue" placeholder="请输入微信号/邮箱 *">
+                        <i class="fas fa-edit input-icon"></i>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <button class="form-submit" id="submitForm">提交申请</button>
     </div>
 </div>
 
-<!--<script>-->
-<!--    $(document).ready(function() {-->
-<!--        (function() {-->
-<!--            // 更新手动替换内容-->
-<!--            // #登录emailJS 点击用户名进入Account页面，找到API keys 输入 Public Key-->
-<!--            emailjs.init("DK5BXaY1FX2kqsoyG");-->
-<!--        })();-->
-
-<!--        // ===== 轮播图逻辑 =====-->
-<!--        let currentSlide = 0;-->
-<!--        const slides = $('.carousel-slide');-->
-<!--        const indicators = $('.indicator');-->
-<!--        const totalSlides = slides.length;-->
-<!--        let autoPlayInterval;-->
-
-<!--        function showSlide(index) {-->
-<!--            if (index < 0) index = totalSlides - 1;-->
-<!--            if (index >= totalSlides) index = 0;-->
-
-<!--            slides.removeClass('active');-->
-<!--            indicators.removeClass('active');-->
-<!--            $(slides[index]).addClass('active');-->
-<!--            $(indicators[index]).addClass('active');-->
-
-<!--            $('#slideCounter').text((index+1).toString().padStart(2,'0') + ' / ' + totalSlides.toString().padStart(2,'0'));-->
-<!--            currentSlide = index;-->
-<!--        }-->
-
-<!--        function nextSlide() { showSlide(currentSlide + 1); }-->
-<!--        function prevSlide() { showSlide(currentSlide - 1); }-->
-
-<!--        $('#nextBtn').click(function() { nextSlide(); resetAutoPlay(); });-->
-<!--        $('#prevBtn').click(function() { prevSlide(); resetAutoPlay(); });-->
-
-<!--        $('.indicator').click(function() {-->
-<!--            showSlide($(this).data('index'));-->
-<!--            resetAutoPlay();-->
-<!--        });-->
-
-<!--        function startAutoPlay() {-->
-<!--            autoPlayInterval = setInterval(nextSlide, 5000);-->
-<!--        }-->
-<!--        function resetAutoPlay() {-->
-<!--            clearInterval(autoPlayInterval);-->
-<!--            startAutoPlay();-->
-<!--        }-->
-<!--        startAutoPlay();-->
-<!--        $('.carousel-container').mouseenter(() => clearInterval(autoPlayInterval));-->
-<!--        $('.carousel-container').mouseleave(() => startAutoPlay());-->
-
-<!--        // ===== 解决方案横向滚动 =====-->
-<!--        const solutionContainer = $('#solutionContainer');-->
-<!--        const scrollAmount = 400;-->
-
-<!--        $('#solutionScrollLeft').click(function() {-->
-<!--            solutionContainer.animate({ scrollLeft: '-=' + scrollAmount }, 300);-->
-<!--        });-->
-
-<!--        $('#solutionScrollRight').click(function() {-->
-<!--            solutionContainer.animate({ scrollLeft: '+=' + scrollAmount }, 300);-->
-<!--        });-->
-
-<!--        // ===== 回到顶部 =====-->
-<!--        $('#goTop').click(() => $('html, body').animate({ scrollTop: 0 }, 600));-->
-
-<!--        // ===== 弹窗逻辑 =====-->
-<!--        const modal = $('#applyModal');-->
-
-<!--        // 所有申请按钮点击打开弹窗-->
-<!--        $('.apply-btn, #navConsultBtn, #ctaApplyBtn').click(function(e) {-->
-<!--            e.preventDefault();-->
-<!--            modal.addClass('active');-->
-<!--        });-->
-
-<!--        // 关闭按钮-->
-<!--        $('#closeModal').click(function() {-->
-<!--            modal.removeClass('active');-->
-<!--        });-->
-
-<!--        // 点击遮罩关闭-->
-<!--        modal.click(function(e) {-->
-<!--            if ($(e.target).is(modal)) {-->
-<!--                modal.removeClass('active');-->
-<!--            }-->
-<!--        });-->
-
-<!--        // ===== 提交表单 - EmailJS =====-->
-<!--        $('#submitForm').click(function() {-->
-<!--            // 获取表单值-->
-<!--            const name = $('#nameInput').val().trim();-->
-<!--            const system = $('#systemSelect').val();-->
-<!--            const scale = $('#scaleSelect').val();-->
-<!--            const phone = $('#phoneInput').val().trim();-->
-<!--            const wechat = $('#wechatInput').val().trim();-->
-<!--            const company = $('#companyInput').val().trim();-->
-<!--            const remark = $('#remarkInput').val().trim();-->
-
-<!--            // 验证必填字段-->
-<!--            if (!name) {-->
-<!--                alert('请输入您的姓名');-->
-<!--                return;-->
-<!--            }-->
-<!--            if (!system) {-->
-<!--                alert('请选择系统');-->
-<!--                return;-->
-<!--            }-->
-<!--            if (!scale) {-->
-<!--                alert('请选择用户规模');-->
-<!--                return;-->
-<!--            }-->
-<!--            if (!phone) {-->
-<!--                alert('请输入联系电话');-->
-<!--                return;-->
-<!--            }-->
-<!--            if (!wechat) {-->
-<!--                alert('请输入微信号');-->
-<!--                return;-->
-<!--            }-->
-<!--            if (!company) {-->
-<!--                alert('请输入公司名称');-->
-<!--                return;-->
-<!--            }-->
-
-<!--            // 显示提交中状态-->
-<!--            const $btn = $(this);-->
-<!--            const originalText = $btn.text();-->
-<!--            $btn.text('提交中...').prop('disabled', true);-->
-
-<!--            // 准备发送参数-->
-<!--            const templateParams = {-->
-<!--                name: name,-->
-<!--                system: system,-->
-<!--                scale: scale,-->
-<!--                phone: phone,-->
-<!--                wechat: wechat,-->
-<!--                company: company,-->
-<!--                remark: remark || '无',-->
-<!--            };-->
-
-<!--            // 更新手动替换内容-->
-<!--            emailjs.send(-->
-<!--                'service_jr8tecu',      // 需要替换为您的 Service ID #登录emailJS 左侧导航栏点击 Email Services-->
-<!--                'template_dia1yzv',     // 需要替换为您的 Template ID #登录emailJS 左侧导航栏点击 Email Templates-->
-<!--                templateParams-->
-<!--            ).then(function(response) {-->
-<!--                console.log('发送成功', response);-->
-<!--                alert('申请提交成功！客服将在24小时内容联系您。');-->
-
-<!--                // 清空表单-->
-<!--                $('#nameInput').val('');-->
-<!--                $('#systemSelect').val('');-->
-<!--                $('#scaleSelect').val('');-->
-<!--                $('#phoneInput').val('');-->
-<!--                $('#wechatInput').val('');-->
-<!--                $('#companyInput').val('');-->
-<!--                $('#remarkInput').val('');-->
-
-<!--                // 关闭弹窗-->
-<!--                modal.removeClass('active');-->
-<!--            }, function(error) {-->
-<!--                console.log('发送失败', error);-->
-<!--                alert('提交失败，请稍后重试或直接电话联系我们。');-->
-<!--            }).finally(function() {-->
-<!--                // 恢复按钮状态-->
-<!--                $btn.text(originalText).prop('disabled', false);-->
-<!--            });-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
-
 <script>
     $(document).ready(function() {
-        // ===== 存储多组配置的数组 =====
-        let emailConfigs = [];
-        // 当前使用的配置索引（从localStorage读取，默认为0）
-        let currentConfigIndex = localStorage.getItem('emailConfigIndex') ?
-            parseInt(localStorage.getItem('emailConfigIndex')) : 0;
+        // ===== 产品配置数据（从配置文件读取）=====
+        let productConfigs = {
+            app: { name: "APP端", options: [] },
+            miniprogram: { name: "微信小程序端", options: [] },
+            pc: { name: "PC端", options: [] },
+            excel: { name: "Excel端", options: [] }
+        };
 
-        // ===== 读取配置文件 =====
+        // ===== 读取产品配置文件 =====
+        function loadProductConfig() {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    url: 'product_config.txt',
+                    dataType: 'text',
+                    success: function(data) {
+                        const lines = data.split('\n');
+
+                        lines.forEach(line => {
+                            // 跳过空行和注释行
+                            line = line.trim();
+                            if (line === '' || line.startsWith('#')) return;
+
+                            const parts = line.split(',').map(p => p.trim());
+                            if (parts.length >= 4) {
+                                const type = parts[0];      // 端类型: app, miniprogram, pc, excel
+                                const name = parts[1];      // 端显示名称
+                                const space = parts[2];     // 空间大小
+                                const price = parseInt(parts[3]); // 价格
+
+                                if (productConfigs[type]) {
+                                    productConfigs[type].name = name;
+                                    productConfigs[type].options.push({
+                                        space: space,
+                                        price: price
+                                    });
+                                }
+                            }
+                        });
+
+                        console.log('产品配置加载成功:', productConfigs);
+
+                        // 加载完成后动态生成产品选项
+                        generateProductOptions();
+                        resolve(productConfigs);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('读取产品配置文件失败:', error);
+                        console.log('使用默认配置');
+                        // 使用默认配置
+                        productConfigs = {
+                            app: { name: "APP端", options: [{space:"10GB", price:299}, {space:"50GB", price:999}, {space:"100GB", price:1699}, {space:"500GB", price:5999}] },
+                            miniprogram: { name: "微信小程序端", options: [{space:"10GB", price:199}, {space:"50GB", price:699}, {space:"100GB", price:1199}, {space:"500GB", price:3999}] },
+                            pc: { name: "PC端", options: [{space:"10GB", price:399}, {space:"50GB", price:1299}, {space:"100GB", price:2199}, {space:"500GB", price:7999}] },
+                            excel: { name: "Excel端", options: [{space:"10GB", price:99}, {space:"50GB", price:399}, {space:"100GB", price:699}, {space:"500GB", price:1999}] }
+                        };
+                        generateProductOptions();
+                        resolve(productConfigs);
+                    }
+                });
+            });
+        }
+
+        // ===== 动态生成产品选项 =====
+        function generateProductOptions() {
+            const categories = [
+                { type: 'app', icon: 'fas fa-mobile-alt', title: 'APP端' },
+                { type: 'miniprogram', icon: 'fab fa-weixin', title: '微信小程序端' },
+                { type: 'pc', icon: 'fas fa-laptop', title: 'PC端' },
+                { type: 'excel', icon: 'fas fa-file-excel', title: 'Excel端' }
+            ];
+
+            let html = '';
+
+            categories.forEach(cat => {
+                const config = productConfigs[cat.type];
+                if (config && config.options.length > 0) {
+                    html += `
+                        <div class="product-category">
+                            <h4><i class="${cat.icon}"></i> ${config.name}</h4>
+                            <div class="product-options" data-type="${cat.type}">
+                    `;
+
+                    config.options.forEach(opt => {
+                        html += `
+                            <div class="product-option" data-space="${opt.space}" data-price="${opt.price}">
+                                <div class="product-name">${opt.space}空间</div>
+                                <div class="product-price">¥${opt.price}/年</div>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            $('.product-section').html(html);
+
+            // 重新绑定产品选项点击事件
+            bindProductEvents();
+        }
+
+        // ===== 绑定产品选项点击事件 =====
+        function bindProductEvents() {
+            $(".product-option").off('click').click(function() {
+                const parentType = $(this).closest(".product-options").data("type");
+                const space = $(this).data("space");
+                const price = $(this).data("price");
+
+                // 移除同组其他选中样式
+                $(this).closest(".product-options").find(".product-option").removeClass("selected");
+                $(this).addClass("selected");
+
+                // 存储选中产品
+                selectedProducts[parentType] = { space: space, price: price };
+
+                updateTotalAmount();
+            });
+        }
+
+        // 二维码配置（从同路径读取）
+        let qrConfig = {
+            wechatPay: "wechat_pay_qr.png",
+            alipay: "alipay_qr.png"
+        };
+
+        // 默认二维码图片
+        $("#qrCodeImg").attr("src", qrConfig.wechatPay);
+        $("#qrCodeImg2").attr("src", qrConfig.alipay);
+
+        // 存储选中的产品
+        let selectedProducts = {
+            app: null,
+            miniprogram: null,
+            pc: null,
+            excel: null
+        };
+
+        // 更新总金额
+        function updateTotalAmount() {
+            let total = 0;
+            for (let key in selectedProducts) {
+                if (selectedProducts[key]) {
+                    total += selectedProducts[key].price;
+                }
+            }
+            $("#totalAmount").text("应支付总金额：¥" + total.toLocaleString());
+        }
+
+        // 先加载产品配置
+        loadProductConfig();
+
+        // ===== 邮件配置 =====
+        let emailConfigs = [];
+        let currentConfigIndex = localStorage.getItem('emailConfigIndex') ? parseInt(localStorage.getItem('emailConfigIndex')) : 0;
+
         function loadEmailConfigs() {
             return new Promise((resolve, reject) => {
                 $.ajax({
                     url: 'config.txt',
                     dataType: 'text',
                     success: function(data) {
-                        // 按行分割，过滤掉空行和注释行
-                        const lines = data.split('\n').filter(line =>
-                            line.trim() && !line.trim().startsWith('#')
-                        );
-
-                        // 解析每一行配置
+                        const lines = data.split('\n').filter(line => line.trim() && !line.trim().startsWith('#'));
                         emailConfigs = lines.map(line => {
                             const parts = line.split(',').map(p => p.trim());
-                            return {
-                                publicKey: parts[0],
-                                serviceId: parts[1],
-                                templateId: parts[2]
-                            };
+                            return { publicKey: parts[0], serviceId: parts[1], templateId: parts[2] };
                         });
-
-                        console.log(`成功加载 ${emailConfigs.length} 组邮件配置`);
-
-                        // 初始化当前配置的 Public Key
                         if (emailConfigs.length > 0) {
                             const currentConfig = emailConfigs[currentConfigIndex % emailConfigs.length];
                             emailjs.init(currentConfig.publicKey);
-                            console.log(`当前使用第 ${currentConfigIndex + 1} 组配置`);
                         }
-
                         resolve(emailConfigs);
                     },
-                    error: function(xhr, status, error) {
-                        console.error('读取配置文件失败:', error);
-                        // 如果读取失败，使用默认配置
-                        emailConfigs = [{
-                            publicKey: "mLSNpPhMtQ3yS5vFU",
-                            serviceId: "service_mi34rgd",
-                            templateId: "template_dia1yzv"
-                        }];
+                    error: function() {
+                        emailConfigs = [{ publicKey: "mLSNpPhMtQ3yS5vFU", serviceId: "service_mi34rgd", templateId: "template_dia1yzv" }];
                         emailjs.init(emailConfigs[0].publicKey);
                         resolve(emailConfigs);
                     }
@@ -2056,31 +1964,37 @@
             });
         }
 
-        // ===== 切换到下一组配置 =====
         function switchToNextConfig() {
             if (emailConfigs.length === 0) return;
-
-            // 更新索引（循环）
             currentConfigIndex = (currentConfigIndex + 1) % emailConfigs.length;
-
-            // 保存到localStorage
             localStorage.setItem('emailConfigIndex', currentConfigIndex);
-
-            // 重新初始化Public Key
             const nextConfig = emailConfigs[currentConfigIndex];
             emailjs.init(nextConfig.publicKey);
-
-            console.log(`已切换到第 ${currentConfigIndex + 1} 组配置`);
         }
 
-        // ===== 获取当前配置 =====
         function getCurrentConfig() {
             if (emailConfigs.length === 0) return null;
             return emailConfigs[currentConfigIndex % emailConfigs.length];
         }
 
-        // ===== 初始化加载配置 =====
         loadEmailConfigs();
+
+        // ===== 选项切换逻辑 =====
+        let currentOption = "manual";
+
+        $(".option-tab").click(function() {
+            $(".option-tab").removeClass("active");
+            $(this).addClass("active");
+            currentOption = $(this).data("option");
+
+            if (currentOption === "manual") {
+                $("#manualForm").removeClass("hidden");
+                $("#purchaseForm").addClass("hidden");
+            } else {
+                $("#manualForm").addClass("hidden");
+                $("#purchaseForm").removeClass("hidden");
+            }
+        });
 
         // ===== 轮播图逻辑 =====
         let currentSlide = 0;
@@ -2092,12 +2006,10 @@
         function showSlide(index) {
             if (index < 0) index = totalSlides - 1;
             if (index >= totalSlides) index = 0;
-
             slides.removeClass('active');
             indicators.removeClass('active');
             $(slides[index]).addClass('active');
             $(indicators[index]).addClass('active');
-
             $('#slideCounter').text((index+1).toString().padStart(2,'0') + ' / ' + totalSlides.toString().padStart(2,'0'));
             currentSlide = index;
         }
@@ -2107,19 +2019,10 @@
 
         $('#nextBtn').click(function() { nextSlide(); resetAutoPlay(); });
         $('#prevBtn').click(function() { prevSlide(); resetAutoPlay(); });
+        $('.indicator').click(function() { showSlide($(this).data('index')); resetAutoPlay(); });
 
-        $('.indicator').click(function() {
-            showSlide($(this).data('index'));
-            resetAutoPlay();
-        });
-
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(nextSlide, 5000);
-        }
-        function resetAutoPlay() {
-            clearInterval(autoPlayInterval);
-            startAutoPlay();
-        }
+        function startAutoPlay() { autoPlayInterval = setInterval(nextSlide, 5000); }
+        function resetAutoPlay() { clearInterval(autoPlayInterval); startAutoPlay(); }
         startAutoPlay();
         $('.carousel-container').mouseenter(() => clearInterval(autoPlayInterval));
         $('.carousel-container').mouseleave(() => startAutoPlay());
@@ -2127,135 +2030,173 @@
         // ===== 解决方案横向滚动 =====
         const solutionContainer = $('#solutionContainer');
         const scrollAmount = 400;
-
-        $('#solutionScrollLeft').click(function() {
-            solutionContainer.animate({ scrollLeft: '-=' + scrollAmount }, 300);
-        });
-
-        $('#solutionScrollRight').click(function() {
-            solutionContainer.animate({ scrollLeft: '+=' + scrollAmount }, 300);
-        });
+        $('#solutionScrollLeft').click(function() { solutionContainer.animate({ scrollLeft: '-=' + scrollAmount }, 300); });
+        $('#solutionScrollRight').click(function() { solutionContainer.animate({ scrollLeft: '+=' + scrollAmount }, 300); });
 
         // ===== 回到顶部 =====
         $('#goTop').click(() => $('html, body').animate({ scrollTop: 0 }, 600));
 
         // ===== 弹窗逻辑 =====
         const modal = $('#applyModal');
-
-        // 所有申请按钮点击打开弹窗
         $('.apply-btn, #navConsultBtn, #ctaApplyBtn').click(function(e) {
             e.preventDefault();
             modal.addClass('active');
         });
+        $('#closeModal').click(function() { modal.removeClass('active'); });
+        modal.click(function(e) { if ($(e.target).is(modal)) modal.removeClass('active'); });
 
-        // 关闭按钮
-        $('#closeModal').click(function() {
-            modal.removeClass('active');
-        });
-
-        // 点击遮罩关闭
-        modal.click(function(e) {
-            if ($(e.target).is(modal)) {
-                modal.removeClass('active');
-            }
-        });
-
-        // ===== 提交表单 - 使用当前配置发送 =====
+        // ===== 提交表单 =====
         $('#submitForm').click(function() {
-            // 获取表单值
-            const name = $('#nameInput').val().trim();
-            const system = $('#systemSelect').val();
-            const scale = $('#scaleSelect').val();
-            const phone = $('#phoneInput').val().trim();
-            const wechat = $('#wechatInput').val().trim();
-            const company = $('#companyInput').val().trim();
-            const remark = $('#remarkInput').val().trim();
-
-            // 验证必填字段
-            if (!name) {
-                alert('请输入您的姓名');
-                return;
-            }
-            if (!system) {
-                alert('请选择系统');
-                return;
-            }
-            if (!scale) {
-                alert('请选择用户规模');
-                return;
-            }
-            if (!phone) {
-                alert('请输入联系电话');
-                return;
-            }
-            if (!wechat) {
-                alert('请输入微信号');
-                return;
-            }
-            if (!company) {
-                alert('请输入公司名称');
-                return;
-            }
-
-            // 获取当前配置
-            const currentConfig = getCurrentConfig();
-            if (!currentConfig) {
-                alert('邮件配置加载失败');
-                return;
-            }
-
-            // 显示提交中状态
             const $btn = $(this);
             const originalText = $btn.text();
-            $btn.text('提交中...').prop('disabled', true);
 
-            // 准备发送参数
-            const templateParams = {
-                name: name,
-                system: system,
-                scale: scale,
-                phone: phone,
-                wechat: wechat,
-                company: company,
-                remark: remark || '无',
-            };
+            if (currentOption === "manual") {
+                // 人工创建表单验证（保持不变）
+                const name = $('#nameInput').val().trim();
+                const system = $('#systemSelect').val();
+                const scale = $('#scaleSelect').val();
+                const phone = $('#phoneInput').val().trim();
+                const wechat = $('#wechatInput').val().trim();
+                const company = $('#companyInput').val().trim();
+                const remark = $('#remarkInput').val().trim();
 
-            console.log(`使用第 ${currentConfigIndex + 1} 组配置发送邮件`);
+                if (!name || !system || !scale || !phone || !wechat || !company) {
+                    alert('请填写所有必填项');
+                    return;
+                }
 
-            // 发送邮件
-            emailjs.send(
-                currentConfig.serviceId,
-                currentConfig.templateId,
-                templateParams
-            ).then(function(response) {
-                console.log(`第 ${currentConfigIndex + 1} 组配置发送成功`, response);
-                alert('申请提交成功！客服将在24小时内联系您。');
+                const currentConfig = getCurrentConfig();
+                if (!currentConfig) { alert('邮件配置加载失败'); return; }
 
-                // 清空表单
-                $('#nameInput').val('');
-                $('#systemSelect').val('');
-                $('#scaleSelect').val('');
-                $('#phoneInput').val('');
-                $('#wechatInput').val('');
-                $('#companyInput').val('');
-                $('#remarkInput').val('');
+                $btn.text('提交中...').prop('disabled', true);
 
-                // 关闭弹窗
-                modal.removeClass('active');
+                const templateParams = {
+                    name: name,
+                    system: system,
+                    scale: scale,
+                    phone: phone,
+                    wechat: wechat,
+                    company: company,
+                    remark: remark || '无',
+                    serviceType: '人工创建'
+                };
 
-                // 发送成功后切换到下一组配置
-                switchToNextConfig();
+                emailjs.send(currentConfig.serviceId, currentConfig.templateId, templateParams)
+                    .then(function(response) {
+                        alert('申请提交成功！客服将在24小时内联系您。');
+                        $('#nameInput, #phoneInput, #wechatInput, #companyInput, #remarkInput').val('');
+                        $('#systemSelect, #scaleSelect').val('');
+                        modal.removeClass('active');
+                        switchToNextConfig();
+                    })
+                    .catch(function(error) { alert('提交失败，请稍后重试。'); })
+                    .finally(function() { $btn.text(originalText).prop('disabled', false); });
+            }
+            else {
+                // 购买产品表单验证
+                const name = $('#purchaseName').val().trim();
+                const system = $('#systemSelectPurchase').val();
+                const contactValue = $('#contactValue').val().trim();
+                const contactType = $('#contactType').val();
+                const dingdanhao = $('#dingdanhao').val();
 
-            }).catch(function(error) {
-                console.log(`第 ${currentConfigIndex + 1} 组配置发送失败`, error);
-                alert('提交失败，请稍后重试或直接电话联系我们。');
-            }).finally(function() {
-                // 恢复按钮状态
-                $btn.text(originalText).prop('disabled', false);
-            });
+                if (!name || !system || !contactValue) {
+                    alert('请填写姓名、选择系统并填写联系方式');
+                    return;
+                }
+
+                if (!dingdanhao) {
+                    alert('请填付款订单号 后六位');
+                    return;
+                }
+
+                // 检查是否有选中的产品
+                let hasProduct = false;
+                let productDetails = [];
+                for (let key in selectedProducts) {
+                    if (selectedProducts[key]) {
+                        hasProduct = true;
+                        const config = productConfigs[key];
+                        productDetails.push(`${config.name}: ${selectedProducts[key].space} - ¥${selectedProducts[key].price}`);
+                    }
+                }
+
+                if (!hasProduct) {
+                    alert('请至少选择一个产品端');
+                    return;
+                }
+
+                // 计算总金额
+                let total = 0;
+                for (let key in selectedProducts) {
+                    if (selectedProducts[key]) total += selectedProducts[key].price;
+                }
+
+                // 构建备注内容（合并所有其他信息）
+                let remarkContent = [];
+                remarkContent.push(`意向系统：${system}`);
+                remarkContent.push(`联系方式：${contactType === 'wechat' ? '微信号' : '邮箱'} - ${contactValue}`);
+                remarkContent.push(`购买产品详情：${productDetails.join('；')}`);
+                remarkContent.push(`应付总金额：¥${total.toLocaleString()}`);
+                remarkContent.push(`订单号：${dingdanhao}`);
+
+                // 如果有选中的产品端，还可以添加更多信息
+                let selectedEnds = [];
+                for (let key in selectedProducts) {
+                    if (selectedProducts[key]) {
+                        selectedEnds.push(key);
+                    }
+                }
+                if (selectedEnds.length > 0) {
+                    remarkContent.push(`购买端类型：${selectedEnds.join('、')}`);
+                }
+
+                const finalRemark = remarkContent.join('\n');
+
+                const currentConfig = getCurrentConfig();
+                if (!currentConfig) { alert('邮件配置加载失败'); return; }
+
+                $btn.text('提交中...').prop('disabled', true);
+
+                // 邮件参数：姓名、意向系统使用独立字段，其他内容放在备注
+                const templateParams = {
+                    name: name,                           // 姓名 - 独立字段
+                    system: system,                       // 意向系统 - 独立字段
+                    remark: finalRemark,                  // 备注 - 包含所有其他信息
+                    serviceType: '购买产品'               // 服务类型标识
+                };
+
+                emailjs.send(currentConfig.serviceId, currentConfig.templateId, templateParams)
+                    .then(function(response) {
+                        alert(`购买申请提交成功！\n应支付金额：¥${total.toLocaleString()}\n24小时内创建账号信息将发送至您预留联系方式，请耐心等待！`);
+                        // 清空表单
+                        $('#purchaseName, #contactValue').val('');
+                        $('#systemSelectPurchase').val('');
+                        $(".product-option").removeClass("selected");
+                        selectedProducts = { app: null, miniprogram: null, pc: null, excel: null };
+                        updateTotalAmount();
+                        modal.removeClass('active');
+                        switchToNextConfig();
+                    })
+                    .catch(function(error) {
+                        console.error('发送失败:', error);
+                        alert('提交失败，请稍后重试。');
+                    })
+                    .finally(function() {
+                        $btn.text(originalText).prop('disabled', false);
+                    });
+            }
+        });
+
+        // 联系方式类型切换时更新placeholder
+        $('#contactType').change(function() {
+            if ($(this).val() === 'wechat') {
+                $('#contactValue').attr('placeholder', '请输入微信号 *');
+            } else {
+                $('#contactValue').attr('placeholder', '请输入邮箱 *');
+            }
         });
     });
-
 </script>
 </body>
 </html>

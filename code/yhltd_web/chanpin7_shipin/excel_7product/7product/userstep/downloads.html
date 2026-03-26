@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>系统下载中心 - 云合未来</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .download-container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .download-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .download-header .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .download-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .download-header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .download-body {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .system-info {
+            background: #f8f9fa;
+            border-radius: 24px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .system-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .system-desc {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .file-info {
+            background: #e8f0fe;
+            border-radius: 16px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .file-info .label {
+            font-size: 0.85rem;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .file-info .value {
+            font-size: 1rem;
+            color: #333;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.4);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .auto-download-tip {
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff3e0;
+            border-radius: 12px;
+            color: #e67e22;
+            font-size: 0.85rem;
+        }
+
+        .error-message {
+            background: #fee;
+            border: 1px solid #fcc;
+            border-radius: 16px;
+            padding: 20px;
+            color: #c33;
+            margin-bottom: 20px;
+        }
+
+        .error-message h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .download-container {
+                border-radius: 24px;
+            }
+            .download-header {
+                padding: 30px 20px;
+            }
+            .download-header h1 {
+                font-size: 1.5rem;
+            }
+            .download-body {
+                padding: 30px 20px;
+            }
+            .system-name {
+                font-size: 1.3rem;
+            }
+            .download-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="download-container" id="downloadContainer">
+    <div class="download-header">
+        <div class="icon">📦</div>
+        <h1>系统下载中心</h1>
+        <p>正在准备下载文件，请稍候...</p>
+    </div>
+    <div class="download-body" id="downloadBody">
+        <div class="loading" style="margin: 20px auto;"></div>
+        <p style="margin-top: 15px; color: #666;">正在识别下载参数...</p>
+    </div>
+    <div class="footer">
+        <p>云合未来 · 智能企业服务</p>
+    </div>
+</div>
+
+<script>
+    // 系统安装包配置映射表
+    const systemConfig = {
+        // 财务系统
+        'finance': {
+            name: '财务管理系统',
+            desc: '智能看板、多账号权限、税务管理一体化',
+            file: 'downloads/finance_setup.rar',
+            fileName: '财务管理系统_安装包.rar',
+            icon: '💰'
+        },
+        // 进销存系统
+        'jxc': {
+            name: '进销存管理系统',
+            desc: '进货、销售、存储、财务一体化管理',
+            file: 'downloads/jxc_setup.rar',
+            fileName: '进销存管理系统_安装包.rar',
+            icon: '📦'
+        },
+        // 人事系统
+        'hr': {
+            name: '人事管理系统',
+            desc: '考勤、薪酬、审批流，一键生成工资',
+            file: 'downloads/hr_setup.rar',
+            fileName: '人事管理系统_安装包.rar',
+            icon: '👥'
+        },
+        // 协同办公系统
+        'office': {
+            name: '协同办公系统',
+            desc: '数据共享，分权限编辑，多人协同',
+            file: 'downloads/office_setup.rar',
+            fileName: '协同办公系统_安装包.rar',
+            icon: '📄'
+        },
+        // 智慧门店系统
+        'store': {
+            name: '智慧门店系统',
+            desc: '卡帐期管理、用户管理、信息提醒',
+            file: 'downloads/store_setup.rar',
+            fileName: '智慧门店系统_安装包.rar',
+            icon: '🏪'
+        },
+        // 排产系统
+        'pc': {
+            name: '排产管理系统',
+            desc: '生产计划排产、插单自动调整',
+            file: 'downloads/pc_setup.rar',
+            fileName: '排产管理系统_安装包.rar',
+            icon: '🏭'
+        },
+        // 培训管理系统
+        'train': {
+            name: '培训管理系统',
+            desc: '学生收费、课时统计、教师工资',
+            file: 'downloads/train_setup.rar',
+            fileName: '培训管理系统_安装包.rar',
+            icon: '🎓'
+        },
+    };
+
+    // 获取URL参数
+    function getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // 触发下载
+    function downloadFile(filePath, fileName) {
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // 延迟下载（用于显示页面信息）
+    function delayedDownload(filePath, fileName, delay = 1000) {
+        setTimeout(() => {
+            downloadFile(filePath, fileName);
+        }, delay);
+    }
+
+    // 显示错误信息
+    function showError(message) {
+        const body = document.getElementById('downloadBody');
+        body.innerHTML = `
+                <div class="error-message">
+                    <h3>⚠️ 下载参数错误</h3>
+                    <p>${message}</p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">支持的参数: system=finance, jxc, hr, office, store, pc, train, info, all</p>
+                </div>
+                <a href="javascript:history.back()" class="back-link">← 返回上一页</a>
+            `;
+    }
+
+    // 显示下载信息并开始下载
+    function showDownloadInfo(systemKey) {
+        const config = systemConfig[systemKey] || systemConfig['all'];
+        const body = document.getElementById('downloadBody');
+        const container = document.getElementById('downloadContainer');
+
+        // 更新头部信息
+        const header = document.querySelector('.download-header');
+        header.innerHTML = `
+                <div class="icon">${config.icon}</div>
+                <h1>${config.name}</h1>
+                <p>下载已准备就绪，即将开始</p>
+            `;
+
+        // 更新主体内容
+        body.innerHTML = `
+                <div class="system-info">
+                    <div class="system-name">${config.name}</div>
+                </div>
+                <div class="file-info">
+                    <div class="label">📁 安装包名称</div>
+                    <div class="value">${config.fileName}</div>
+                </div>
+                <button class="download-btn" id="manualDownloadBtn">
+                    <span>📥</span> 立即下载
+                </button>
+                <div class="auto-download-tip">
+                    ⏳ 2秒后自动开始下载，如果未开始请点击上方按钮
+                </div>
+            `;
+
+        // 自动下载
+        setTimeout(() => {
+            downloadFile(config.file, config.fileName);
+        }, 2000);
+
+        // 手动下载按钮
+        setTimeout(() => {
+            const manualBtn = document.getElementById('manualDownloadBtn');
+            if (manualBtn) {
+                manualBtn.addEventListener('click', function() {
+                    downloadFile(config.file, config.fileName);
+                });
+            }
+        }, 100);
+    }
+
+    // 主函数：解析参数并执行下载
+    function init() {
+        const systemParam = getUrlParameter('system');
+        const downloadParam = getUrlParameter('download');
+
+        // 兼容两种参数方式: ?system=finance 或 ?download=finance
+        let systemKey = systemParam || downloadParam;
+
+        // 如果参数是数字或中文名称，尝试匹配
+        if (systemKey && !systemConfig[systemKey]) {
+            // 尝试匹配中文名称
+            for (let key in systemConfig) {
+                if (systemConfig[key].name === systemKey) {
+                    systemKey = key;
+                    break;
+                }
+            }
+        }
+
+        if (!systemKey) {
+            // 没有参数时，显示所有可选系统
+            showAllSystems();
+        } else if (systemConfig[systemKey]) {
+            // 有效的系统参数，开始下载
+            showDownloadInfo(systemKey);
+        } else {
+            // 无效参数
+            showError(`未找到系统 "${systemParam || downloadParam}" 的安装包`);
+        }
+    }
+
+    // 显示所有可选系统（无参数时）
+    function showAllSystems() {
+        const header = document.querySelector('.download-header');
+        header.innerHTML = `
+                <div class="icon">📋</div>
+                <h1>选择下载系统</h1>
+                <p>请从下方选择需要下载的系统安装包</p>
+            `;
+
+        const body = document.getElementById('downloadBody');
+        let systemsHtml = `
+                <div class="system-info" style="background: #f0f4ff; margin-bottom: 20px;">
+                    <div class="system-name" style="font-size: 1.2rem;">可下载系统列表</div>
+                    <div class="system-desc">点击下方按钮下载对应的Excel安装包</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+            `;
+
+        for (let key in systemConfig) {
+            if (key !== 'all') {
+                systemsHtml += `
+                        <button class="download-btn" style="background: white; color: #667eea; border: 2px solid #667eea; margin: 0;" onclick="location.href='?system=${key}'">
+                            <span>${systemConfig[key].icon}</span> ${systemConfig[key].name}
+                        </button>
+                    `;
+            }
+        }
+
+        body.innerHTML = systemsHtml;
+    }
+
+    // 页面加载完成后执行
+    window.addEventListener('DOMContentLoaded', init);
+
+    // 监听页面可见性变化，确保下载不被阻止
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            console.log('页面已激活');
+        }
+    });
+</script>
+</body>
+</html>
